@@ -1,0 +1,114 @@
+{
+  "scene": "26",
+  "pen": "https://codepen.io/sith/pen/gNOZvB",
+  "start": "1",
+  "characters": [
+    "sirio",
+    "petronio"
+  ],
+  "assets": [
+    "boys.jpg",
+    "wss.png",
+    "audio.png",
+    "petronio_dubbioso.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png"
+  ],
+  "beats": {
+    "1": {
+      "id": "1",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "media": [
+        {
+          "type": "image",
+          "class": "img2",
+          "asset": "audio.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "2"
+        }
+      ]
+    },
+    "2": {
+      "id": "2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Look, I still have two photos from when they were doing these pieces... Take them! For your collection ahah",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Thanks Sirio!!",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Come on, if we turn left on Via Cevedale we find another crazy mural!",
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "instruction": "Follow Sirio's instructions",
+      "next": [],
+      "orphan": true
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

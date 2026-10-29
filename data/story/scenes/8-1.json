@@ -1,0 +1,191 @@
+{
+  "scene": "8-1",
+  "pen": "https://codepen.io/sith/pen/YbmvPm",
+  "start": "2",
+  "characters": [
+    "sirio",
+    "petronio"
+  ],
+  "assets": [
+    "armenia.jpeg",
+    "wss.png",
+    "petronio_dubbioso.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png"
+  ],
+  "beats": {
+    "2": {
+      "id": "2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Weren't we supposed to say something once we got here? I forgot already",
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "next": [
+        {
+          "to": "4",
+          "label": "I can try"
+        },
+        {
+          "to": "11",
+          "label": "Don't remember"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "instruction": "Press the talk button to say something or leave",
+      "waitsFor": "voice"
+    },
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Nice place! But... what’s that thing on the ground next to the playground?",
+      "next": [
+        {
+          "to": "13"
+        }
+      ]
+    },
+    "13": {
+      "id": "13",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Dunno, no fucking clue, it has to be recent, let's go and see.",
+      "next": [
+        {
+          "to": "14"
+        }
+      ]
+    },
+    "14": {
+      "id": "14",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Seen up close they look like pieces of letters. I wonder if they mean something...",
+      "next": [
+        {
+          "to": "15"
+        }
+      ]
+    },
+    "15": {
+      "id": "15",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "For sure! Come on, try to figure out what they mean, using your big big brain and that journal… I’m sure you'll make it!",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "16"
+        }
+      ]
+    },
+    "16": {
+      "id": "16",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "instruction": "Solve the riddle",
+      "next": [
+        {
+          "to": "17",
+          "label": "Solved"
+        }
+      ]
+    },
+    "17": {
+      "id": "17",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Look! It says “Candiani Beach Boyz”, but what does it mean?",
+      "next": [
+        {
+          "to": "18"
+        }
+      ]
+    },
+    "18": {
+      "id": "18",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Ahahahah, brilliant! They're fellas a little older than me, let's go to the park in Via Candiani and I'll tell you the story!",
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

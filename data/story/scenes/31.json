@@ -1,0 +1,150 @@
+{
+  "scene": "31",
+  "pen": "https://codepen.io/sith/pen/XLbbYe",
+  "start": "1",
+  "characters": [
+    "sirio",
+    "petronio"
+  ],
+  "assets": [
+    "branca.jpg",
+    "wss.png",
+    "audio.png",
+    "petronio_dubbioso.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png"
+  ],
+  "beats": {
+    "1": {
+      "id": "1",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "media": [
+        {
+          "type": "image",
+          "class": "img2",
+          "asset": "audio.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Can we go in and visit?",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Sure, it's not just there for looks ahahahaha, but you have to book the visit.",
+      "next": [
+        {
+          "to": "5"
+        }
+      ]
+    },
+    "5": {
+      "id": "5",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Ah fuck!",
+      "next": [
+        {
+          "to": "11"
+        }
+      ]
+    },
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Well, in the meantime take these flyers, so you get into the mood a bit.",
+      "next": [
+        {
+          "to": "12"
+        }
+      ]
+    },
+    "12": {
+      "id": "12",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Excellent, I'll keep them in my diary. Now we have to get back, right?",
+      "next": [
+        {
+          "to": "13"
+        }
+      ]
+    },
+    "13": {
+      "id": "13",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Yes, but cheer up man! Tomorrow we'll see graffiti right behind the university, in Via Schiaffino, then we'll go to a super nice place in Via Bovisasca 57!",
+      "instruction": "End of the day",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

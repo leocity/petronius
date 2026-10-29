@@ -1,0 +1,166 @@
+{
+  "scene": "30",
+  "pen": "https://codepen.io/sith/pen/ZdGGre",
+  "start": "1",
+  "characters": [
+    "sirio",
+    "petronio"
+  ],
+  "assets": [
+    "tango.jpg",
+    "wss.png",
+    "audio.png",
+    "petronio_dubbioso.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png"
+  ],
+  "beats": {
+    "1": {
+      "id": "1",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "media": [
+        {
+          "type": "image",
+          "class": "img2",
+          "asset": "audio.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Really interesting... Hey, what's that poster attached to the right of the mural?",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "I don't know, let's get closer!",
+      "next": [
+        {
+          "to": "5"
+        }
+      ]
+    },
+    "5": {
+      "id": "5",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Oh, how strange! It looks like another code, you just ain't got shit to do in the suburbs huh!",
+      "next": [
+        {
+          "to": "11"
+        }
+      ]
+    },
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "You're right, but we are geniuses! Come on, solve it!",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "12"
+        }
+      ]
+    },
+    "12": {
+      "id": "12",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "instruction": "Solve the riddle",
+      "next": [
+        {
+          "to": "13",
+          "label": "Done"
+        }
+      ]
+    },
+    "13": {
+      "id": "13",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Well, it just says \"Turn\", but turn where?",
+      "next": [
+        {
+          "to": "14"
+        }
+      ]
+    },
+    "14": {
+      "id": "14",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Have you tried 180°? And I'm supposed to be the dumb one! Anyway look, that's the Fernet Branca chimney over there. It just occurred to me that we could drop by: it's in Via Resegone 2, and inside there's the \"Collezione Branca\".",
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

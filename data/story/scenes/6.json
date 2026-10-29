@@ -1,0 +1,166 @@
+{
+  "scene": "6",
+  "pen": "https://codepen.io/sith/pen/BeXmLV",
+  "start": "2",
+  "characters": [
+    "sirio",
+    "petronio"
+  ],
+  "assets": [
+    "mastro.jpeg",
+    "wss.png",
+    "audio.png",
+    "petronio_dubbioso.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png"
+  ],
+  "beats": {
+    "2": {
+      "id": "2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "media": [
+        {
+          "type": "image",
+          "class": "img2",
+          "asset": "audio.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "How nice!",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "I’m happy you like it. Try to figure out where I want to go next!",
+      "next": [
+        {
+          "to": "5"
+        }
+      ]
+    },
+    "5": {
+      "id": "5",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "How can I?",
+      "next": [
+        {
+          "to": "10"
+        }
+      ]
+    },
+    "10": {
+      "id": "10",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "It’s quite simple. Just focus on the road signs. Keep the lamppost on your left, look straight ahead, close your left eye and use this transparent paper… as always, when you find it, just nod, man!",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "11"
+        }
+      ]
+    },
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "instruction": "Follow Sirio's instructions",
+      "next": [
+        {
+          "to": "12",
+          "label": "Done"
+        }
+      ]
+    },
+    "12": {
+      "id": "12",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "So we have to go straight and then right?",
+      "next": [
+        {
+          "to": "13"
+        }
+      ]
+    },
+    "13": {
+      "id": "13",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Bingo, my friend! Follow me while you enjoy these murals",
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

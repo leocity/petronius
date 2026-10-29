@@ -1,0 +1,302 @@
+{
+  "scene": "22",
+  "pen": "https://codepen.io/sith/pen/GbroVa",
+  "start": "2",
+  "characters": [
+    "petronio",
+    "sirio"
+  ],
+  "assets": [
+    "wss.png",
+    "librarygame.jpeg",
+    "petronio_dubbioso.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png",
+    "biblio.jpg"
+  ],
+  "beats": {
+    "2": {
+      "id": "2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Fuck you, Sirio, you and your memory will drive me crazy hahaha Come on, let's go to the pole with the words \"Free wi-fi area\". There seems to be a door that could be the archive's...",
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Fuck it, I can't find the 3 folders Yda told us about.",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Something is not right... The only codes missing are those 3. I bet they deleted them just so they couldn't be consulted!",
+      "next": [
+        {
+          "to": "5"
+        }
+      ]
+    },
+    "5": {
+      "id": "5",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "We just need to understand how the code system works in this library.",
+      "next": [
+        {
+          "to": "6"
+        }
+      ]
+    },
+    "6": {
+      "id": "6",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Come on, let's give it a try. We don't have much time! Just two minutes.",
+      "next": [
+        {
+          "to": "container3"
+        }
+      ],
+      "startsTimer": true
+    },
+    "9": {
+      "id": "9",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Look, the principal is not registered in any of the faculties that she claims to have attended... That's crazy!",
+      "next": [
+        {
+          "to": "10"
+        }
+      ]
+    },
+    "10": {
+      "id": "10",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "That's why she put all these numbers and stuff.",
+      "next": [
+        {
+          "to": "11"
+        }
+      ]
+    },
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Who knows who helped her to do it...",
+      "next": [
+        {
+          "to": "12"
+        }
+      ]
+    },
+    "12": {
+      "id": "12",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Certainly \"Gualtiero\", the archive librarian, he has always looked at me as if he had something to hide.",
+      "next": [
+        {
+          "to": "13"
+        }
+      ]
+    },
+    "13": {
+      "id": "13",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "I'll mark him down in the diary, he'll surely come in handy!",
+      "instruction": "Take note of Gualtiero",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "14": {
+      "id": "14",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "I don't know if it worked as it should have...",
+      "next": [
+        {
+          "to": "15"
+        }
+      ]
+    },
+    "15": {
+      "id": "15",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Neither do I, but write down the name of the archive librarian before I forget it, then we'll try to make him talk.",
+      "next": [
+        {
+          "to": "16"
+        }
+      ]
+    },
+    "16": {
+      "id": "16",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Ok, I'll put it in the diary. Just tell me his name while you still remember it haha",
+      "next": [
+        {
+          "to": "17"
+        }
+      ]
+    },
+    "17": {
+      "id": "17",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "He's called \"Luigi\"",
+      "instruction": "Take note of Luigi",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "container2": {
+      "id": "container2",
+      "container": "container2",
+      "kind": "puzzle",
+      "prompt": "ENTER CODES",
+      "inputs": 3,
+      "next": [
+        {
+          "to": "9",
+          "label": "password: correct",
+          "kind": "password-correct"
+        },
+        {
+          "to": "14",
+          "label": "password: wrong",
+          "kind": "password-wrong"
+        }
+      ],
+      "answers": [
+        "8",
+        "21",
+        "34"
+      ]
+    },
+    "container3": {
+      "id": "container3",
+      "container": "container3",
+      "kind": "timer",
+      "seconds": 120,
+      "next": [
+        {
+          "to": "container2",
+          "label": "time runs out",
+          "kind": "timeout"
+        }
+      ]
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

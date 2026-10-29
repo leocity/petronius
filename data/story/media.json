@@ -1,0 +1,354 @@
+{
+  "$comment": [
+    "Original assets of the 2019 game (from the DEMO folder next to the project), wired into the revival.",
+    "backgrounds: scene -> #containerN (as in the original CSS) -> web file; beats carry `container` (tools/extract-scenes.mjs).",
+    "backgroundFiles: web file -> source. portraits: original cut-out PNGs (inside = university scenes); portraitDefault: per character, used when a beat names none or names another character (bugs in 24-2 and 33).",
+    "Built into web/assets/media/ by tools/build-media.py (WebP for images; audio and video copied).",
+    "sceneSongs: the song each scene played (its <audio>; 27/30/32 pointed to a lost mastro_audio.mp4 and use the song named like their background). SoundCloud links in other scenes are dead and are not replaced."
+  ],
+  "backgrounds": {
+    "4": {
+      "container": "bg-ingresso-b2-the-reveal.webp"
+    },
+    "5": {
+      "container": "bg-gate-b3.webp"
+    },
+    "6": {
+      "container": "bg-mastro.webp"
+    },
+    "7": {
+      "container": "bg-graffiti.webp"
+    },
+    "8": {
+      "container": "bg-armenia.webp"
+    },
+    "9": {
+      "container": "bg-dergano.webp"
+    },
+    "10": {
+      "container": "bg-mamusca.webp"
+    },
+    "11": {
+      "container": "bg-reka.webp"
+    },
+    "12": {
+      "container": "bg-guardiano.webp"
+    },
+    "13": {
+      "container": "bg-penny.webp"
+    },
+    "14": {
+      "container": "bg-bausan.webp"
+    },
+    "15": {
+      "container": "bg-schiavone.webp"
+    },
+    "16": {
+      "container": "bg-gate-b3.webp"
+    },
+    "17": {
+      "container": "bg-matt.webp"
+    },
+    "18": {
+      "container": "bg-savarino.webp"
+    },
+    "19": {
+      "container": "bg-gelateria.webp"
+    },
+    "20": {
+      "container2": "bg-market.webp",
+      "container": "bg-market.webp"
+    },
+    "21": {
+      "container": "bg-sound.webp"
+    },
+    "22": {
+      "container3": "bg-librarygame.webp",
+      "container": "bg-biblio.webp"
+    },
+    "23": {
+      "container": "bg-never.webp"
+    },
+    "24": {
+      "container": "bg-ribalta.webp"
+    },
+    "25": {
+      "container": "bg-aula.webp"
+    },
+    "26": {
+      "container": "bg-boys.webp"
+    },
+    "27": {
+      "container": "bg-amilcare.webp"
+    },
+    "28": {
+      "container": "bg-puzzo.webp"
+    },
+    "29": {
+      "container": "bg-opella.webp"
+    },
+    "30": {
+      "container": "bg-tango.webp"
+    },
+    "31": {
+      "container": "bg-branca.webp"
+    },
+    "32": {
+      "container": "bg-altri.webp"
+    },
+    "33": {
+      "container": "bg-spirit.webp"
+    },
+    "34": {
+      "container": "bg-design.webp"
+    },
+    "35": {
+      "container": "bg-rifugio.webp"
+    },
+    "36": {
+      "container": "bg-stagioni.webp"
+    },
+    "37": {
+      "container": "bg-b8.webp"
+    },
+    "1-2": {
+      "container": "bg-camera.webp",
+      "container2": "bg-aula.webp"
+    },
+    "12-1": {
+      "container": "bg-guardiano.webp"
+    },
+    "16-1": {
+      "container": "bg-gate-b1.webp"
+    },
+    "17-1": {
+      "container": "bg-matt.webp"
+    },
+    "18-1": {
+      "container": "bg-savarino.webp"
+    },
+    "2-1-3": {
+      "container": "bg-corridoio.webp"
+    },
+    "20-1": {
+      "container": "bg-market.webp",
+      "container3": "bg-market.webp"
+    },
+    "21-1": {
+      "container4": "bg-soundgame.webp",
+      "container3": "bg-soundgame.webp",
+      "container": "bg-sound.webp"
+    },
+    "22-1": {
+      "container": "bg-biblio.webp"
+    },
+    "24-2": {
+      "container": "bg-ribalta.webp"
+    },
+    "5-1": {
+      "container": "bg-gate-b1.webp"
+    },
+    "8-1": {
+      "container": "bg-armenia.webp"
+    },
+    "9-1": {
+      "container": "bg-dergano.webp"
+    }
+  },
+  "backgroundFiles": {
+    "bg-camera.webp": "../Backgrounds/camera.jpg",
+    "bg-aula.webp": "../Backgrounds/aula.jpg",
+    "bg-mamusca.webp": "../Backgrounds/mamusca.jpg",
+    "bg-reka.webp": "../Backgrounds/reka.jpg",
+    "bg-guardiano.webp": "../Backgrounds/guardiano.jpg",
+    "bg-penny.webp": "../Backgrounds/penny.jpg",
+    "bg-bausan.webp": "../Backgrounds/bausan.jpg",
+    "bg-schiavone.webp": "../Backgrounds/schiavone.jpg",
+    "bg-gate-b3.webp": "../Backgrounds/Gate-B3.jpg",
+    "bg-gate-b1.webp": "../Backgrounds/Gate-B1.jpg",
+    "bg-matt.webp": "../Backgrounds/matt.jpg",
+    "bg-savarino.webp": "../Backgrounds/savarino.jpg",
+    "bg-gelateria.webp": "../Backgrounds/gelateria.jpg",
+    "bg-corridoio.webp": "../Backgrounds/corridoio.jpg",
+    "bg-market.webp": "../Backgrounds/market.jpeg",
+    "bg-sound.webp": "../Backgrounds/sound.jpeg",
+    "bg-soundgame.webp": "../Backgrounds/soundgame.jpeg",
+    "bg-librarygame.webp": "../Backgrounds/librarygame.jpeg",
+    "bg-biblio.webp": "../Backgrounds/biblio.jpeg",
+    "bg-never.webp": "../Backgrounds/never.jpg",
+    "bg-ribalta.webp": "../Backgrounds/ribalta.jpeg",
+    "bg-boys.webp": "../Backgrounds/boys.jpg",
+    "bg-amilcare.webp": "../Backgrounds/amilcare.jpeg",
+    "bg-puzzo.webp": "../Backgrounds/puzzo.jpeg",
+    "bg-opella.webp": "../Backgrounds/opella.jpg",
+    "bg-tango.webp": "../Backgrounds/tango.jpg",
+    "bg-branca.webp": "../Backgrounds/branca.jpg",
+    "bg-altri.webp": "../Backgrounds/altri.jpg",
+    "bg-spirit.webp": "../Backgrounds/spirit.jpeg",
+    "bg-design.webp": "../Backgrounds/design.jpg",
+    "bg-rifugio.webp": "../Backgrounds/rifugio.jpg",
+    "bg-stagioni.webp": "../Backgrounds/stagioni.jpg",
+    "bg-b8.webp": "../Backgrounds/b8.jpg",
+    "bg-ingresso-b2-the-reveal.webp": "../Backgrounds/Ingresso-B2-(the-reveal).jpg",
+    "bg-mastro.webp": "../Backgrounds/mastro.jpeg",
+    "bg-graffiti.webp": "../Backgrounds/graffiti.jpeg",
+    "bg-armenia.webp": "../Backgrounds/armenia.jpeg",
+    "bg-dergano.webp": "../Backgrounds/dergano.jpg"
+  },
+  "portraits": {
+    "gabriele": {
+      "file": "portrait-gabriele.webp",
+      "src": "../Characters/gabriele.png"
+    },
+    "guido": {
+      "file": "portrait-guido.webp",
+      "src": "../Characters/guido.png"
+    },
+    "minerva": {
+      "file": "portrait-minerva.webp",
+      "src": "../Characters/minerva.png"
+    },
+    "petronio_dubbioso": {
+      "file": "portrait-petronio-dubbioso.webp",
+      "src": "../Characters/petronio_dubbioso.png"
+    },
+    "petronio_inside": {
+      "file": "portrait-petronio-inside.webp",
+      "src": "../Characters/petronio_inside.png"
+    },
+    "roberto_inside": {
+      "file": "portrait-roberto-inside.webp",
+      "src": "../Characters/roberto_inside.png"
+    },
+    "roberto_serio": {
+      "file": "portrait-roberto-serio.webp",
+      "src": "../Characters/roberto_serio.png"
+    },
+    "sirio_inside": {
+      "file": "portrait-sirio-inside.webp",
+      "src": "../Characters/sirio_inside.png"
+    },
+    "sirio_shocked": {
+      "file": "portrait-sirio-shocked.webp",
+      "src": "../Characters/sirio_shocked.png"
+    },
+    "su": {
+      "file": "portrait-su.webp",
+      "src": "../Characters/su.png"
+    },
+    "yda": {
+      "file": "portrait-yda.webp",
+      "src": "../Characters/yda.png"
+    }
+  },
+  "portraitDefault": {
+    "petronio": "petronio_dubbioso",
+    "sirio": "sirio_shocked",
+    "roberto": "roberto_serio",
+    "yda": "yda",
+    "su": "su",
+    "guido": "guido",
+    "gabriele": "gabriele",
+    "minerva": "minerva"
+  },
+  "audio": {
+    "altri.mp3": {
+      "file": "altri.mp3",
+      "src": "../Audio/altri.mp3"
+    },
+    "amilcare.mp3": {
+      "file": "amilcare.mp3",
+      "src": "../Audio/amilcare.mp3"
+    },
+    "bausan.mp3": {
+      "file": "bausan.mp3",
+      "src": "../Audio/bausan.mp3"
+    },
+    "boyz.mp3": {
+      "file": "boyz.mp3",
+      "src": "../Audio/boyz.mp3"
+    },
+    "branca.mp3": {
+      "file": "branca.mp3",
+      "src": "../Audio/branca.mp3"
+    },
+    "design.mp3": {
+      "file": "design.mp3",
+      "src": "../Audio/design.mp3"
+    },
+    "graffiti.mp3": {
+      "file": "graffiti.mp3",
+      "src": "../Audio/graffiti.mp3"
+    },
+    "mastro.mp3": {
+      "file": "mastro.mp3",
+      "src": "../Audio/mastro.mp3"
+    },
+    "matt.mp3": {
+      "file": "matt.mp3",
+      "src": "../Audio/matt.mp3"
+    },
+    "puzzo.mp3": {
+      "file": "puzzo.mp3",
+      "src": "../Audio/puzzo.mp3"
+    },
+    "reka.mp3": {
+      "file": "reka.mp3",
+      "src": "../Audio/reka.mp3"
+    },
+    "rifugio.mp3": {
+      "file": "rifugio.mp3",
+      "src": "../Audio/rifugio.mp3"
+    },
+    "savarino.mp3": {
+      "file": "savarino.mp3",
+      "src": "../Audio/savarino.mp3"
+    },
+    "schiavone.mp3": {
+      "file": "schiavone.mp3",
+      "src": "../Audio/schiavone.mp3"
+    },
+    "stagioni.mp3": {
+      "file": "stagioni.mp3",
+      "src": "../Audio/stagioni.mp3"
+    },
+    "tango.mp3": {
+      "file": "tango.mp3",
+      "src": "../Audio/tango.mp3"
+    }
+  },
+  "videos": {
+    "expelled.mp4": {
+      "file": "expelled.mp4",
+      "src": "../Endings/expelled.mp4"
+    },
+    "freedom.mp4": {
+      "file": "freedom.mp4",
+      "src": "../Endings/freedom.mp4"
+    },
+    "neworder.mp4": {
+      "file": "neworder.mp4",
+      "src": "../Endings/neworder.mp4"
+    }
+  },
+  "sceneSongs": {
+    "6": "mastro.mp3",
+    "7": "graffiti.mp3",
+    "11": "reka.mp3",
+    "14": "bausan.mp3",
+    "15": "schiavone.mp3",
+    "17": "matt.mp3",
+    "18": "savarino.mp3",
+    "26": "boyz.mp3",
+    "27": "amilcare.mp3",
+    "28": "puzzo.mp3",
+    "30": "tango.mp3",
+    "31": "branca.mp3",
+    "32": "altri.mp3",
+    "34": "design.mp3",
+    "35": "rifugio.mp3",
+    "36": "stagioni.mp3",
+    "17-1": "matt.mp3",
+    "18-1": "savarino.mp3"
+  }
+}

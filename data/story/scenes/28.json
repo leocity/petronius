@@ -1,0 +1,133 @@
+{
+  "scene": "28",
+  "pen": "https://codepen.io/sith/pen/YoPbzL",
+  "start": "1",
+  "characters": [
+    "sirio",
+    "petronio"
+  ],
+  "assets": [
+    "puzzo.jpeg",
+    "wss.png",
+    "audio.png",
+    "petronio_dubbioso.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png"
+  ],
+  "beats": {
+    "1": {
+      "id": "1",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "media": [
+        {
+          "type": "image",
+          "class": "img2",
+          "asset": "audio.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "2"
+        }
+      ]
+    },
+    "2": {
+      "id": "2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Well, no more words about this place, you've gotta live it. Take a tour and tell me what you think.",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "I can't imagine the fun you have in here! I wish I could come here every now and then...",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Eh, tell me about it. Now that I've been away for a while, I hardly recognize it anymore.",
+      "next": [
+        {
+          "to": "5"
+        }
+      ]
+    },
+    "5": {
+      "id": "5",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "You know, sometimes I think we should run away for good...",
+      "next": [
+        {
+          "to": "11"
+        }
+      ]
+    },
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Come on, enough with this sentimental shit! It just occurred to me that nearby, in Via Guerzoni 39, there's Su's new shop, I haven't been there yet, let's go say hello.",
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

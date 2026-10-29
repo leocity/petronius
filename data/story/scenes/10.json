@@ -1,0 +1,281 @@
+{
+  "scene": "10",
+  "pen": "https://codepen.io/sith/pen/xoKQzZ",
+  "start": "1",
+  "characters": [
+    "su",
+    "roberto",
+    "sirio",
+    "petronio"
+  ],
+  "assets": [
+    "mamusca.jpg",
+    "wss.png",
+    "petronio_dubbioso.png",
+    "su.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png"
+  ],
+  "beats": {
+    "1": {
+      "id": "1",
+      "container": "container",
+      "kind": "line",
+      "speaker": "su",
+      "portrait": {
+        "class": "char_img_su",
+        "asset": "su.png"
+      },
+      "text": "Hi guys... Hey, love, what are you doing together? Do you know each other?",
+      "next": [
+        {
+          "to": "2"
+        }
+      ]
+    },
+    "2": {
+      "id": "2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "roberto",
+      "portrait": {
+        "class": "char_img_roberto",
+        "asset": "roberto_serio.png"
+      },
+      "text": "Eh, cool story, they are my new pupils and apparently I am helping them to escape...",
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Yeah but, at this point, tell us what's between you two, come on!",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "roberto",
+      "portrait": {
+        "class": "char_img_roberto",
+        "asset": "roberto_serio.png"
+      },
+      "text": "Bad story...",
+      "next": [
+        {
+          "to": "5"
+        }
+      ]
+    },
+    "5": {
+      "id": "5",
+      "container": "container",
+      "kind": "line",
+      "speaker": "su",
+      "portrait": {
+        "class": "char_img_su",
+        "asset": "su.png"
+      },
+      "text": "Robi has been coming to my father's bar forever and after a while we became friends and then... come on, you know what I mean.",
+      "next": [
+        {
+          "to": "6"
+        }
+      ]
+    },
+    "6": {
+      "id": "6",
+      "container": "container",
+      "kind": "line",
+      "speaker": "roberto",
+      "portrait": {
+        "class": "char_img_roberto",
+        "asset": "roberto_serio.png"
+      },
+      "text": "So are we having a beer or what?",
+      "next": [
+        {
+          "to": "7"
+        }
+      ]
+    },
+    "7": {
+      "id": "7",
+      "container": "container",
+      "kind": "line",
+      "speaker": "su",
+      "portrait": {
+        "class": "char_img_su",
+        "asset": "su.png"
+      },
+      "text": "Just a second, first I have to finish something. Could you help me look for a flyer? I'd take a look at that stall to the right of the entrance.",
+      "next": [
+        {
+          "to": "11"
+        }
+      ]
+    },
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Sure thing Su, we will help you right away!",
+      "next": [
+        {
+          "to": "13"
+        }
+      ]
+    },
+    "13": {
+      "id": "13",
+      "container": "container",
+      "kind": "line",
+      "speaker": "su",
+      "portrait": {
+        "class": "char_img_su",
+        "asset": "su.png"
+      },
+      "text": "Ok, let me know when you've done it.",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "14"
+        }
+      ]
+    },
+    "14": {
+      "id": "14",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "instruction": "Search for the flyer",
+      "next": [
+        {
+          "to": "15",
+          "label": "Done"
+        }
+      ]
+    },
+    "15": {
+      "id": "15",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Look guys, I found a weird flyer...",
+      "next": [
+        {
+          "to": "16"
+        }
+      ]
+    },
+    "16": {
+      "id": "16",
+      "container": "container",
+      "kind": "line",
+      "speaker": "roberto",
+      "portrait": {
+        "class": "char_img_roberto",
+        "asset": "roberto_serio.png"
+      },
+      "text": "Noo, that's the bomb, James Reka is the best. I have class tomorrow, but you should definitely go.",
+      "next": [
+        {
+          "to": "17"
+        }
+      ]
+    },
+    "17": {
+      "id": "17",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Yeah, fuck it, we gotta go, my friend Guido will be there too for sure, fooling around as usual.",
+      "next": [
+        {
+          "to": "18"
+        }
+      ]
+    },
+    "18": {
+      "id": "18",
+      "container": "container",
+      "kind": "line",
+      "speaker": "roberto",
+      "portrait": {
+        "class": "char_img_roberto",
+        "asset": "roberto_serio.png"
+      },
+      "text": "Top, now maybe you should head back, if we don't want to get caught. I'll stay a little longer with Su.",
+      "next": [
+        {
+          "to": "19"
+        }
+      ]
+    },
+    "19": {
+      "id": "19",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "You are right prof. Chop chop Sirio, let's get back to the university before someone catches us!",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

@@ -1,0 +1,459 @@
+{
+  "scene": "24",
+  "pen": "https://codepen.io/sith/pen/GbpKyw",
+  "start": "2",
+  "characters": [
+    "sirio",
+    "petronio",
+    "gabriele"
+  ],
+  "assets": [
+    "ribalta.jpeg",
+    "wss.png",
+    "petronio_dubbioso.png",
+    "gabriele.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png"
+  ],
+  "beats": {
+    "2": {
+      "id": "2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Yeah sure, I wanted to tell you that I think Gabriele knows something big, when I told him I wanted to enter the University he wasn't very happy, and he let slip something about her, as if he knew her.",
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Oh fuck... What did he say?",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Actually I didn't understand much, he was very vague and when I asked for more he immediately changed the subject, so we'll have to be very convincing.",
+      "next": [
+        {
+          "to": "11"
+        }
+      ]
+    },
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Come on, we can do it.",
+      "next": [
+        {
+          "to": "12"
+        }
+      ]
+    },
+    "12": {
+      "id": "12",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Here’s Gabriele! Hey hi Gabri!",
+      "next": [
+        {
+          "to": "13"
+        }
+      ]
+    },
+    "13": {
+      "id": "13",
+      "container": "container",
+      "kind": "line",
+      "speaker": "gabriele",
+      "portrait": {
+        "class": "char_img_gabriele",
+        "asset": "gabriele.png"
+      },
+      "text": "Hi kids! You arrived just in time, I just finished preparing a new drink I learned to make in Thailand. Would you like to taste it? So you can also give me your opinion...",
+      "next": [
+        {
+          "to": "14"
+        }
+      ]
+    },
+    "14": {
+      "id": "14",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Sure, it looks great! If you want you can join us to chat a little...",
+      "next": [
+        {
+          "to": "15"
+        }
+      ]
+    },
+    "15": {
+      "id": "15",
+      "container": "container",
+      "kind": "line",
+      "speaker": "gabriele",
+      "portrait": {
+        "class": "char_img_gabriele",
+        "asset": "gabriele.png"
+      },
+      "text": "Eh, small talk is not my favorite thing.",
+      "next": [
+        {
+          "to": "16"
+        }
+      ]
+    },
+    "16": {
+      "id": "16",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Gabri, to be honest, we are here because we have to talk to you about the principal, and I remember you let slip something about her, as if you knew her",
+      "next": [
+        {
+          "to": "17"
+        }
+      ]
+    },
+    "17": {
+      "id": "17",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "You know, your help could be crucial. We would love to create a new university system with more freedom and fewer rules... We have already thought of everything.",
+      "next": [
+        {
+          "to": "18"
+        }
+      ]
+    },
+    "18": {
+      "id": "18",
+      "container": "container",
+      "kind": "line",
+      "speaker": "gabriele",
+      "portrait": {
+        "class": "char_img_gabriele",
+        "asset": "gabriele.png"
+      },
+      "text": "You two enjoy being a pain in my ass, huh? Your intentions are really noble, but I imagine you know that they alone are never enough, especially when it comes to changing something.",
+      "next": [
+        {
+          "to": "180"
+        }
+      ]
+    },
+    "19": {
+      "id": "19",
+      "container": "container",
+      "kind": "line",
+      "speaker": "gabriele",
+      "portrait": {
+        "class": "char_img_gabriele",
+        "asset": "gabriele.png"
+      },
+      "text": "I kept it a secret for a long time. I knew Minerva very well, she is my sister.",
+      "next": [
+        {
+          "to": "20"
+        }
+      ]
+    },
+    "20": {
+      "id": "20",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "What the fuck are you telling me?",
+      "next": [
+        {
+          "to": "21"
+        }
+      ]
+    },
+    "21": {
+      "id": "21",
+      "container": "container",
+      "kind": "line",
+      "speaker": "gabriele",
+      "portrait": {
+        "class": "char_img_gabriele",
+        "asset": "gabriele.png"
+      },
+      "text": "Yes, kid, we were very close as children, even if very different. Then she became a great bitch, a person hungry for power, willing to do anything for it, including ruining our relationship by plotting behind everyone's back and lying shamelessly.",
+      "next": [
+        {
+          "to": "22"
+        }
+      ]
+    },
+    "22": {
+      "id": "22",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Then why did you never say anything?",
+      "next": [
+        {
+          "to": "23"
+        }
+      ]
+    },
+    "23": {
+      "id": "23",
+      "container": "container",
+      "kind": "line",
+      "speaker": "gabriele",
+      "portrait": {
+        "class": "char_img_gabriele",
+        "asset": "gabriele.png"
+      },
+      "text": "When the reform took place it seemed to suit everyone inside the fucking system, and as far as I was concerned those weren't my fucking problems anyway. But now that you want to change things, why should I keep quiet? Now you know everything there is to know.",
+      "next": [
+        {
+          "to": "24"
+        }
+      ]
+    },
+    "24": {
+      "id": "24",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "This is incredible news... It will surely change everything! Let's head back to the University to tell Yda and Roberto!",
+      "next": [
+        {
+          "to": "fin1"
+        }
+      ]
+    },
+    "25": {
+      "id": "25",
+      "container": "container",
+      "kind": "line",
+      "speaker": "gabriele",
+      "portrait": {
+        "class": "char_img_gabriele",
+        "asset": "gabriele.png"
+      },
+      "text": "These names tell me nothing. You can do some more research if you think your principal is hiding something, but be careful, you're playing with fire.",
+      "next": [
+        {
+          "to": "26"
+        }
+      ]
+    },
+    "26": {
+      "id": "26",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "All right Gabri, we'll be back, you'll see. Come on Petronio, it's time to go back, we'll find out more next time! Now let's go back to University and go to B2.2.14, to see if Yda is there as usual.",
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "27": {
+      "id": "27",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "instruction": "do something",
+      "next": [
+        {
+          "to": "28",
+          "label": "DOne"
+        }
+      ],
+      "orphan": true
+    },
+    "28": {
+      "id": "28",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "next": [],
+      "orphan": true
+    },
+    "31": {
+      "id": "31",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "DOne",
+      "instruction": "do something",
+      "orphan": true
+    },
+    "180": {
+      "id": "180",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "We did some research and found these 3 names. By any chance, do they tell you anything about the principal?",
+      "instruction": "Write the names with the right capital letters",
+      "next": [
+        {
+          "to": "container2"
+        }
+      ]
+    },
+    "container2": {
+      "id": "container2",
+      "container": "container2",
+      "kind": "puzzle",
+      "prompt": "ENTER NAMES",
+      "inputs": 3,
+      "next": [
+        {
+          "to": "19",
+          "label": "password: correct",
+          "kind": "password-correct"
+        },
+        {
+          "to": "25",
+          "label": "password: wrong",
+          "kind": "password-wrong"
+        }
+      ],
+      "answers": [
+        "Gualtiero",
+        "Forsety",
+        "Cordelia Bianchetti"
+      ]
+    },
+    "container3": {
+      "id": "container3",
+      "container": "container3",
+      "kind": "video",
+      "src": "neworder.mp4"
+    },
+    "fin1": {
+      "id": "fin1",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Look Petronio! The news is in the newspaper! The headmistress got arrested and now the University will be a completely different place.",
+      "next": [
+        {
+          "to": "fin2"
+        }
+      ]
+    },
+    "fin2": {
+      "id": "fin2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Great! Finally we will be able to enjoy life as true university students, committing ourselves but also having fun!",
+      "instruction": "Open the envelope F1",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "container3"
+        }
+      ]
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

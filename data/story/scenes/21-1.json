@@ -1,0 +1,386 @@
+{
+  "scene": "21-1",
+  "pen": "https://codepen.io/sith/pen/PrWoGj",
+  "start": "container3",
+  "characters": [
+    "sirio",
+    "petronio"
+  ],
+  "assets": [
+    "wss.png",
+    "soundgame.jpeg",
+    "petronio_dubbioso.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png",
+    "sound.jpeg"
+  ],
+  "beats": {
+    "1": {
+      "id": "1",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "But who are all these people?",
+      "next": [
+        {
+          "to": "2"
+        }
+      ]
+    },
+    "2": {
+      "id": "2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "I don't know. But take a closer look at that girl in the middle... It does look like the headmistress, only younger, doesn't it?",
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Shit I hadn't noticed, but it's true. They seem to be part of a kind of association...",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Surely the code we have to decipher is this one on the billboard.",
+      "next": [
+        {
+          "to": "5"
+        }
+      ]
+    },
+    "5": {
+      "id": "5",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Yda said there was a clue in the photo, right? The only thing out of place I see is that guy with his hand raised.",
+      "next": [
+        {
+          "to": "6"
+        }
+      ]
+    },
+    "6": {
+      "id": "6",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "True! Come on, let's try it. We can use my diary to write...",
+      "instruction": "You have one minute to decrypt the billboard",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "container4"
+        }
+      ],
+      "startsTimer": true
+    },
+    "9": {
+      "id": "9",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Strange Time... Who knows what it means...",
+      "next": [
+        {
+          "to": "10"
+        }
+      ]
+    },
+    "10": {
+      "id": "10",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Oh fuck! Now I remember! My grandfather told me about it when I was a child, it was an association of people who wanted to gain power while avoiding all the difficulties, without studying or working.",
+      "next": [
+        {
+          "to": "11"
+        }
+      ]
+    },
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "So you're saying the principal was one of them? The principles of the reform, my ass... But who ran all of this?",
+      "next": [
+        {
+          "to": "12"
+        }
+      ]
+    },
+    "12": {
+      "id": "12",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "My grandpa always told me that the leader of the group was a certain \"Cordelia Bianchetti\", who disappeared who knows where after the reform.",
+      "next": [
+        {
+          "to": "13"
+        }
+      ]
+    },
+    "13": {
+      "id": "13",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Ok, I'll take a note so we can use it as proof!",
+      "instruction": "Take note of Cordelia Bianchetti",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "14": {
+      "id": "14",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Hmm, I don't know if it's enough...",
+      "next": [
+        {
+          "to": "15"
+        }
+      ]
+    },
+    "15": {
+      "id": "15",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "No no, I remembered one thing: when I was a child my grandpa used to tell me about an association of people who wanted to gain power but without studying or working",
+      "next": [
+        {
+          "to": "16"
+        }
+      ]
+    },
+    "16": {
+      "id": "16",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Could this be the association? And is this the principal?",
+      "next": [
+        {
+          "to": "17"
+        }
+      ]
+    },
+    "17": {
+      "id": "17",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "I really think so, you know, quite the opposite of what she told us in her stupid speech at the beginning of the year.",
+      "next": [
+        {
+          "to": "18"
+        }
+      ]
+    },
+    "18": {
+      "id": "18",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Can you tell me something more that could help us? For example the name of the other members...",
+      "next": [
+        {
+          "to": "19"
+        }
+      ]
+    },
+    "19": {
+      "id": "19",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Wait... That's it, I remember! This one is called \"Mario Correggi\".",
+      "next": [
+        {
+          "to": "20"
+        }
+      ]
+    },
+    "20": {
+      "id": "20",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Ok, I'll write it down right away!",
+      "instruction": "Take note of Mario Correggi",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "container2": {
+      "id": "container2",
+      "container": "container2",
+      "kind": "puzzle",
+      "prompt": "ENTER CLUE",
+      "inputs": 1,
+      "next": [
+        {
+          "to": "9",
+          "label": "password: correct",
+          "kind": "password-correct"
+        },
+        {
+          "to": "14",
+          "label": "password: wrong",
+          "kind": "password-wrong"
+        }
+      ],
+      "answers": [
+        "Strange time"
+      ]
+    },
+    "container3": {
+      "id": "container3",
+      "container": "container3",
+      "kind": "image",
+      "asset": "soundgame.jpeg",
+      "next": [
+        {
+          "to": "1"
+        }
+      ]
+    },
+    "container4": {
+      "id": "container4",
+      "container": "container4",
+      "kind": "timer",
+      "seconds": 60,
+      "next": [
+        {
+          "to": "container2"
+        },
+        {
+          "to": "container2",
+          "label": "time runs out",
+          "kind": "timeout"
+        }
+      ]
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

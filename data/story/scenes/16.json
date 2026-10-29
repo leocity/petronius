@@ -1,0 +1,442 @@
+{
+  "scene": "16",
+  "pen": "https://codepen.io/sith/pen/agbXdE",
+  "start": "1",
+  "characters": [
+    "yda",
+    "sirio",
+    "petronio",
+    "roberto"
+  ],
+  "assets": [
+    "wss.png",
+    "petronio_dubbioso.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png",
+    "Gate-B3.jpg"
+  ],
+  "beats": {
+    "1": {
+      "id": "1",
+      "container": "container",
+      "kind": "line",
+      "speaker": "yda",
+      "portrait": {
+        "class": "char_img_yda",
+        "asset": "yda.png"
+      },
+      "text": "As it turns out the two idiots don't have the slightest respect for the rules, or maybe they just can't understand them.",
+      "next": [
+        {
+          "to": "2"
+        }
+      ]
+    },
+    "2": {
+      "id": "2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Again with these useless rules...",
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "next": [
+        {
+          "to": "399a",
+          "label": "Rules are strict"
+        },
+        {
+          "to": "399b",
+          "label": "Useless rules"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "yda",
+      "portrait": {
+        "class": "char_img_yda",
+        "asset": "yda.png"
+      },
+      "text": "That idiot over there was not a student of ours, and since he tried to enter our university, and succeeded, I must deduce that he wants to be part of it, not to upset its balance.",
+      "next": [
+        {
+          "to": "5"
+        }
+      ]
+    },
+    "5": {
+      "id": "5",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Look Yda, Professor Remedia is coming. Let's try and ask him what he thinks... Hey professor!",
+      "next": [
+        {
+          "to": "6"
+        }
+      ]
+    },
+    "6": {
+      "id": "6",
+      "container": "container",
+      "kind": "line",
+      "speaker": "yda",
+      "portrait": {
+        "class": "char_img_yda",
+        "asset": "yda.png"
+      },
+      "text": "Your useless arguments make me laugh. The rules must always be respected, however hard they are; they were established to train and educate you in the best possible way. It's a real pity, I am forced to report everything to the principal, am I right, Professor?",
+      "next": [
+        {
+          "to": "7"
+        }
+      ]
+    },
+    "7": {
+      "id": "7",
+      "container": "container",
+      "kind": "line",
+      "speaker": "yda",
+      "portrait": {
+        "class": "char_img_yda",
+        "asset": "yda.png"
+      },
+      "text": "We were waiting for you... we saw you last night as well. Unfortunately Yda caught us. I... I'm dying to see that world outside! Sirio told me about it... he really misses his freedom!",
+      "next": [
+        {
+          "to": "11"
+        }
+      ]
+    },
+    "8": {
+      "id": "8",
+      "container": "container",
+      "kind": "line",
+      "speaker": "yda",
+      "portrait": {
+        "class": "char_img_yda",
+        "asset": "yda.png"
+      },
+      "text": "Is it really possible to have a new system of balance based on diversity? I could be the first one to organize such a system. You have intrigued me, at least. I will help you, but I want a prominent role in it. Since I'm the only one who can do it, I'll do some research. I'll be in touch in the next few days, students.",
+      "next": [
+        {
+          "to": "9"
+        }
+      ]
+    },
+    "9": {
+      "id": "9",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Thanks Yda, we are counting on you! Send us a message when you finish your research... Hey Sirio, what do we do tomorrow?",
+      "next": [
+        {
+          "to": "10"
+        }
+      ]
+    },
+    "10": {
+      "id": "10",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "I'm starving mate! Let's grab a bite in Via Butti 18, remember that we gotta go to the garden.",
+      "instruction": "End of the day",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        },
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "You know what? What do we care, bro? Don't make a fuss about it, tomorrow I'll take you to eat in Via Imbonati 11, our life is out there, do you understand it now?",
+      "instruction": "End of the day",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "20": {
+      "id": "20",
+      "container": "container",
+      "kind": "line",
+      "speaker": "yda",
+      "portrait": {
+        "class": "char_img_yda",
+        "asset": "yda.png"
+      },
+      "text": "Rules are necessary to manage the order of the universe, without respecting them the world would collapse in a few moments.",
+      "next": [
+        {
+          "to": "21"
+        }
+      ]
+    },
+    "21": {
+      "id": "21",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "next": [
+        {
+          "to": "21a",
+          "label": "Different rules"
+        },
+        {
+          "to": "21b",
+          "label": "Need for freedom"
+        }
+      ]
+    },
+    "30": {
+      "id": "30",
+      "container": "container",
+      "kind": "line",
+      "speaker": "yda",
+      "portrait": {
+        "class": "char_img_yda",
+        "asset": "yda.png"
+      },
+      "text": "Prove it to me, you have 12 seconds of my attention. Oh Yda, how lenient you are.",
+      "next": [
+        {
+          "to": "31"
+        }
+      ]
+    },
+    "31": {
+      "id": "31",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "next": [
+        {
+          "to": "31a",
+          "label": "New rules"
+        },
+        {
+          "to": "31b",
+          "label": "Help me, Sirio"
+        }
+      ]
+    },
+    "31b": {
+      "id": "31b",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Sirio, help me with this... Tell her you think the same, these rules hold us back and...",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "31a": {
+      "id": "31a",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Okay... Together we can create a new system based on respect for each other, for the ideas and potential of each one of us. This does not affect the possibility of producing prepared and educated students; on the contrary, it helps to train students who are also enriched by the diversity of others... Those were your 12 seconds.",
+      "next": [
+        {
+          "to": "prof1"
+        }
+      ]
+    },
+    "399a": {
+      "id": "399a",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Ehm... Come on Yda, let me at least explain... You know I've always respected the rules, but now I'm realizing they are too strict. The system could work just as well even if we were not isolated in here all the time.",
+      "next": [
+        {
+          "to": "30"
+        }
+      ]
+    },
+    "399b": {
+      "id": "399b",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "You're right Yda! We didn't go by the rules! Do you know why? Because they serve no purpose but to isolate us within this university, without allowing us to experience the world out there!",
+      "next": [
+        {
+          "to": "20"
+        }
+      ]
+    },
+    "prof1": {
+      "id": "prof1",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Look Yda, Professor Remedia is coming. Let's try and ask him what his thoughts are... Hey professor!",
+      "next": [
+        {
+          "to": "prof2"
+        }
+      ]
+    },
+    "prof2": {
+      "id": "prof2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "yda",
+      "portrait": {
+        "class": "char_img_yda",
+        "asset": "yda.png"
+      },
+      "text": "Yes come on, let's hear him take my side.",
+      "next": [
+        {
+          "to": "prof3"
+        }
+      ]
+    },
+    "prof3": {
+      "id": "prof3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "roberto",
+      "portrait": {
+        "class": "char_img_roberto",
+        "asset": "roberto_serio.png"
+      },
+      "text": "Not this time, Yda, I heard you talking and I'm with you guys. When I was a student here we had much more freedom of expression and it is not true that things did not work, or rather... Now look at me, I've been here for ages and I still have to hide to see my friends or my girlfriend while pretending to be a serious person the rest of the time.",
+      "next": [
+        {
+          "to": "8"
+        }
+      ]
+    },
+    "21a": {
+      "id": "21a",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Yes, but if you think about it, the world doesn't run on the stupid rules of this university... What I'm trying to say is that rules are necessary, of course, but they can be different.",
+      "next": [
+        {
+          "to": "prof1"
+        }
+      ]
+    },
+    "21b": {
+      "id": "21b",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "You just can't understand... Rules made you a different person than you would have been if you had had the freedom to have certain experiences!",
+      "next": [
+        {
+          "to": "prof1"
+        }
+      ]
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

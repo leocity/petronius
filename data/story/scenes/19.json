@@ -1,0 +1,140 @@
+{
+  "scene": "19",
+  "pen": "https://codepen.io/sith/pen/YoXmvV",
+  "start": "1",
+  "characters": [
+    "sirio",
+    "petronio",
+    "yda"
+  ],
+  "assets": [
+    "wss.png",
+    "petronio_dubbioso.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png",
+    "gelateria.jpg"
+  ],
+  "beats": {
+    "1": {
+      "id": "1",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "For me this is the best ice cream in the world. You absolutely must try it...\n* SMS coming *",
+      "next": [
+        {
+          "to": "2"
+        }
+      ]
+    },
+    "2": {
+      "id": "2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Look Sirio! Yda just sent us the message we were waiting for! I'm so nervous...",
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "yda",
+      "portrait": {
+        "class": "char_img_yda",
+        "asset": "yda.png"
+      },
+      "text": "Hello students, I've been collecting my thoughts these days. To establish a new balance within the university we must first get rid of the principal. I'm investigating her and there are things that don't add up. You have to go and look for evidence in 3 places.",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "yda",
+      "portrait": {
+        "class": "char_img_yda",
+        "asset": "yda.png"
+      },
+      "text": "The first one has something to do with diplomas: it is the Th(r)ief(t) Market in Piazza Emilio Alfieri, you can only go there on Sundays between 7:00 am and 2:00 pm. The second one is in Via Ciaia 4, you can go there between 7:00 pm and 3:00 am every day except Sundays.",
+      "next": [
+        {
+          "to": "5"
+        }
+      ]
+    },
+    "5": {
+      "id": "5",
+      "container": "container",
+      "kind": "line",
+      "speaker": "yda",
+      "portrait": {
+        "class": "char_img_yda",
+        "asset": "yda.png"
+      },
+      "text": "You have to solve a code in a picture and, as I understand it, the key to decrypting it is in the picture itself. The last one is in Via Baldinucci 76, it's a library: you'll have to access the registers to check the graduates, 1987 in medicine, 1989 in psychology and 1995 in architecture.",
+      "next": [
+        {
+          "to": "6"
+        }
+      ]
+    },
+    "6": {
+      "id": "6",
+      "container": "container",
+      "kind": "line",
+      "speaker": "yda",
+      "portrait": {
+        "class": "char_img_yda",
+        "asset": "yda.png"
+      },
+      "text": "Remember to say \"ARCHIVE\" when you enter. When you have found everything, go to Ribalta in Via Cevedale. Don't make me regret this choice, idiots.",
+      "instruction": "Take note of \"Archive\"",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "8": {
+      "id": "8",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "next": [],
+      "orphan": true
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

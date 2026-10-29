@@ -1,0 +1,420 @@
+{
+  "scene": "9-1",
+  "pen": "https://codepen.io/sith/pen/Wqvrja",
+  "start": "1",
+  "characters": [
+    "sirio",
+    "petronio",
+    "guido",
+    "yda"
+  ],
+  "assets": [
+    "wss.png",
+    "petronio_dubbioso.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png",
+    "guido.png",
+    "dergano.jpg"
+  ],
+  "beats": {
+    "1": {
+      "id": "1",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Since we've seen so many graffiti, I'll introduce you to someone who knows them well!",
+      "next": [
+        {
+          "to": "111"
+        }
+      ]
+    },
+    "2": {
+      "id": "2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Come on bro, you know I never read texts... Anyway Petronio here is way better than me when it comes to writing!",
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "next": [
+        {
+          "to": "399a",
+          "label": "I love writing"
+        },
+        {
+          "to": "399b",
+          "label": "It's personal"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "guido",
+      "portrait": {
+        "class": "char_img_guido",
+        "asset": "guido.png"
+      },
+      "text": "I think the inspiration lies right under our feet, do you see these stamps? Some of them hide things and words... You'll see, it will be useful to you! keeek",
+      "next": [
+        {
+          "to": "5"
+        }
+      ]
+    },
+    "5": {
+      "id": "5",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Come on Petronio, it's getting late, it's time to go back. Let's go through the main entrance in Via Durando 10 to save time!",
+      "instruction": "Cut the journal's page",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "6": {
+      "id": "6",
+      "container": "container",
+      "kind": "line",
+      "speaker": "guido",
+      "portrait": {
+        "class": "char_img_guido",
+        "asset": "guido.png"
+      },
+      "next": [
+        {
+          "to": "7"
+        }
+      ]
+    },
+    "7": {
+      "id": "7",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Come on Petronio, it's getting late, it's time to go back. Let's go through the main entrance in Via Durando 10 to save time!",
+      "instruction": "Turn the journal's page",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "orphan": true
+    },
+    "20": {
+      "id": "20",
+      "container": "container",
+      "kind": "line",
+      "speaker": "guido",
+      "portrait": {
+        "class": "char_img_guido",
+        "asset": "guido.png"
+      },
+      "text": "Easy, I can understand. Maybe you could write a new one specifically for the design I'm planning to do.",
+      "next": [
+        {
+          "to": "21"
+        }
+      ]
+    },
+    "21": {
+      "id": "21",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "next": [
+        {
+          "to": "21a",
+          "label": "Good idea"
+        },
+        {
+          "to": "21b",
+          "label": "Maybe not"
+        }
+      ]
+    },
+    "30": {
+      "id": "30",
+      "container": "container",
+      "kind": "line",
+      "speaker": "guido",
+      "portrait": {
+        "class": "char_img_guido",
+        "asset": "guido.png"
+      },
+      "text": "Great bro, I appreciate keek. Don't you feel like letting me read something?",
+      "next": [
+        {
+          "to": "31"
+        }
+      ]
+    },
+    "31": {
+      "id": "31",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "next": [
+        {
+          "to": "31a",
+          "label": "Sure"
+        },
+        {
+          "to": "31b",
+          "label": "Not now"
+        }
+      ]
+    },
+    "40": {
+      "id": "40",
+      "container": "container",
+      "kind": "line",
+      "speaker": "guido",
+      "portrait": {
+        "class": "char_img_guido",
+        "asset": "guido.png"
+      },
+      "text": "We could try to come up with something that expresses what you are experiencing... What do you think?",
+      "next": [
+        {
+          "to": "41"
+        }
+      ]
+    },
+    "41": {
+      "id": "41",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "next": [
+        {
+          "to": "41a",
+          "label": "OK then"
+        },
+        {
+          "to": "41b",
+          "label": "We're too far apart"
+        }
+      ]
+    },
+    "111": {
+      "id": "111",
+      "container": "container",
+      "kind": "line",
+      "speaker": "guido",
+      "portrait": {
+        "class": "char_img_guido",
+        "asset": "guido.png"
+      },
+      "text": "Anybody talking about me? You idiot, wake up, why didn't you text me back? I texted you about that new project of murals with poems, but you have to help me, mate! You are the poet.",
+      "next": [
+        {
+          "to": "2"
+        }
+      ]
+    },
+    "31b": {
+      "id": "31b",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Right now? I don't know if I feel like it... Besides, I don't think my poems are suitable for your graffiti...",
+      "next": [
+        {
+          "to": "40"
+        }
+      ]
+    },
+    "41a": {
+      "id": "41a",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Ok, you've convinced me. Then tonight I'll try to write something that both of us can enjoy!",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "41b": {
+      "id": "41b",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "I'm not sure we will be able to find common ground... But I'll think about it, and if so I'll let you know.",
+      "next": [
+        {
+          "to": "6"
+        }
+      ]
+    },
+    "31a": {
+      "id": "31a",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Yeah sure! Look, I have my diary right here with me.",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "399a": {
+      "id": "399a",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Ahahah Sirio is right! Writing poetry is one of my passions, so if you want I can help you out...",
+      "next": [
+        {
+          "to": "30"
+        }
+      ]
+    },
+    "399b": {
+      "id": "399b",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Yeah, I write poetry. But I prefer to keep it to myself because it deals with very personal topics...",
+      "next": [
+        {
+          "to": "20"
+        }
+      ]
+    },
+    "21a": {
+      "id": "21a",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "This sounds like a good idea! Come on, give me some inspiration and I'll start right away!",
+      "next": [
+        {
+          "to": "40"
+        }
+      ]
+    },
+    "21b": {
+      "id": "21b",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "I'm still not convinced. I don't think these are two arts that go well together",
+      "next": [
+        {
+          "to": "6"
+        }
+      ]
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

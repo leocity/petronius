@@ -1,0 +1,296 @@
+{
+  "scene": "4",
+  "pen": "https://codepen.io/sith/pen/mYQZde",
+  "start": "1",
+  "characters": [
+    "sirio",
+    "petronio",
+    "roberto"
+  ],
+  "assets": [
+    "wss.png",
+    "petronio_inside.png",
+    "roberto_inside.png",
+    "yda.png",
+    "sirio_inside.png",
+    "Ingresso-B2-(the-reveal"
+  ],
+  "beats": {
+    "1": {
+      "id": "1",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_inside.png"
+      },
+      "text": "Quiet! I hear someone is approaching.",
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "text": "Oh my God! I can’t believe it! It’s Roberto Remedia! Our “Principles of Web Design” professor! He’s one of the pillars of the University, he studied here and he taught here before the reform! Sirio? Sirio wait, what are you doing, stop, please!",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_inside.png"
+      },
+      "text": "Professor wait, we have some questions!",
+      "next": [
+        {
+          "to": "5"
+        }
+      ]
+    },
+    "5": {
+      "id": "5",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "next": [
+        {
+          "to": "399a",
+          "label": "Calm"
+        },
+        {
+          "to": "399b",
+          "label": "Aggressive"
+        }
+      ]
+    },
+    "6": {
+      "id": "6",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "next": [
+        {
+          "to": "401",
+          "label": "Pressing"
+        },
+        {
+          "to": "402",
+          "label": "Friendly"
+        }
+      ]
+    },
+    "7": {
+      "id": "7",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "text": "We were waiting for you... we saw you last night as well. Unfortunately Yda caught us. I... I'm dying to see that world outside! Sirio told me about it... he really misses his freedom!",
+      "next": [
+        {
+          "to": "8"
+        }
+      ]
+    },
+    "8": {
+      "id": "8",
+      "container": "container",
+      "kind": "line",
+      "speaker": "roberto",
+      "portrait": {
+        "class": "char_img_roberto",
+        "asset": "roberto_inside.png"
+      },
+      "text": "Good story, guys! Don't worry, I can help you. But remember, keep your mouths shut. We can meet tomorrow, after 2.30 p.m. for sure... I’m really busy, you know. I’ll give you this memo with our meeting time.",
+      "next": [
+        {
+          "to": "81"
+        }
+      ]
+    },
+    "9": {
+      "id": "9",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "text": "Oh, thank you very much, professor!",
+      "instruction": "Turn the journal's page",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "81": {
+      "id": "81",
+      "container": "container",
+      "kind": "line",
+      "speaker": "roberto",
+      "portrait": {
+        "class": "char_img_roberto",
+        "asset": "roberto_inside.png"
+      },
+      "text": "I'll leave you two some more information, hidden near the B3 building entrance. Go out from there… I'll ask the guard to leave the gate open for you…",
+      "next": [
+        {
+          "to": "9"
+        }
+      ]
+    },
+    "400": {
+      "id": "400",
+      "container": "container",
+      "kind": "line",
+      "speaker": "roberto",
+      "portrait": {
+        "class": "char_img_roberto",
+        "asset": "roberto_inside.png"
+      },
+      "text": "Well… guys, bad story, I was just looking for a USB pen I think I lost this afternoon…",
+      "next": [
+        {
+          "to": "6"
+        }
+      ]
+    },
+    "401": {
+      "id": "401",
+      "container": "container",
+      "kind": "line",
+      "speaker": "roberto",
+      "portrait": {
+        "class": "char_img_roberto",
+        "asset": "roberto_inside.png"
+      },
+      "text": "Shit guys, how did you see me? I go out the most hidden way… what are YOU doing here, instead? Isn't it forbidden?",
+      "next": [
+        {
+          "to": "7"
+        }
+      ]
+    },
+    "402": {
+      "id": "402",
+      "container": "container",
+      "kind": "line",
+      "speaker": "roberto",
+      "portrait": {
+        "class": "char_img_roberto",
+        "asset": "roberto_inside.png"
+      },
+      "text": "Well, let’s say that to find this pen it is enough to go to the ground-floor corridor, at the B1 door. That door has some trouble with the alarm… there you can look for “the USB pen” with no hassle.",
+      "instruction": "Turn the journal's page",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "399a": {
+      "id": "399a",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "text": "Ehm, good evening professor… ehm, Sirio and I, we really couldn't sleep tonight… that’s why we decided to take a little… walk! And we were wondering if you had the same idea... that’s all!",
+      "next": [
+        {
+          "to": "400"
+        }
+      ]
+    },
+    "399b": {
+      "id": "399b",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "text": "Good evening professor! We saw you climb over the University gate, twice... We are curious: where do you run away to when you go out?",
+      "next": [
+        {
+          "to": "401"
+        }
+      ]
+    },
+    "400a": {
+      "id": "400a",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "text": "An USB pen? Come on, professor... no lies!",
+      "orphan": true
+    },
+    "400b": {
+      "id": "400b",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "text": "An USB pen, I see.. maybe this pendrive has been lost outside the University, isn’t it?",
+      "orphan": true
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "scene": "7",
+  "pen": "https://codepen.io/sith/pen/RmXXzX",
+  "start": "2",
+  "characters": [
+    "sirio",
+    "petronio"
+  ],
+  "assets": [
+    "graffiti.jpeg",
+    "wss.png",
+    "audio.png",
+    "petronio_dubbioso.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png"
+  ],
+  "beats": {
+    "2": {
+      "id": "2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "media": [
+        {
+          "type": "image",
+          "class": "img2",
+          "asset": "audio.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Yeah I know, there’s a lot to know about this wall… Come on, now, let's meet with Roberto.",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Vero? Però vediamo se riesci a capire dove ti voglio portare adesso…",
+      "next": [
+        {
+          "to": "5"
+        }
+      ],
+      "orphan": true
+    },
+    "5": {
+      "id": "5",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "E come?",
+      "next": [
+        {
+          "to": "10"
+        }
+      ],
+      "orphan": true
+    },
+    "10": {
+      "id": "10",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Boh è semplice, basta che usi i cartelli! Tieni sulla sinistra il palo, guarda dritto, chiudi l’occhio sinistro e prendi questo acetato per aiutarti e dimmi quando l’hai capito.",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "11"
+        }
+      ],
+      "orphan": true
+    },
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "instruction": "segui le istruzioni di Sirio",
+      "next": [
+        {
+          "to": "12"
+        },
+        {
+          "to": "12",
+          "label": "Ho capito"
+        }
+      ],
+      "orphan": true
+    },
+    "12": {
+      "id": "12",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Quindi dobbiamo andare dritto a destra?",
+      "next": [
+        {
+          "to": "13"
+        }
+      ],
+      "orphan": true
+    },
+    "13": {
+      "id": "13",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Sì, seguimi dai, però goditi questi murales!",
+      "orphan": true
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

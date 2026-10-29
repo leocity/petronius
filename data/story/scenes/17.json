@@ -1,0 +1,181 @@
+{
+  "scene": "17",
+  "pen": "https://codepen.io/sith/pen/BgNXNd",
+  "start": "11",
+  "characters": [
+    "sirio",
+    "petronio"
+  ],
+  "assets": [
+    "matt.jpg",
+    "wss.png",
+    "petronio_dubbioso.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png"
+  ],
+  "beats": {
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "next": [
+        {
+          "to": "12"
+        }
+      ]
+    },
+    "12": {
+      "id": "12",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Wow, what a courtyard! What's that thing on the right, next to the writing on the wall?",
+      "next": [
+        {
+          "to": "13"
+        }
+      ]
+    },
+    "13": {
+      "id": "13",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Dunno, I guess it's some game the crazy owners of this place have put up, let's check it out!",
+      "next": [
+        {
+          "to": "14"
+        }
+      ]
+    },
+    "14": {
+      "id": "14",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "To me it seems just a list of words...",
+      "next": [
+        {
+          "to": "15"
+        }
+      ]
+    },
+    "15": {
+      "id": "15",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Look at this, there's the grid where you look for them, stick it in your diary and try to solve it!",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "26"
+        }
+      ]
+    },
+    "26": {
+      "id": "26",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "instruction": "Follow Sirio's instructions",
+      "next": [
+        {
+          "to": "27",
+          "label": "Done"
+        }
+      ]
+    },
+    "27": {
+      "id": "27",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Livigno? What does it have to do with the suburbs?",
+      "next": [
+        {
+          "to": "28"
+        }
+      ]
+    },
+    "28": {
+      "id": "28",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "I've no fucking clue man, but there's a street here called Livigno, actually, let's go to Via Livigno 5, there's a park that's not bad at all",
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "29": {
+      "id": "29",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Ahaha they’re cool! They’re a crew of guys, a couple of years older than we are… let’s go to the park in Via Candiani… I’ll tell you the story once there!"
+    },
+    "30": {
+      "id": "30",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Look! There’s writing “Candiani Beach Boyz”, but what does it mean?",
+      "orphan": true
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

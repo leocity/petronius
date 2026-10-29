@@ -1,0 +1,421 @@
+{
+  "scene": "33",
+  "pen": "https://codepen.io/sith/pen/JQddeZ",
+  "start": "1",
+  "characters": [
+    "sirio",
+    "petronio",
+    "roberto",
+    "su"
+  ],
+  "assets": [
+    "wss.png",
+    "petronio_dubbioso.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png",
+    "su.png",
+    "spirit.jpeg"
+  ],
+  "beats": {
+    "1": {
+      "id": "1",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "This place is special! They organize some event almost every night. We also presented some of our projects here a few times!",
+      "next": [
+        {
+          "to": "2"
+        }
+      ]
+    },
+    "2": {
+      "id": "2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Are you serious? I would have really liked to be there... Hey, look! Isn't that Professor Remedia?",
+      "next": [
+        {
+          "to": "222"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "next": [
+        {
+          "to": "399a",
+          "label": "It's cool"
+        },
+        {
+          "to": "399b",
+          "label": "I'm worried"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "roberto",
+      "portrait": {
+        "class": "char_img_roberto",
+        "asset": "roberto_serio.png"
+      },
+      "text": "But before saying goodbye I want to tell you something: the beauty of the suburbs is that everything hides another meaning. For example, the Spirit bar is number 1 for wines, but even its business card could hide very important letters, it's a good story...",
+      "next": [
+        {
+          "to": "5"
+        }
+      ]
+    },
+    "5": {
+      "id": "5",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Now I'll show you how people think out here. Let's go to Via Durando 10, in front of the electric car charging column, to see some more street art.",
+      "instruction": "Cut the journal's page",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "6": {
+      "id": "6",
+      "container": "container",
+      "kind": "line",
+      "speaker": "roberto",
+      "portrait": {
+        "class": "char_img_roberto",
+        "asset": "roberto_serio.png"
+      },
+      "text": "Okay I'll think about it if you let me drink in peace, bad story...",
+      "next": [
+        {
+          "to": "7"
+        }
+      ]
+    },
+    "7": {
+      "id": "7",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Now I'll show you how people think out here. Let's go to Via Durando 10, in front of the electric car charging column, to see some more street art.",
+      "instruction": "Turn the page",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "orphan": true
+    },
+    "20": {
+      "id": "20",
+      "container": "container",
+      "kind": "line",
+      "speaker": "roberto",
+      "portrait": {
+        "class": "char_img_roberto",
+        "asset": "roberto_serio.png"
+      },
+      "text": "Yes, bad story, but look, it's nothing, just be slick...",
+      "next": [
+        {
+          "to": "21"
+        }
+      ]
+    },
+    "21": {
+      "id": "21",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "next": [
+        {
+          "to": "21a",
+          "label": "Right"
+        },
+        {
+          "to": "21b",
+          "label": "It's not easy"
+        }
+      ]
+    },
+    "30": {
+      "id": "30",
+      "container": "container",
+      "kind": "line",
+      "speaker": "su",
+      "portrait": {
+        "class": "char_img_roberto",
+        "asset": "roberto_serio.png"
+      },
+      "text": "Bomb, then let's get something to drink, like a small glass of red wine.",
+      "next": [
+        {
+          "to": "31"
+        }
+      ]
+    },
+    "31": {
+      "id": "31",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "next": [
+        {
+          "to": "31a",
+          "label": "Why not"
+        },
+        {
+          "to": "31b",
+          "label": "Stay focused"
+        }
+      ]
+    },
+    "40": {
+      "id": "40",
+      "container": "container",
+      "kind": "line",
+      "speaker": "roberto",
+      "portrait": {
+        "class": "char_img_roberto",
+        "asset": "roberto_serio.png"
+      },
+      "text": "Ok, then I'll have a glass of this red wine, which is what I need right now.",
+      "next": [
+        {
+          "to": "41"
+        }
+      ]
+    },
+    "41": {
+      "id": "41",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "next": [
+        {
+          "to": "41a",
+          "label": "Me too"
+        },
+        {
+          "to": "41b",
+          "label": "Help me with Yda"
+        }
+      ]
+    },
+    "222": {
+      "id": "222",
+      "container": "container",
+      "kind": "line",
+      "speaker": "roberto",
+      "portrait": {
+        "class": "char_img_roberto",
+        "asset": "roberto_serio.png"
+      },
+      "text": "No no, bad story, don't call me professor, here I'm Roberto ahahahah. Anyway, what are you guys doing here? You've caught the bug by now...",
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "31b": {
+      "id": "31b",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "I don't know... I'd like to keep a clear head 'cause Yda could try to make us slip up at any moment...",
+      "next": [
+        {
+          "to": "40"
+        }
+      ]
+    },
+    "41a": {
+      "id": "41a",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Mmm... okay come on, I'll take one too!",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "41b": {
+      "id": "41b",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "As for me, I’d need someone to intercede for us with the headmistress about the Yda situation...",
+      "next": [
+        {
+          "to": "6"
+        }
+      ]
+    },
+    "31a": {
+      "id": "31a",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Why not! But I need help choosing 'cause I'm not a great wine expert ahahah.",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "399a": {
+      "id": "399a",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Eh, I'm afraid so hahaha Out here it's too good, there are always so many things to do!",
+      "next": [
+        {
+          "to": "30"
+        }
+      ]
+    },
+    "399b": {
+      "id": "399b",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Oh yeah... I'm a bit worried about this situation, though, we always have Yda after us and I don't know how this story will end...",
+      "next": [
+        {
+          "to": "20"
+        }
+      ]
+    },
+    "21a": {
+      "id": "21a",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "You're right! I really need something to help me stop thinking about it...",
+      "next": [
+        {
+          "to": "40"
+        }
+      ]
+    },
+    "21b": {
+      "id": "21b",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "I wish it were that easy... We'd need advice from someone who has been in the system for a long time and could intercede for us...",
+      "next": [
+        {
+          "to": "6"
+        }
+      ]
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

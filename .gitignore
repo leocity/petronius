@@ -1,0 +1,19 @@
+# Original print files of the physical journal (712 MB, some PDFs > 100 MB) and the old Android build:
+# kept only in the project folder. The game uses the web copies in web/assets/journal/.
+/Journal/
+/Petronius.apk
+
+node_modules/
+_site/
+.impeccable/hook.cache.json
+
+# Original 2019 scenes (CodePen exports): input of tools/extract-scenes.mjs, kept only in the project folder.
+/petronius-*/
+# Working notes and tool outputs not needed by the game.
+/docs/journal/
+/data/story/report.md
+/data/story/index.json
+# Local assistant and editor configuration.
+/CLAUDE.md
+/.claude/
+/.impeccable/

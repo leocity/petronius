@@ -1,0 +1,226 @@
+{
+  "scene": "13",
+  "pen": "https://codepen.io/sith/pen/MMgxgq",
+  "start": "1",
+  "characters": [
+    "guido",
+    "sirio",
+    "petronio"
+  ],
+  "assets": [
+    "penny.jpg",
+    "wss.png",
+    "petronio_dubbioso.png",
+    "guido.png",
+    "su.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png"
+  ],
+  "beats": {
+    "1": {
+      "id": "1",
+      "container": "container",
+      "kind": "line",
+      "speaker": "guido",
+      "portrait": {
+        "class": "char_img_guido",
+        "asset": "guido.png"
+      },
+      "text": "Something to drink bro?",
+      "next": [
+        {
+          "to": "2"
+        }
+      ]
+    },
+    "2": {
+      "id": "2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Sure thing, this is how we introduce Petronio to the world of sub-brands.",
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "guido",
+      "portrait": {
+        "class": "char_img_guido",
+        "asset": "guido.png"
+      },
+      "text": "Come on, then let's set our trick up...",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Excuse me, what are you talking about? Ahahah.",
+      "next": [
+        {
+          "to": "5"
+        }
+      ]
+    },
+    "5": {
+      "id": "5",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Basically we wanted to make a trashy postcard by photographing Penny's alcohol brands, highlighting only a few letters to make a sentence appear, but they busted our asses, and we never finished...",
+      "next": [
+        {
+          "to": "6"
+        }
+      ]
+    },
+    "6": {
+      "id": "6",
+      "container": "container",
+      "kind": "line",
+      "speaker": "guido",
+      "portrait": {
+        "class": "char_img_guido",
+        "asset": "guido.png"
+      },
+      "text": "Yeah, but with your white-collar education, I guess you can understand what we wanted to say, let's see if our idea would have succeeded",
+      "next": [
+        {
+          "to": "7"
+        }
+      ]
+    },
+    "7": {
+      "id": "7",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Right bro! We still have a test photo, don't we? Let's go to the alcohol aisle, if you compare it with the shelf, you can do it for sure!",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "11"
+        }
+      ]
+    },
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "instruction": "Try to make a sentence",
+      "next": [
+        {
+          "to": "13",
+          "label": "Done"
+        }
+      ]
+    },
+    "13": {
+      "id": "13",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Ahah! But what kind of place is it?",
+      "next": [
+        {
+          "to": "14"
+        }
+      ]
+    },
+    "14": {
+      "id": "14",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "It's a super iconic place, where we go at the end of the day to have a couple of Karpackies. Crazy beer, man.",
+      "next": [
+        {
+          "to": "15"
+        }
+      ]
+    },
+    "15": {
+      "id": "15",
+      "container": "container",
+      "kind": "line",
+      "speaker": "guido",
+      "portrait": {
+        "class": "char_img_guido",
+        "asset": "guido.png"
+      },
+      "text": "Let's take him with us at this point, right?",
+      "next": [
+        {
+          "to": "16"
+        }
+      ]
+    },
+    "16": {
+      "id": "16",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "I'm in guys! Let's go.",
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

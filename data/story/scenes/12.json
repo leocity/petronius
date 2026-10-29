@@ -1,0 +1,153 @@
+{
+  "scene": "12",
+  "pen": "https://codepen.io/sith/pen/WqePdj",
+  "start": "2",
+  "characters": [
+    "sirio",
+    "petronio",
+    "guido"
+  ],
+  "assets": [
+    "guardiano.jpg",
+    "wss.png",
+    "petronio_dubbioso.png",
+    "guido.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png"
+  ],
+  "beats": {
+    "2": {
+      "id": "2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Shit, what's his name again? I forgot it already!",
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "next": [
+        {
+          "to": "4",
+          "label": "I can try"
+        },
+        {
+          "to": "13",
+          "label": "Don't remember"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "instruction": "Press the talk button to say something or leave",
+      "waitsFor": "voice"
+    },
+    "13": {
+      "id": "13",
+      "container": "container",
+      "kind": "line",
+      "speaker": "guido",
+      "portrait": {
+        "class": "char_img_guido",
+        "asset": "guido.png"
+      },
+      "text": "You don't remember shit, huh? What's up Sirio, why are you back already? I thought you'd gone all fancy by now and didn't hang out in keek suburbs anymore. Who is your friend?",
+      "next": [
+        {
+          "to": "14"
+        }
+      ]
+    },
+    "14": {
+      "id": "14",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Hi bro, he's Petronio, my roommate...",
+      "next": [
+        {
+          "to": "15"
+        }
+      ]
+    },
+    "15": {
+      "id": "15",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Hi Guido, finally I get to meet you! Is this mural really yours? It's amazing! I hadn't seen one like this yet these days...",
+      "next": [
+        {
+          "to": "16"
+        }
+      ]
+    },
+    "16": {
+      "id": "16",
+      "container": "container",
+      "kind": "line",
+      "speaker": "guido",
+      "portrait": {
+        "class": "char_img_guido",
+        "asset": "guido.png"
+      },
+      "text": "Look at this fella who doesn't know the real masters! Of course that's not mine, 2501 did it, it's so damn cool, I was here watching him to figure out how to do these things, but it didn't help me much apart from drooling all over it.",
+      "next": [
+        {
+          "to": "17"
+        }
+      ]
+    },
+    "17": {
+      "id": "17",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Cut the bullshit, it's Penny Market time.",
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

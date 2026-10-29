@@ -1,0 +1,274 @@
+{
+  "scene": "36",
+  "pen": "https://codepen.io/sith/pen/pXJgyq",
+  "start": "11",
+  "characters": [
+    "sirio",
+    "petronio"
+  ],
+  "assets": [
+    "stagioni.jpg",
+    "audio.png",
+    "wss.png",
+    "petronio_dubbioso.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png"
+  ],
+  "beats": {
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "media": [
+        {
+          "type": "image",
+          "class": "img2",
+          "asset": "audio.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "12"
+        }
+      ]
+    },
+    "12": {
+      "id": "12",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "I didn't think you'd ever done anything healthy in your life hahaha.",
+      "next": [
+        {
+          "to": "13"
+        }
+      ]
+    },
+    "13": {
+      "id": "13",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "I am a man of many resources, yo. Anyway you have to get my milkshake, it's so good man, I guarantee it.",
+      "next": [
+        {
+          "to": "14"
+        }
+      ]
+    },
+    "14": {
+      "id": "14",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "I don't know whether to trust you hahaha Come on, if you tell me what to order I'll take it.",
+      "next": [
+        {
+          "to": "15"
+        }
+      ]
+    },
+    "15": {
+      "id": "15",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Eeeeeeeh, you know I have a short memory. I swear to you bro that I never remember the ingredients of my favorite, and I had even ordered them so that the first letters formed a meaningful word, but I forget it every fucking time. Meaningful things are not for me.",
+      "next": [
+        {
+          "to": "16"
+        }
+      ]
+    },
+    "16": {
+      "id": "16",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "How the fuck can you forget everything? Hahaha Now how do we order it?",
+      "next": [
+        {
+          "to": "17"
+        }
+      ]
+    },
+    "17": {
+      "id": "17",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Easy, the owner surely still has the recipe hanging somewhere, he left it there to keep me from forgetting it every time hahaha.",
+      "next": [
+        {
+          "to": "18"
+        }
+      ]
+    },
+    "18": {
+      "id": "18",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Come on, let's check it out.",
+      "next": [
+        {
+          "to": "19"
+        }
+      ]
+    },
+    "19": {
+      "id": "19",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "See, there it is on the desk!",
+      "next": [
+        {
+          "to": "20"
+        }
+      ]
+    },
+    "20": {
+      "id": "20",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Are you serious? How much stuff is in there?",
+      "next": [
+        {
+          "to": "21"
+        }
+      ]
+    },
+    "21": {
+      "id": "21",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "All very good bro, trust 5-year-old Sirio, write it in the diary, you’ll thank me. So, what word do the first letters make?",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "26"
+        }
+      ]
+    },
+    "26": {
+      "id": "26",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "instruction": "Follow Sirio's instructions",
+      "next": [
+        {
+          "to": "27",
+          "label": "Done"
+        }
+      ]
+    },
+    "27": {
+      "id": "27",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "What does it mean?",
+      "next": [
+        {
+          "to": "28"
+        }
+      ]
+    },
+    "28": {
+      "id": "28",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Ah yeah, what a fool, it's the name of the square just around the corner. When we get there remind me that we have to play PING PONG, it's tradition.",
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "30": {
+      "id": "30",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Look! There’s writing “Candiani Beach Boyz”, but what does it mean?",
+      "orphan": true
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

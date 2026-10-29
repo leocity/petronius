@@ -1,0 +1,214 @@
+{
+  "scene": "37",
+  "pen": "https://codepen.io/sith/pen/EBjPRK",
+  "start": "1",
+  "characters": [
+    "yda",
+    "petronio",
+    "sirio"
+  ],
+  "assets": [
+    "wss.png",
+    "petronio_dubbioso.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png",
+    "b8.jpg"
+  ],
+  "beats": {
+    "1": {
+      "id": "1",
+      "container": "container",
+      "kind": "line",
+      "speaker": "yda",
+      "portrait": {
+        "class": "char_img_yda",
+        "asset": "yda.png"
+      },
+      "text": "Here they are, the idiots who run away like dogs without a leash. I've had enough of you two breaking the balance guaranteed by the rules. I will report everything to the principal.",
+      "next": [
+        {
+          "to": "2"
+        }
+      ]
+    },
+    "2": {
+      "id": "2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Oh Yda, what a surprise... You just can't stay away from us, huh? You should understand that I discovered more things being out of here for just a few hours than in all the years I spent in there.",
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "yda",
+      "portrait": {
+        "class": "char_img_yda",
+        "asset": "yda.png"
+      },
+      "text": "You have 12 seconds of my attention. Oh Yda how lenient you are.",
+      "next": [
+        {
+          "to": "container2"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "yda",
+      "portrait": {
+        "class": "char_img_yda",
+        "asset": "yda.png"
+      },
+      "text": "Oops, I'm really forced to take you to Principal Moretti, what a pity. Let's go to B2.2.14, now!",
+      "instruction": "Turn the journal's page",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "5": {
+      "id": "5",
+      "container": "container",
+      "kind": "line",
+      "speaker": "yda",
+      "portrait": {
+        "class": "char_img_yda",
+        "asset": "yda.png"
+      },
+      "text": "Sure, do as you wish, idiots, I'm not going to waste any more time with you. Go and live in the middle of Chaos. Two fewer problems for the university's order.",
+      "next": [
+        {
+          "to": "7"
+        }
+      ]
+    },
+    "7": {
+      "id": "7",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Sirio, I can't believe it, fuck! We are finally FREE!",
+      "next": [
+        {
+          "to": "8"
+        }
+      ]
+    },
+    "8": {
+      "id": "8",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Shit, that's wonderful, I was in that place less than a month and I was already thinking about suicide, I don't know how you managed all those years hahaha.",
+      "next": [
+        {
+          "to": "9"
+        }
+      ]
+    },
+    "9": {
+      "id": "9",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Well, you saw how dumb I was until a few days ago hahaha Thanks to you I'm finally learning how to be myself! Gimme five bro!",
+      "next": [
+        {
+          "to": "10"
+        }
+      ]
+    },
+    "10": {
+      "id": "10",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "\"Give me five\"? Dude, you still have so much to learn hahaha.",
+      "instruction": "Open the envelope F3",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "container3"
+        }
+      ]
+    },
+    "container2": {
+      "id": "container2",
+      "container": "container2",
+      "kind": "puzzle",
+      "prompt": "ENTER CLUES",
+      "inputs": 3,
+      "next": [
+        {
+          "to": "5",
+          "label": "password: correct",
+          "kind": "password-correct"
+        },
+        {
+          "to": "4",
+          "label": "password: wrong",
+          "kind": "password-wrong"
+        }
+      ],
+      "answers": [
+        "back to",
+        "santa",
+        "and chill"
+      ]
+    },
+    "container3": {
+      "id": "container3",
+      "container": "container3",
+      "kind": "video",
+      "src": "freedom.mp4"
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

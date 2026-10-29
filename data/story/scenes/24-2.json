@@ -1,0 +1,353 @@
+{
+  "scene": "24-2",
+  "pen": "https://codepen.io/sith/pen/xoxvVO",
+  "start": "2",
+  "characters": [
+    "sirio",
+    "petronio",
+    "gabriele"
+  ],
+  "assets": [
+    "ribalta.jpeg",
+    "wss.png",
+    "gabriele.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png"
+  ],
+  "beats": {
+    "2": {
+      "id": "2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Weren't we supposed to say something once we got here? I forgot already",
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "gabriele.png"
+      },
+      "next": [
+        {
+          "to": "4",
+          "label": "I can try"
+        },
+        {
+          "to": "11",
+          "label": "Don't remember"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "gabriele.png"
+      },
+      "instruction": "Press the talk button to say something or leave",
+      "waitsFor": "voice"
+    },
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Oh well, I don't remember shit as usual.",
+      "next": [
+        {
+          "to": "13"
+        }
+      ]
+    },
+    "13": {
+      "id": "13",
+      "container": "container",
+      "kind": "line",
+      "speaker": "gabriele",
+      "portrait": {
+        "class": "char_img_gabriele",
+        "asset": null
+      },
+      "text": "Hi Sirio! It's been ages since you came to the pub, how are you?",
+      "next": [
+        {
+          "to": "14"
+        }
+      ]
+    },
+    "14": {
+      "id": "14",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Hey yo Gabri! What's up? This is Petronio, my mate from university.",
+      "next": [
+        {
+          "to": "15"
+        }
+      ]
+    },
+    "15": {
+      "id": "15",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "gabriele.png"
+      },
+      "text": "Nice to meet you, Gabriele! Sirio is taking me on some hidden tours of the suburbs. Unfortunately, after the reform, my father never allowed me...",
+      "next": [
+        {
+          "to": "16"
+        }
+      ]
+    },
+    "16": {
+      "id": "16",
+      "container": "container",
+      "kind": "line",
+      "speaker": "gabriele",
+      "portrait": {
+        "class": "char_img_gabriele",
+        "asset": null
+      },
+      "text": "I hear you... and this damn reform doesn't help at all, does it? Oh, I almost forgot! I have just finished brewing a new beer with the ingredients I brought back from my last trip to Germany, I called it Kayser Soze. Would you like some?",
+      "next": [
+        {
+          "to": "17"
+        }
+      ]
+    },
+    "17": {
+      "id": "17",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Of course Gabri, anyway how are you doing?",
+      "next": [
+        {
+          "to": "18"
+        }
+      ]
+    },
+    "18": {
+      "id": "18",
+      "container": "container",
+      "kind": "line",
+      "speaker": "gabriele",
+      "portrait": {
+        "class": "char_img_gabriele",
+        "asset": null
+      },
+      "text": "Well, a real pain in the ass as always.",
+      "next": [
+        {
+          "to": "19"
+        }
+      ]
+    },
+    "19": {
+      "id": "19",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_gabriele",
+        "asset": null
+      },
+      "text": "But do you brew all these beers?",
+      "next": [
+        {
+          "to": "20"
+        }
+      ]
+    },
+    "20": {
+      "id": "20",
+      "container": "container",
+      "kind": "line",
+      "speaker": "gabriele",
+      "portrait": {
+        "class": "char_img_gabriele",
+        "asset": null
+      },
+      "text": "Of course, I brew everything at home and then sell it here.",
+      "next": [
+        {
+          "to": "21"
+        }
+      ]
+    },
+    "21": {
+      "id": "21",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "gabriele.png"
+      },
+      "text": "That's dope! I had never seen a place where they brew beer.",
+      "next": [
+        {
+          "to": "23"
+        }
+      ]
+    },
+    "23": {
+      "id": "23",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Dude, you know, Gabriele doesn't like jerks and people who peel his coasters, like 2501, so he found a way to tell them...",
+      "next": [
+        {
+          "to": "24"
+        }
+      ]
+    },
+    "24": {
+      "id": "24",
+      "container": "container",
+      "kind": "line",
+      "speaker": "gabriele",
+      "portrait": {
+        "class": "char_img_gabriele",
+        "asset": null
+      },
+      "text": "I'll show it to you kiddo, take the coaster and follow the instructions.",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "27"
+        }
+      ]
+    },
+    "27": {
+      "id": "27",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "gabriele.png"
+      },
+      "instruction": "Follow Gabriele's instructions",
+      "next": [
+        {
+          "to": "28",
+          "label": "Done"
+        }
+      ]
+    },
+    "28": {
+      "id": "28",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "gabriele.png"
+      },
+      "text": "Leave me alone?",
+      "next": [
+        {
+          "to": "29"
+        }
+      ]
+    },
+    "29": {
+      "id": "29",
+      "container": "container",
+      "kind": "line",
+      "speaker": "gabriele",
+      "portrait": {
+        "class": "char_img_gabriele",
+        "asset": null
+      },
+      "text": "It's just a warning.",
+      "next": [
+        {
+          "to": "30"
+        }
+      ]
+    },
+    "30": {
+      "id": "30",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Yes, I'd say it fits us perfectly! We're so late, we have to go back to University.",
+      "next": [
+        {
+          "to": "31"
+        }
+      ]
+    },
+    "31": {
+      "id": "31",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "gabriele.png"
+      },
+      "text": "Time flies out here! Come on, hurry up, but let's go through the B1 door, which is the only faulty one. See you soon, Gabriele!",
+      "instruction": "Enter the university through the B1 door",
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

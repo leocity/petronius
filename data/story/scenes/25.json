@@ -1,0 +1,288 @@
+{
+  "scene": "25",
+  "pen": "https://codepen.io/sith/pen/VJvYja",
+  "start": "2",
+  "characters": [
+    "yda",
+    "minerva",
+    "roberto",
+    "sirio",
+    "petronio",
+    "gabriele"
+  ],
+  "assets": [
+    "aula.jpg",
+    "wss.png",
+    "petronio_dubbioso.png",
+    "gabriele.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png",
+    "minerva.png"
+  ],
+  "beats": {
+    "2": {
+      "id": "2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "yda",
+      "portrait": {
+        "class": "char_img_yda",
+        "asset": "yda.png"
+      },
+      "text": "As it turns out, you are idiots, and... oops, with the evidence I gathered you got someone's attention: the principal wants to see you.",
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "minerva",
+      "portrait": {
+        "class": "char_img_minerva",
+        "asset": "minerva.png"
+      },
+      "text": "Here they are, our rebels. I didn't expect it from someone like you, Petronio; as for Sirio, I didn't have much hope, seeing where he grew up. Did you really think you could fool me?",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "roberto",
+      "portrait": {
+        "class": "char_img_roberto",
+        "asset": "roberto_serio.png"
+      },
+      "text": "Nobody has ever succeeded in all these years, Minerva, I don't see how they could be the first. By the way, Sirio, I really congratulate you on wasting a unique opportunity",
+      "next": [
+        {
+          "to": "11"
+        }
+      ]
+    },
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "minerva",
+      "portrait": {
+        "class": "char_img_minerva",
+        "asset": "minerva.png"
+      },
+      "text": "Thank you Roberto, as always you took the words right out of my mouth. It's people like you and Yda, who understand all the benefits the reform has brought to the University, who count and will count in the future.",
+      "next": [
+        {
+          "to": "12"
+        }
+      ]
+    },
+    "12": {
+      "id": "12",
+      "container": "container",
+      "kind": "line",
+      "speaker": "roberto",
+      "portrait": {
+        "class": "char_img_roberto",
+        "asset": "roberto_serio.png"
+      },
+      "text": "You're right, now I would say that there is only one thing left to do.",
+      "next": [
+        {
+          "to": "13"
+        }
+      ]
+    },
+    "13": {
+      "id": "13",
+      "container": "container",
+      "kind": "line",
+      "speaker": "minerva",
+      "portrait": {
+        "class": "char_img_minerva",
+        "asset": "minerva.png"
+      },
+      "text": "Exactly: you are expelled from the University forever, with no possibility of appeal.",
+      "next": [
+        {
+          "to": "14"
+        }
+      ]
+    },
+    "14": {
+      "id": "14",
+      "container": "container",
+      "kind": "line",
+      "speaker": "yda",
+      "portrait": {
+        "class": "char_img_yda",
+        "asset": "yda.png"
+      },
+      "text": "Idiots.",
+      "next": [
+        {
+          "to": "15"
+        }
+      ]
+    },
+    "15": {
+      "id": "15",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "I've never been so pissed off, I really didn't expect such a scene from Roberto; from that chick Yda, yes, but from Roberto...",
+      "next": [
+        {
+          "to": "16"
+        }
+      ]
+    },
+    "16": {
+      "id": "16",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "I'm really stunned too. And also pissed off! But come on, look at the bright side... At least we're really free now!",
+      "instruction": "Open the envelope F2",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "container3"
+        }
+      ]
+    },
+    "17": {
+      "id": "17",
+      "container": "container",
+      "kind": "line",
+      "speaker": "gabriele",
+      "portrait": {
+        "class": "char_img_gabriele",
+        "asset": "gabriele.png"
+      },
+      "text": "Look! There’s writing “Candiani Beach Boyz”, but what does it mean?",
+      "next": [],
+      "orphan": true
+    },
+    "27": {
+      "id": "27",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "instruction": "do something",
+      "next": [
+        {
+          "to": "28",
+          "label": "DOne"
+        }
+      ],
+      "orphan": true
+    },
+    "28": {
+      "id": "28",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "next": [],
+      "orphan": true
+    },
+    "31": {
+      "id": "31",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "DOne",
+      "instruction": "do something",
+      "orphan": true
+    },
+    "container2": {
+      "id": "container2",
+      "container": "container2",
+      "kind": "puzzle",
+      "prompt": "Enter your password:\nEnter your password:\nEnter your password:",
+      "inputs": 3,
+      "next": [],
+      "answers": [
+        "zozza",
+        "bomba",
+        "bongiorno"
+      ],
+      "orphan": true
+    },
+    "container3": {
+      "id": "container3",
+      "container": "container3",
+      "kind": "video",
+      "src": "expelled.mp4"
+    },
+    "fin1": {
+      "id": "fin1",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "next": [
+        {
+          "to": "fin2"
+        },
+        {
+          "to": "fin2"
+        }
+      ],
+      "orphan": true
+    },
+    "fin2": {
+      "id": "fin2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "orphan": true
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end",
+      "orphan": true
+    }
+  }
+}

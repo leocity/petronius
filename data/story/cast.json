@@ -1,0 +1,65 @@
+{
+  "$comment": [
+    "Cast: photos from the character cards (Journal/Cards/<Name>.pdf, front) used as dialogue portraits, and the card backs as notebook bios.",
+    "Photos of real people from the original project, used with the project owner's consent. focus = CSS object-position of the face in the square crop.",
+    "Web copies are built by tools/build-journal-assets.py into web/assets/journal/."
+  ],
+  "characters": {
+    "petronio": {
+      "name": "Petronio",
+      "file": "portrait-petronio.jpg",
+      "src": "Cards/Petronio.pdf#1",
+      "focus": "50% 12%",
+      "bio": "Should I describe myself? I warn you, it will be boring! I know nothing but rigour and discipline because I grew up in the strict school environment regulated by the reform. But now I want more, I need to see the outside world and find my true identity."
+    },
+    "sirio": {
+      "name": "Sirio",
+      "file": "portrait-sirio.jpg",
+      "src": "Cards/Sirio.pdf#1",
+      "focus": "50% 12%",
+      "bio": "What should I say? I’m Sirio, I’m 19. I’m rather confused, most of the time. I love surfing, skateboarding, build my stuff, streams of consciousness, taking photos, feel free. I forget things, already said?"
+    },
+    "yda": {
+      "name": "Yda",
+      "file": "portrait-yda.jpg",
+      "src": "Cards/Yda.pdf#1",
+      "focus": "50% 12%",
+      "bio": "Minimalist, diffident, intuitive. Just an ordinary girl frustrated by the inconsistency of others. Don’t mess with the natural order of the world, or you’ll face me. Like putting salt into sweet vanilla."
+    },
+    "minerva": {
+      "name": "Minerva",
+      "file": "portrait-minerva.jpg",
+      "src": "Cards/Minerva.pdf#1",
+      "focus": "50% 12%",
+      "bio": "Order, discipline and rigour are the main pillars of society. Control is what I like most: the rigorousness of classical compositions, minimalist art and my beloved parrots that get out of their cages only when I decide it."
+    },
+    "roberto": {
+      "name": "Roberto",
+      "file": "portrait-roberto.jpg",
+      "src": "Cards/Roberto.pdf#1",
+      "focus": "50% 12%",
+      "bio": "I have an ambitious double-life goal: never be caught jumping the fence. I live as two, I travel as two, I drink as two and I sleep as half a person. If the rules were written in Helvetica I think I could almost respect them. A a E e R r A a E e R r"
+    },
+    "guido": {
+      "name": "Guido",
+      "file": "portrait-guido.jpg",
+      "src": "Cards/Guido.pdf#1",
+      "focus": "50% 12%",
+      "bio": "Art, beauty, aesthetics are lifestyle for me. I hate boundaries, I like free form thinking people. Equality and sharing of moments and beauty will make society better and better. Oh, and don’t forget to train."
+    },
+    "gabriele": {
+      "name": "Gabriele",
+      "file": "portrait-gabriele.jpg",
+      "src": "Cards/Gabriele.pdf#1",
+      "focus": "50% 12%",
+      "bio": "I haven't much to say. I hate talking about me. I produce crafted beer and liquor. I believe in self-expression and I love what allows me to express myself. These are all there is to know."
+    },
+    "su": {
+      "name": "Su",
+      "file": "portrait-su.jpg",
+      "src": "Cards/Su.pdf#1",
+      "focus": "50% 12%",
+      "bio": "I live a peaceful life. I appreciate the culture: it helped me to develop my interest and free thinking. I have a bijoux shop: I make stuff to express myself. I admire freedom, creativity and self-expression."
+    }
+  }
+}

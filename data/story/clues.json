@@ -1,0 +1,1175 @@
+{
+  "$comment": [
+    "Digital versions of the paper journal's clues, for home mode. Hand-curated; audited Oct 2026 (docs/recap.md).",
+    "clues: keyed '<scene>#<beat>' = the beat that carries the real-world instruction (or a puzzle/timer beat).",
+    "items[]: images shown in the clue. file = web copy in web/assets/journal/, built from src (+ crop/rotate/grid) by tools/build-journal-assets.py.",
+    "items[].sheet: the item is a transparent sheet/piece the player drags over the item before it. true = same size as the base, snaps at (0,0); or { w: width as a fraction of the base, at: [x, y] top-left target as fractions }.",
+    "items[].turn: the item must be rotated until it lines up (starts at `angle` degrees, aligned at 0).",
+    "reveal: { label, text, items } shown after the player presses `label` (e.g. searching the spot on a map).",
+    "answers: accepted answers, compared exactly after removing case, spaces and punctuation (list every accepted variant). No answers = look-and-continue.",
+    "hints: revealed one at a time; after the last one the solution is shown. Puzzles that decide the ending (24, 37) have no hints on purpose.",
+    "note: added to the notebook when solved. image + hotspots (timer beats): tap areas [x0, y0, x1, y1] as fractions of the image.",
+    "Unknown originals recreated for the revival: the numbers on Gabriele's coaster (tools/assets-src/coaster-ribalta.svg)."
+  ],
+  "clues": {
+    "5#5": {
+      "title": "Remedia's memo",
+      "text": "Remedia gave you half a memo and said he'd hide the rest on the left of the B3 door. You found a torn scrap of graph paper. Fit the two halves together.",
+      "items": [
+        {
+          "file": "note-b2-1.png",
+          "src": "Riddles/Note B2 to the B3 #1.png",
+          "alt": "Remedia's memo, top half"
+        },
+        {
+          "file": "note-b2-2.png",
+          "src": "Riddles/Note B2 to the B3 #2.png",
+          "alt": "The torn scrap from the B3 door",
+          "sheet": {
+            "w": 1,
+            "at": [
+              0,
+              0.76
+            ]
+          }
+        }
+      ],
+      "question": "What do you have to say when you get there?",
+      "answers": [
+        "itsabomb",
+        "itisabomb"
+      ],
+      "hints": [
+        "Drag the scrap under the memo until the torn edges meet.",
+        "Read the second line on the scrap."
+      ],
+      "solution": "\"It's a bomb\", in Via Baldinucci 54",
+      "note": "Meet Roberto in Via Baldinucci 54. Say \"It's a bomb\"."
+    },
+    "5-1#5": {
+      "title": "Something in the wooden box",
+      "text": "In the wooden box on the left of the B1 door: a bookmark from the Dergano-Bovisa library. Keep it. Its shape will matter later.",
+      "items": [
+        {
+          "file": "bookmark-1.jpg",
+          "src": "Riddles/Bookmark B2 to the B2.pdf#1",
+          "alt": "Library bookmark, front"
+        },
+        {
+          "file": "bookmark-2.jpg",
+          "src": "Riddles/Bookmark B2 to the B2.pdf#2",
+          "alt": "Library bookmark, back"
+        }
+      ],
+      "note": "Picked up: the library bookmark"
+    },
+    "6#11": {
+      "title": "Sirio's sketch",
+      "text": "Sirio's sheet isn't for the mural: it's a sketch of the street. Keep the lamppost on your left, look straight down the road and follow the drawing to where it says \"Go here!\".",
+      "items": [
+        {
+          "file": "mastro.jpg",
+          "src": "../Backgrounds/mastro.jpeg",
+          "alt": "E. Mastro's mural 'Mutevole' on Via Schiaffino"
+        },
+        {
+          "file": "sheet-mutevole-street.png",
+          "src": "Riddles/Transparent Sheet*Mutevole*.png",
+          "rotate": 90,
+          "alt": "Sirio's transparent sketch of the street"
+        }
+      ],
+      "question": "Which way does Sirio want you to go?",
+      "answers": [
+        "right",
+        "straightthenright",
+        "straightandright",
+        "goright",
+        "turnright"
+      ],
+      "hints": [
+        "Turn your head: the sketch is a road seen from where you stand.",
+        "Follow the road to \"Go here!\". Which way does it bend?"
+      ],
+      "solution": "Straight on, then right"
+    },
+    "8#14": {
+      "title": "The ripped poster",
+      "text": "A cinema poster on the gate is missing its bottom corner. Petronio found a ripped orange piece on the ground. Drag it into place.",
+      "items": [
+        {
+          "file": "poster-armenia.jpg",
+          "src": "Riddles/Poster Ex Armenia Films Park #2.pdf#1",
+          "alt": "Armenia Films poster with a corner missing"
+        },
+        {
+          "file": "poster-armenia-piece.png",
+          "src": "Riddles/Poster Ex Armenia Films Park #1.png",
+          "alt": "The ripped orange piece",
+          "sheet": {
+            "w": 0.397,
+            "at": [
+              0.603,
+              0.711
+            ]
+          }
+        }
+      ],
+      "question": "Where is the special screening?",
+      "answers": [
+        "piazzadergano",
+        "dergano",
+        "pzadergano"
+      ],
+      "hints": [
+        "The piece fills the white bite in the bottom-right corner.",
+        "Read the outlined words at the bottom once the piece is in place."
+      ],
+      "solution": "Piazza Dergano",
+      "note": "Next place: Piazza Dergano"
+    },
+    "8-1#16": {
+      "title": "Pieces of letters",
+      "text": "On the ground next to the playground: letters cut in half. Sirio's transparent sheet has the missing halves. Drag it over them.",
+      "items": [
+        {
+          "file": "candiani-letters.jpg",
+          "src": "Riddles/Sticker A5 Ex Armenia Films Park.pdf#1",
+          "alt": "Broken white letters on orange"
+        },
+        {
+          "file": "sheet-candiani.png",
+          "src": "Riddles/Transparent Sheet Ex Armenia Films Park.png",
+          "alt": "Transparent sheet with the missing halves",
+          "sheet": true
+        }
+      ],
+      "question": "What do the letters say?",
+      "answers": [
+        "candianibeachboyz",
+        "candianibeachboys"
+      ],
+      "hints": [
+        "Each letter is cut in two: the sheet has the other half.",
+        "Three words. The first one is a street in Bovisa."
+      ],
+      "solution": "Candiani Beach Boyz",
+      "note": "Candiani Beach Boyz: the crew from Via Candiani"
+    },
+    "9#20": {
+      "title": "Roberto's Nokia",
+      "text": "Roberto texts his friends in code from an old Nokia 3310, so nobody can read the screen at a glance.",
+      "items": [
+        {
+          "file": "nokia-screen.jpg",
+          "src": "Journal.pdf#11",
+          "crop": [
+            0.74,
+            0.4,
+            0.9,
+            0.59
+          ],
+          "max": 900,
+          "alt": "The Nokia's screen: key presses"
+        },
+        {
+          "file": "journal-p11.jpg",
+          "src": "Journal.pdf#11",
+          "alt": "Journal page 11"
+        }
+      ],
+      "question": "What does the message say?",
+      "answers": [
+        "viadavanzati2",
+        "viadavanzatidue",
+        "davanzati2",
+        "davanzatidue",
+        "viadavanzati",
+        "davanzati"
+      ],
+      "hints": [
+        "Old phones type by pressing a key several times: (x3) means press it three times; no (x) means once.",
+        "Key 8 is T U V, key 4 is G H I, key 2 is A B C."
+      ],
+      "solution": "VIA DAVANZATI, DUE (Via Davanzati 2)",
+      "note": "Next place: Via Davanzati 2"
+    },
+    "10#14": {
+      "title": "Su's flyer",
+      "text": "Su asks you to find a flyer on the stall to the right of the entrance.",
+      "items": [
+        {
+          "file": "flyer-mamusca-1.jpg",
+          "src": "Riddles/Flyer Mamusca.pdf#1",
+          "alt": "Mamusca flyer, front"
+        },
+        {
+          "file": "flyer-mamusca-2.jpg",
+          "src": "Riddles/Flyer Mamusca.pdf#2",
+          "alt": "Mamusca flyer, back: who is James Reka"
+        }
+      ],
+      "question": "Where is the new mural being inaugurated?",
+      "answers": [
+        "viadegliimbriani54",
+        "viaimbriani54",
+        "imbriani54",
+        "viadegliimbriani",
+        "imbriani"
+      ],
+      "hints": [
+        "Look under 'Inauguration'."
+      ],
+      "solution": "Via degli Imbriani 54, tomorrow",
+      "note": "Next place: Via degli Imbriani 54"
+    },
+    "11#11": {
+      "title": "Reka's symbols",
+      "text": "Reka left a message in Australian icons, sticker after sticker, on the way to the mural. His key is on page 13 of your notebook: each icon stands for the first letter of its name.",
+      "items": [
+        {
+          "file": "reka-code.jpg",
+          "grid": {
+            "cols": 8,
+            "items": [
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#1"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#2"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#3"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#4"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#5"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#6"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#7"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#8"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#9"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#10"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#11"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#12"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#13"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#14"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#15"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#16"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#17"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#18"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#19"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#20"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#21"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#22"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#23"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#24"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#25"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#26"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#27"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#28"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#29"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#30"
+              },
+              {
+                "src": "Riddles/Sticker J. Reka*s Street Art.pdf#31"
+              }
+            ]
+          },
+          "alt": "31 stickers in a row, read left to right, top to bottom"
+        },
+        {
+          "file": "journal-p13.jpg",
+          "src": "Journal.pdf#13",
+          "alt": "Journal page 13: the key, from Boomerang to Zinc Cream"
+        },
+        {
+          "file": "reka-mural.jpg",
+          "src": "../Backgrounds/reka.jpg",
+          "alt": "Reka's mural in Via degli Imbriani 54"
+        }
+      ],
+      "question": "What does Reka tell you to do?",
+      "answers": [
+        "exitthetunnelandturnrightdrongo",
+        "exitthetunnelandturnright",
+        "exitthetunnelturnright",
+        "turnright"
+      ],
+      "hints": [
+        "Write down one letter per sticker, using page 13. The first word is EXIT.",
+        "The howling animal is the Tasmanian Devil (T); the dog is the Dingo (D)."
+      ],
+      "solution": "EXIT THE TUNNEL AND TURN RIGHT, DRONGO",
+      "note": "Reka: exit the tunnel and turn right"
+    },
+    "12-1#14": {
+      "title": "Il Guardiano",
+      "text": "Start in front of the laundry. Guido gave Sirio a transparent sheet for 2501's 'Il Guardiano': lay it over the wall.",
+      "items": [
+        {
+          "file": "guardiano-wall.jpg",
+          "src": "../Backgrounds/guardiano.jpg",
+          "crop": [
+            0.3744,
+            0.0835,
+            0.7294,
+            0.9144
+          ],
+          "max": 1241,
+          "alt": "2501's mural 'Il Guardiano'"
+        },
+        {
+          "file": "sheet-guardiano.png",
+          "src": "Riddles/Transparent Sheet*Guardiano*.png",
+          "alt": "Guido's transparent sheet",
+          "sheet": true
+        }
+      ],
+      "question": "What appears on the mural?",
+      "answers": [
+        "gohome"
+      ],
+      "hints": [
+        "Match the orange outline to the edges of the wall.",
+        "Each black mark completes a shape painted on the wall. Read from top to bottom."
+      ],
+      "solution": "GO HOME"
+    },
+    "13#11": {
+      "title": "The alcohol aisle",
+      "text": "Sirio's test photo of the flyer: on every bottle a white splash covers one letter of the name. You know these brands, and the shelf in front of you has the real labels.",
+      "items": [
+        {
+          "file": "flyer-penny-1.jpg",
+          "src": "Riddles/Flyer Penny Market.pdf#1",
+          "alt": "Penny Market flyer: LET'S… over eight bottles"
+        },
+        {
+          "file": "flyer-penny-2.jpg",
+          "src": "Riddles/Flyer Penny Market.pdf#2",
+          "alt": "Penny Market flyer, back"
+        }
+      ],
+      "question": "What does the flyer say?",
+      "answers": [
+        "letsgobausan",
+        "gobausan",
+        "bausan"
+      ],
+      "hints": [
+        "Read the covered letters left to right, after LET'S.",
+        "The first two make GO. The rest is a square in Dergano."
+      ],
+      "solution": "LET'S GO BAUSAN",
+      "note": "Next place: Piazza Bausan"
+    },
+    "14#11": {
+      "title": "The fountain poem",
+      "text": "Sirio's code from 'that famous evening': eight strips of the poem carved around the fountain in Piazza Bausan, one per side (page 15). On each strip a bar is a letter, a gap is a space; the orange bar is the letter to keep. Walk round the fountain anticlockwise from #1.",
+      "items": [
+        {
+          "file": "journal-p15.jpg",
+          "src": "Journal.pdf#15",
+          "alt": "Journal page 15: strips #1 to #8 and Sirio's sketch"
+        },
+        {
+          "file": "bausan.jpg",
+          "src": "../Backgrounds/bausan.jpg",
+          "alt": "The fountain in Piazza Bausan"
+        }
+      ],
+      "reveal": {
+        "label": "Read the inscription",
+        "text": "Around the fountain: #1 STORIE DEL PIAVE · #2 STORIE DELL'ISONZO · #3 ESSA È LA VOCE DEI NOSTRI MORTI · #4 CHE GIAMMAI S'ESTINGUE · #6 FONTANA PIA LA TUA VOCE · #7 QUIETA IN MURMURE · #8 PERENNE CI RACCONTA. Side #5 is worn away: its orange letter is V."
+      },
+      "question": "Which place does the code name?",
+      "answers": [
+        "pzaschiavone",
+        "piazzaschiavone",
+        "pzzaschiavone",
+        "schiavone"
+      ],
+      "hints": [
+        "#1 is STORIE DEL PIAVE read right to left: its orange letter is P.",
+        "P-Z-A is short for 'piazza'."
+      ],
+      "solution": "P.ZA SCHIAVONE",
+      "note": "Next place: Piazza Schiavone"
+    },
+    "15#11": {
+      "title": "Random letters on the steps",
+      "text": "A grid of letters and numbers on the wall in front of the steps. Lay Sirio's sheet over it and read what the holes leave.",
+      "items": [
+        {
+          "file": "grid-mercantini.jpg",
+          "src": "Riddles/Sticker A5 2501 via Mercantini.pdf#1",
+          "alt": "Grid of letters and numbers"
+        },
+        {
+          "file": "sheet-mercantini.png",
+          "src": "Riddles/Transparent Sheet 2501 via Mercantini.png",
+          "alt": "Transparent sheet with holes",
+          "sheet": true
+        }
+      ],
+      "question": "Which street do the letters give?",
+      "answers": [
+        "vialuigimercantini",
+        "viamercantini",
+        "luigimercantini",
+        "mercantini"
+      ],
+      "hints": [
+        "Line the sheet up with the grid's edges, then read the holes row by row.",
+        "The first word is VIA."
+      ],
+      "solution": "VIA LUIGI MERCANTINI",
+      "note": "Next place: Via Mercantini"
+    },
+    "17#26": {
+      "title": "The garden word search",
+      "text": "Find the 16 garden words from the poster in the grid on page 37 (any direction, diagonals too) and cross them out. The letters left over, read row by row, name a street.",
+      "items": [
+        {
+          "file": "poster-robdematt.jpg",
+          "src": "Riddles/Poster Rob de Matt.pdf#1",
+          "alt": "Rob de Matt poster: the word list"
+        },
+        {
+          "file": "wordsearch.jpg",
+          "src": "Journal.pdf#37",
+          "crop": [
+            0,
+            0,
+            0.5,
+            1
+          ],
+          "alt": "Journal page 37: the letter grid"
+        }
+      ],
+      "question": "Which street is left over?",
+      "answers": [
+        "livigno",
+        "vialivigno"
+      ],
+      "hints": [
+        "Words can run backwards and diagonally.",
+        "Seven letters are left."
+      ],
+      "solution": "LIVIGNO",
+      "note": "Next place: Via Livigno 5"
+    },
+    "17-1#26": {
+      "title": "Bathroom stickers",
+      "text": "A sticker on the bathroom door is covered in fruit wedges, each with a letter. Page 33 of your notebook gives the order of the fruits.",
+      "items": [
+        {
+          "file": "sticker-fruit.jpg",
+          "src": "Riddles/Sticker Rob de Matt.pdf#1",
+          "alt": "Sticker with fruit wedges and letters"
+        },
+        {
+          "file": "fruit-scheme.jpg",
+          "src": "Journal.pdf#33",
+          "crop": [
+            0,
+            0,
+            0.5,
+            1
+          ],
+          "alt": "Journal page 33: six fruits in a row"
+        }
+      ],
+      "question": "What do the letters spell?",
+      "answers": [
+        "ciaia8",
+        "viaciaia8",
+        "ciaiaotto"
+      ],
+      "hints": [
+        "Find each fruit from page 33 on the sticker and take its letter.",
+        "The watermelon gives C."
+      ],
+      "solution": "CIAIA 8",
+      "note": "Next place: Via Ciaia 8"
+    },
+    "18#26": {
+      "title": "Sirio's old map",
+      "text": "Sirio and Guido's hiding map from when they were kids, on the right of page 37. Find the X in the park.",
+      "items": [
+        {
+          "file": "treasure-map.jpg",
+          "src": "Journal.pdf#37",
+          "crop": [
+            0.5,
+            0,
+            1,
+            1
+          ],
+          "alt": "Journal page 37: a children's treasure map"
+        },
+        {
+          "file": "savarino.jpg",
+          "src": "../Backgrounds/savarino.jpg",
+          "alt": "Parco Savarino"
+        }
+      ],
+      "reveal": {
+        "label": "Search at the X",
+        "text": "Behind the building marked X, an old drawing:",
+        "items": [
+          {
+            "file": "sticker-icecream.jpg",
+            "src": "Riddles/Sticker Nicol* Savarino Park.pdf#1",
+            "alt": "A child's drawing"
+          }
+        ]
+      },
+      "question": "What did little Sirio draw?",
+      "answers": [
+        "icecream",
+        "anicecream",
+        "gelato",
+        "icecreamcone",
+        "cone"
+      ],
+      "hints": [
+        "Look at the drawing you found at the X."
+      ],
+      "solution": "An ice cream",
+      "note": "Next place: the gelateria in Via Ciaia 6"
+    },
+    "18-1#26": {
+      "title": "Hopscotch",
+      "text": "The children chalked syllables on the hopscotch instead of numbers. Page 27 of your notebook has the same hopscotch with the numbers: jump from 1 to 6 and read.",
+      "items": [
+        {
+          "file": "hopscotch.jpg",
+          "src": "Riddles/Hopschotch Nicol* Savarino Park.pdf#1",
+          "alt": "Hopscotch with a syllable in each square"
+        },
+        {
+          "file": "journal-p27.jpg",
+          "src": "Journal.pdf#27",
+          "alt": "Journal page 27: the numbered hopscotch"
+        }
+      ],
+      "question": "What do the syllables say?",
+      "answers": [
+        "tangodamore"
+      ],
+      "hints": [
+        "Match each square of page 27 to the same square on the chalk drawing.",
+        "#1 is TA, #2 is NG."
+      ],
+      "solution": "TANGO D'AMORE",
+      "note": "Next place: the mural 'Tango d'Amore', Viale Jenner 42"
+    },
+    "20-1#container2": {
+      "title": "Spot the forgery",
+      "text": "First, the real diploma Yda gave you (tap it to enlarge). Then the forger’s copy of Moretti’s. Same university, same template: tap the 3 things the forger got wrong on the copy. Names and dates don’t count. A wrong tap costs 5 seconds.",
+      "items": [
+        {
+          "file": "diploma.jpg",
+          "src": "Minigame/Diploma*.pdf#1",
+          "alt": "The real diploma (Yda Linna)"
+        }
+      ],
+      "image": {
+        "file": "laurea.jpg",
+        "src": "../Backgrounds/laurea.jpg",
+        "alt": "Moretti's diploma: the forgery"
+      },
+      "hotspots": [
+        [
+          0.03,
+          0.06,
+          0.19,
+          0.26
+        ],
+        [
+          0.25,
+          0.18,
+          0.74,
+          0.32
+        ],
+        [
+          0.64,
+          0.8,
+          0.88,
+          0.96
+        ]
+      ]
+    },
+    "21-1#6": {
+      "title": "The billboard",
+      "text": "The billboard holds a coded line. Yda said the key is in the picture itself: look at the man with his hand up. When you continue you'll have one minute to copy the code.",
+      "items": [
+        {
+          "file": "billboard.jpg",
+          "src": "../Backgrounds/soundgame.jpeg",
+          "alt": "Billboard: five people holding a coded sign"
+        }
+      ]
+    },
+    "21-1#container4": {
+      "items": [
+        {
+          "file": "billboard.jpg",
+          "src": "../Backgrounds/soundgame.jpeg",
+          "alt": "Billboard: five people holding a coded sign"
+        }
+      ]
+    },
+    "21-1#container2": {
+      "hints": [
+        "Count the raised fingers, and look at the arrow on the sign.",
+        "Move every letter 2 forward in the alphabet: Q becomes S."
+      ],
+      "solution": "Strange time"
+    },
+    "21-1#13": {
+      "title": "The manifesto",
+      "text": "Sirio's grandpa kept the group's manifesto. Now you know who signed it.",
+      "items": [
+        {
+          "file": "manifesto70.jpg",
+          "src": "Extra/Manifesto Sound of 70*.pdf#1",
+          "alt": "Manifesto of the Sound of '70"
+        },
+        {
+          "file": "secretnote70.jpg",
+          "src": "Extra/Secret Note Sound of 70*.pdf#1",
+          "alt": "Secret note"
+        }
+      ]
+    },
+    "22-1#14": {
+      "title": "The reopening poster",
+      "text": "A poster on the library gate has an empty dashed frame. Sirio says your bookmark is exactly its shape. Drag it in.",
+      "items": [
+        {
+          "file": "poster-library.jpg",
+          "src": "Riddles/Poster Dergano-Bovisa Library.pdf#1",
+          "alt": "Don't miss the reopening party! Via Baldinucci, and an empty frame"
+        },
+        {
+          "file": "bookmark-2.jpg",
+          "src": "Riddles/Bookmark B2 to the B2.pdf#2",
+          "alt": "Your bookmark",
+          "sheet": {
+            "w": 0.167,
+            "at": [
+              0.763,
+              0.594
+            ]
+          }
+        }
+      ],
+      "question": "Where is the party?",
+      "answers": [
+        "viabaldinucci35",
+        "baldinucci35"
+      ],
+      "hints": [
+        "Use the coloured side of the bookmark.",
+        "It completes the street name on the poster."
+      ],
+      "solution": "Via Baldinucci 35",
+      "note": "The library's reopening party: Via Baldinucci 35 (not today)"
+    },
+    "22#container3": {
+      "title": "The archive shelves",
+      "text": "Three folders are missing from the shelves. Work out how each shelf is numbered and remember the missing numbers.",
+      "items": [
+        {
+          "file": "library-shelves.jpg",
+          "src": "../Backgrounds/librarygame.jpeg",
+          "alt": "Two shelves of numbered folders, three gaps"
+        }
+      ]
+    },
+    "22#container2": {
+      "hints": [
+        "Each shelf has its own rule.",
+        "Top shelf: +5, -3, +5, -3… Bottom shelf: each number is the sum of the two before it."
+      ],
+      "solution": "8, 21, 34"
+    },
+    "23#6": {
+      "title": "The beer mat",
+      "text": "Gabriele's coaster is a piece of 2501's mural. Turn it until its stripes run like the wall's, then follow the arrow.",
+      "items": [
+        {
+          "file": "never.jpg",
+          "src": "../Backgrounds/never.jpg",
+          "alt": "2501's mural in Via Cevedale"
+        },
+        {
+          "file": "beermat.png",
+          "src": "Riddles/Beer Mat 2501 via Cevedale*.png",
+          "alt": "Gabriele's coaster",
+          "turn": true,
+          "angle": 135
+        }
+      ],
+      "question": "Which way does the arrow send you?",
+      "answers": [
+        "right",
+        "turnright",
+        "goright",
+        "totheright"
+      ],
+      "hints": [
+        "Match the thin diagonal line and the black bands to the mural."
+      ],
+      "solution": "Right"
+    },
+    "24-2#27": {
+      "title": "Gabriele's coaster",
+      "text": "Gabriele turns the coaster over: numbers instead of words. Page 22 of your notebook says to use the numbers to find the letters.",
+      "items": [
+        {
+          "file": "coaster-ribalta.png",
+          "src": "@/tools/assets-src/coaster-ribalta.svg",
+          "max": 1000,
+          "alt": "Coaster: 12 5 1 22 5 / 13 5 / 1 12 15 14 5"
+        },
+        {
+          "file": "journal-p22.jpg",
+          "src": "Journal.pdf#22",
+          "alt": "Journal page 22: use the numbers to find correspondences with letters"
+        }
+      ],
+      "question": "What's Gabriele's warning?",
+      "answers": [
+        "leavemealone"
+      ],
+      "hints": [
+        "A is 1, B is 2, C is 3…",
+        "Three words."
+      ],
+      "solution": "LEAVE ME ALONE"
+    },
+    "27#11": {
+      "title": "The flyer at Da Amilcare",
+      "text": "Sirio scratched out part of the street name on this flyer. His transparent sheet has the missing bits: drag it over the flyer.",
+      "items": [
+        {
+          "file": "flyer-amilcare.jpg",
+          "src": "Riddles/Flyer Da Amilcare.pdf#1",
+          "alt": "KEEP OUT flyer with a broken street name"
+        },
+        {
+          "file": "sheet-amilcare-marks.png",
+          "src": "Riddles/Transparent Sheet Da Amilcare.png",
+          "crop": [
+            0.1607,
+            0.1419,
+            0.8382,
+            0.8577
+          ],
+          "alt": "Transparent sheet with the missing letters",
+          "sheet": true
+        }
+      ],
+      "question": "Where were Sirio's friends from?",
+      "answers": [
+        "viacaianello1",
+        "caianello1",
+        "viacaianellouno",
+        "viacaianello",
+        "caianello"
+      ],
+      "hints": [
+        "Line up the crop marks of the sheet with the flyer's."
+      ],
+      "solution": "VIA CAIANELLO 1",
+      "note": "Next place: Via Caianello 1"
+    },
+    "29#5": {
+      "title": "Su's origami",
+      "text": "Fold Su's paper into the swan, following her steps. Only a few letters stay on the outside.",
+      "items": [
+        {
+          "file": "origami-1.jpg",
+          "src": "Riddles/Origami Opella.pdf#1",
+          "alt": "Origami sheet, front"
+        },
+        {
+          "file": "origami-2.jpg",
+          "src": "Riddles/Origami Opella.pdf#2",
+          "alt": "Origami sheet, back"
+        },
+        {
+          "file": "meet-su-2.jpg",
+          "src": "Special Pages/Meet Su.pdf#2",
+          "alt": "Su's folding steps and the blanks"
+        }
+      ],
+      "question": "What does the swan say?",
+      "answers": [
+        "backto"
+      ],
+      "hints": [
+        "Look at both sides of the paper.",
+        "4 letters + 2 letters."
+      ],
+      "solution": "BACK TO",
+      "note": "Clue: BACK TO"
+    },
+    "30#12": {
+      "title": "The poster by the mural",
+      "text": "Next to 'Tango d'Amore' hangs a poster: an alphabet where some letters became numbers.",
+      "items": [
+        {
+          "file": "sticker-tango.jpg",
+          "src": "Riddles/Sticker A5*Tango*.pdf#1",
+          "alt": "An alphabet with four numbers in it"
+        },
+        {
+          "file": "tango.jpg",
+          "src": "../Backgrounds/tango.jpg",
+          "alt": "The mural 'Tango d'Amore'"
+        }
+      ],
+      "question": "Read the numbers in order: what word do they make?",
+      "answers": [
+        "turn"
+      ],
+      "hints": [
+        "Which letters are missing from the alphabet?",
+        "Put the missing letters in the order 1, 2, 3, 4."
+      ],
+      "solution": "TURN"
+    },
+    "33#5": {
+      "title": "Roberto's business card",
+      "text": "Roberto said even a business card can hide important letters. Match the Spirit de Milan card to the sketch on Roberto's page.",
+      "items": [
+        {
+          "file": "meet-roberto-2.jpg",
+          "src": "Special Pages/Meet Roberto.pdf#2",
+          "alt": "Match the card with this sketch to find the missing letters: _ _ _ T A"
+        },
+        {
+          "file": "spirit.jpg",
+          "src": "../Backgrounds/spirit.jpeg",
+          "alt": "Spirit de Milan"
+        }
+      ],
+      "question": "Which word do the letters make?",
+      "answers": [
+        "santa"
+      ],
+      "hints": [
+        "The sketch is the round SPIRIT de MILAN logo: the marked letters are on its rim.",
+        "One letter from the top row, two from the bottom row, then TA."
+      ],
+      "solution": "SANTA",
+      "note": "Clue: SANTA"
+    },
+    "33#7": {
+      "title": "Roberto's business card",
+      "text": "Roberto said even a business card can hide important letters. Match the Spirit de Milan card to the sketch on Roberto's page.",
+      "items": [
+        {
+          "file": "meet-roberto-2.jpg",
+          "src": "Special Pages/Meet Roberto.pdf#2",
+          "alt": "Match the card with this sketch to find the missing letters: _ _ _ T A"
+        },
+        {
+          "file": "spirit.jpg",
+          "src": "../Backgrounds/spirit.jpeg",
+          "alt": "Spirit de Milan"
+        }
+      ],
+      "question": "Which word do the letters make?",
+      "answers": [
+        "santa"
+      ],
+      "hints": [
+        "The sketch is the round SPIRIT de MILAN logo: the marked letters are on its rim.",
+        "One letter from the top row, two from the bottom row, then TA."
+      ],
+      "solution": "SANTA",
+      "note": "Clue: SANTA"
+    },
+    "35#12": {
+      "title": "The exercise book",
+      "text": "A page from a primary-school exercise book, from the air-raid shelter under the Giacomo Leopardi school. The holes fall on letters of the plaque by the door; follow each arrow to its blank to fill Sirio's memory hole.",
+      "items": [
+        {
+          "file": "rifugio.jpg",
+          "src": "Riddles/A Page of an Exercise Book Rifugio*.pdf#1",
+          "alt": "Exercise book page with holes and arrows"
+        },
+        {
+          "file": "rifugio-plaque.jpg",
+          "src": "../Backgrounds/rifugio.jpg",
+          "alt": "The school entrance and its plaque"
+        }
+      ],
+      "question": "What did the guide keep saying?",
+      "answers": [
+        "robbdematt",
+        "robdematt",
+        "robbdemat"
+      ],
+      "hints": [
+        "The plaque reads: Rifugio antiaereo n.87 della scuola Giacomo Leopardi.",
+        "It's Milanese dialect: _ _ B B  _ _  _ _ _ _."
+      ],
+      "solution": "ROBB DE MATT",
+      "note": "Robb de Matt: crazy stuff, in Milanese"
+    },
+    "36#26": {
+      "title": "Sirio's milkshake",
+      "text": "The milkshake recipe Sirio invented at five. He listed the ingredients in an order that means something.",
+      "items": [
+        {
+          "file": "flyer-stagioni.jpg",
+          "src": "Riddles/Flyer Le Stagioni della Frutta.pdf#1",
+          "alt": "Sirio’s milkshake recipe"
+        }
+      ],
+      "question": "Where does Sirio want to go?",
+      "answers": [
+        "dergano",
+        "piazzadergano"
+      ],
+      "hints": [
+        "Look at the start of each line.",
+        "It's a square nearby."
+      ],
+      "solution": "DERGANO",
+      "note": "Next place: Piazza Dergano"
+    },
+    "9-1#5": {
+      "title": "Guido's stamps",
+      "text": "Guido says some of the painted circles in the square hide letters. His map numbers eight of them; the stickers you found are labelled with their circle.",
+      "items": [
+        {
+          "file": "meet-guido-2.jpg",
+          "src": "Special Pages/Meet Guido.pdf#2",
+          "alt": "Map of Piazza Dergano: circles #1 to #8"
+        },
+        {
+          "file": "stickers-dergano.jpg",
+          "grid": {
+            "cols": 4,
+            "items": [
+              {
+                "src": "Riddles/Stickers Piazza Dergano.pdf#5",
+                "label": "#5"
+              },
+              {
+                "src": "Riddles/Stickers Piazza Dergano.pdf#1",
+                "label": "#1"
+              },
+              {
+                "src": "Riddles/Stickers Piazza Dergano.pdf#8",
+                "label": "#8"
+              },
+              {
+                "src": "Riddles/Stickers Piazza Dergano.pdf#3",
+                "label": "#3"
+              },
+              {
+                "src": "Riddles/Stickers Piazza Dergano.pdf#6",
+                "label": "#6"
+              },
+              {
+                "src": "Riddles/Stickers Piazza Dergano.pdf#2",
+                "label": "#2"
+              },
+              {
+                "src": "Riddles/Stickers Piazza Dergano.pdf#7",
+                "label": "#7"
+              },
+              {
+                "src": "Riddles/Stickers Piazza Dergano.pdf#4",
+                "label": "#4"
+              }
+            ]
+          },
+          "alt": "Eight stickers, each labelled with the circle where you found it"
+        },
+        {
+          "file": "dergano-square.jpg",
+          "src": "../Backgrounds/dergano.jpg",
+          "alt": "Piazza Dergano and its painted circles"
+        }
+      ],
+      "question": "Read the stickers in the map's order: what do they say?",
+      "answers": [
+        "andchill"
+      ],
+      "hints": [
+        "Follow the map from #1 to #8.",
+        "3 letters + 5 letters."
+      ],
+      "solution": "AND CHILL",
+      "note": "Clue: AND CHILL"
+    },
+    "9-1#7": {
+      "title": "Guido's stamps",
+      "text": "Guido says some of the painted circles in the square hide letters. His map numbers eight of them; the stickers you found are labelled with their circle.",
+      "items": [
+        {
+          "file": "meet-guido-2.jpg",
+          "src": "Special Pages/Meet Guido.pdf#2",
+          "alt": "Map of Piazza Dergano: circles #1 to #8"
+        },
+        {
+          "file": "stickers-dergano.jpg",
+          "grid": {
+            "cols": 4,
+            "items": [
+              {
+                "src": "Riddles/Stickers Piazza Dergano.pdf#5",
+                "label": "#5"
+              },
+              {
+                "src": "Riddles/Stickers Piazza Dergano.pdf#1",
+                "label": "#1"
+              },
+              {
+                "src": "Riddles/Stickers Piazza Dergano.pdf#8",
+                "label": "#8"
+              },
+              {
+                "src": "Riddles/Stickers Piazza Dergano.pdf#3",
+                "label": "#3"
+              },
+              {
+                "src": "Riddles/Stickers Piazza Dergano.pdf#6",
+                "label": "#6"
+              },
+              {
+                "src": "Riddles/Stickers Piazza Dergano.pdf#2",
+                "label": "#2"
+              },
+              {
+                "src": "Riddles/Stickers Piazza Dergano.pdf#7",
+                "label": "#7"
+              },
+              {
+                "src": "Riddles/Stickers Piazza Dergano.pdf#4",
+                "label": "#4"
+              }
+            ]
+          },
+          "alt": "Eight stickers, each labelled with the circle where you found it"
+        },
+        {
+          "file": "dergano-square.jpg",
+          "src": "../Backgrounds/dergano.jpg",
+          "alt": "Piazza Dergano and its painted circles"
+        }
+      ],
+      "question": "Read the stickers in the map's order: what do they say?",
+      "answers": [
+        "andchill"
+      ],
+      "hints": [
+        "Follow the map from #1 to #8.",
+        "3 letters + 5 letters."
+      ],
+      "solution": "AND CHILL",
+      "note": "Clue: AND CHILL"
+    },
+    "37#container2": {}
+  },
+  "pickups": {},
+  "endings": {
+    "F1": [
+      {
+        "file": "badge-f1.jpg",
+        "src": "Extra/F1_A NEW ORDER/Badge F1.pdf#1",
+        "alt": "Badge F1"
+      },
+      {
+        "file": "cards-f1-1.jpg",
+        "src": "Extra/F1_A NEW ORDER/Cards F1.pdf#1",
+        "alt": "Envelope F1, card 1"
+      }
+    ],
+    "F2": [
+      {
+        "file": "badge-f2.jpg",
+        "src": "Extra/F2_EXPELLED/Badge F2.pdf#1",
+        "alt": "Badge F2"
+      },
+      {
+        "file": "cards-f2-1.jpg",
+        "src": "Extra/F2_EXPELLED/Cards F2.pdf#1",
+        "alt": "Envelope F2, card 1"
+      }
+    ],
+    "F3": [
+      {
+        "file": "badge-f3.jpg",
+        "src": "Extra/F3_FREEDOM/Badge F3.pdf#1",
+        "alt": "Badge F3"
+      },
+      {
+        "file": "cards-f3-1.jpg",
+        "src": "Extra/F3_FREEDOM/Cards F3.pdf#1",
+        "alt": "Envelope F3, card 1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Petronius</title>
+  <meta name="description" content="A walk through Bovisa and Dergano, Milan, with Petronio and Sirio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Title -->
+    <section id="title" class="screen" hidden>
+      <h1 class="title-word" aria-label="Petronius">
+        <span>PETRO</span><span>NIUS</span>
+      </h1>
+      <p class="title-lede">Two roommates, a university that runs on rules, and a neighbourhood that doesn't. Sneak out at night and walk Bovisa and Dergano with Petronio and Sirio until you decide which side you're on.</p>
+      <div class="title-actions">
+        <button class="btn btn-primary" id="btn-continue" hidden>Continue</button>
+        <button class="btn" id="btn-new">Play at home</button>
+        <button class="btn" id="btn-new-onsite">Play in Bovisa</button>
+      </div>
+      <dl class="title-modes">
+        <dt>At home</dt><dd>Every place is on the map and every clue is in the notebook. Tap a place to go there.</dd>
+        <dt>In Bovisa</dt><dd>Walk the real streets with your phone. A place unlocks when you get there; the clues are still in the notebook. Starts at Politecnico Bovisa, Via Durando 10.</dd>
+      </dl>
+    </section>
+
+    <!-- Play -->
+    <section id="play" class="screen" hidden>
+      <header class="bar">
+        <div class="bar-where">
+          <span class="bar-day" id="bar-day"></span>
+          <span class="bar-place" id="bar-place"></span>
+        </div>
+        <nav class="bar-actions">
+          <span class="bar-gps" id="bar-gps" role="status" hidden></span>
+          <button class="icon-btn" id="btn-song" aria-label="Play this place's song" aria-pressed="false" title="Song" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm11-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
+          </button>
+          <button class="icon-btn" id="btn-journal" aria-label="Open notebook" title="Notebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h12a2 2 0 0 1 2 2v16H7a2 2 0 0 1-2-2V3Zm2 0v16M10 8h6M10 12h6"/></svg>
+          </button>
+          <button class="icon-btn" id="btn-map" aria-label="Open map" title="Map">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Zm0 0v14m6-12v14"/></svg>
+          </button>
+        </nav>
+      </header>
+      <main class="stage" id="stage" aria-live="polite"></main>
+    </section>
+
+    <!-- Map -->
+    <section id="map-screen" class="screen" hidden>
+      <header class="bar">
+        <div class="bar-where"><span class="bar-place">Bovisa and Dergano</span></div>
+        <nav class="bar-actions">
+          <button class="icon-btn" id="btn-map-close" aria-label="Close map" title="Close">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+        </nav>
+      </header>
+      <div id="map"></div>
+      <aside class="leads" id="leads"></aside>
+    </section>
+
+    <!-- Notebook -->
+    <aside id="journal" class="journal" hidden aria-label="Petronio's notebook">
+      <div class="journal-cover">
+        <span class="journal-title">Fabula de mutationibus</span>
+        <button class="icon-btn icon-btn-light" id="btn-journal-close" aria-label="Close notebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <div class="journal-page" id="journal-page"></div>
+    </aside>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

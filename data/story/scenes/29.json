@@ -1,0 +1,397 @@
+{
+  "scene": "29",
+  "pen": "https://codepen.io/sith/pen/MMYdrJ",
+  "start": "1",
+  "characters": [
+    "su",
+    "sirio",
+    "petronio",
+    "yda"
+  ],
+  "assets": [
+    "wss.png",
+    "petronio_dubbioso.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_shocked.png",
+    "su.png",
+    "opella.jpg"
+  ],
+  "beats": {
+    "1": {
+      "id": "1",
+      "container": "container",
+      "kind": "line",
+      "speaker": "su",
+      "portrait": {
+        "class": "char_img_su",
+        "asset": "su.png"
+      },
+      "text": "Hi Sirio, you finally managed to come! You've been promising for months and you never came, you're always the same! I see your friend is here too.",
+      "next": [
+        {
+          "to": "2"
+        }
+      ]
+    },
+    "2": {
+      "id": "2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "Finally, huh? You know it's a bad time to hang around freely... yo anyway, this new stuff here is lit! Look Petronio!",
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "next": [
+        {
+          "to": "399a",
+          "label": "Cool stuff"
+        },
+        {
+          "to": "399b",
+          "label": "Umm..."
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "su",
+      "portrait": {
+        "class": "char_img_su",
+        "asset": "su.png"
+      },
+      "text": "Okay guys, to make me and my art more understandable, try making the origami: you could learn something unexpected, something it's better for you to remember.",
+      "next": [
+        {
+          "to": "5"
+        }
+      ]
+    },
+    "5": {
+      "id": "5",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "text": "I'll take you to another small park now, the one in Via Livigno 5! When we get there, remind me that I have to tell you about HOPSCOTCH!",
+      "instruction": "Cut the journal's page",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "6": {
+      "id": "6",
+      "container": "container",
+      "kind": "line",
+      "speaker": "su",
+      "portrait": {
+        "class": "char_img_su",
+        "asset": "su.png"
+      },
+      "text": "Okay guys, craftsmanship is not for everyone, see you next time.",
+      "next": [
+        {
+          "to": "7"
+        }
+      ]
+    },
+    "7": {
+      "id": "7",
+      "container": "container",
+      "kind": "line",
+      "speaker": "yda",
+      "portrait": {
+        "class": "char_img_yda",
+        "asset": "yda.png"
+      },
+      "text": "We were waiting for you... we saw you last night as well. Unfortunately Yda caught us. I... I'm dying to see that world outside! Sirio told me about it... he really misses his freedom!",
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
+      },
+      "orphan": true
+    },
+    "20": {
+      "id": "20",
+      "container": "container",
+      "kind": "line",
+      "speaker": "su",
+      "portrait": {
+        "class": "char_img_su",
+        "asset": "su.png"
+      },
+      "text": "I'm not sure if it's a compliment or not...",
+      "next": [
+        {
+          "to": "21"
+        }
+      ]
+    },
+    "21": {
+      "id": "21",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "next": [
+        {
+          "to": "21a",
+          "label": "Kidding"
+        },
+        {
+          "to": "21b",
+          "label": "I don't understand"
+        }
+      ]
+    },
+    "30": {
+      "id": "30",
+      "container": "container",
+      "kind": "line",
+      "speaker": "su",
+      "portrait": {
+        "class": "char_img_su",
+        "asset": "su.png"
+      },
+      "text": "If you want I can teach you the basics, it's very simple",
+      "next": [
+        {
+          "to": "31"
+        }
+      ]
+    },
+    "31": {
+      "id": "31",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "next": [
+        {
+          "to": "31a",
+          "label": "Awesome"
+        },
+        {
+          "to": "31b",
+          "label": "Too complicated"
+        }
+      ]
+    },
+    "40": {
+      "id": "40",
+      "container": "container",
+      "kind": "line",
+      "speaker": "su",
+      "portrait": {
+        "class": "char_img_su",
+        "asset": "su.png"
+      },
+      "text": "I know, bijouterie is not easy to understand and not everyone likes it...",
+      "next": [
+        {
+          "to": "41"
+        }
+      ]
+    },
+    "41": {
+      "id": "41",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "next": [
+        {
+          "to": "41a",
+          "label": "I appreciate it"
+        },
+        {
+          "to": "41b",
+          "label": "Meaningless"
+        }
+      ]
+    },
+    "31b": {
+      "id": "31b",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Hmm, I don't know... It seems too complicated. I don't think I'm good enough. I'm used to book theory, not to practice...",
+      "next": [
+        {
+          "to": "40"
+        }
+      ]
+    },
+    "41a": {
+      "id": "41a",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "I certainly don't get it, but I can appreciate it, just like a lot of the stuff Sirio is showing me around here in Bovisa.",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "41b": {
+      "id": "41b",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Eh, maybe that's just how it is... As an outsider, your jewels don't say much to me...",
+      "next": [
+        {
+          "to": "6"
+        }
+      ]
+    },
+    "31a": {
+      "id": "31a",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Good evening professor! We saw you climb over the University gate, twice... We are curious: where do you run away to when you go out?",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "399a": {
+      "id": "399a",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Wow, congratulations Su! I love them. I'd love to learn to make things by hand myself, like you all do here in the suburbs!",
+      "next": [
+        {
+          "to": "30"
+        }
+      ]
+    },
+    "399b": {
+      "id": "399b",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Ehm... Let's say they remind me a little of those surprises you used to find in snacks as a kid...",
+      "next": [
+        {
+          "to": "20"
+        }
+      ]
+    },
+    "21a": {
+      "id": "21a",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Come on, I was kidding! I'm starting to act like Sirio hahaha You are very good, frankly, I'm the one who has trouble understanding art, considering where I grew up...",
+      "next": [
+        {
+          "to": "40"
+        }
+      ]
+    },
+    "21b": {
+      "id": "21b",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_dubbioso.png"
+      },
+      "text": "Eh, I can't really tell you... Probably I'm the one who doesn't understand them. I am not very familiar with this kind of stuff...",
+      "next": [
+        {
+          "to": "6"
+        }
+      ]
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <!-- Gabriele's beer coaster (24-2), recreated for the revival: the original printed one is lost.
+       Numbers are letter positions in the alphabet: LEAVE / ME / ALONE. -->
+  <circle cx="500" cy="500" r="480" fill="#f4ead2" stroke="#1d1d1b" stroke-width="10"/>
+  <circle cx="500" cy="500" r="430" fill="none" stroke="#ef6630" stroke-width="6" stroke-dasharray="18 14"/>
+  <text x="500" y="250" font-family="Helvetica, Arial, sans-serif" font-size="64" font-weight="bold" text-anchor="middle" fill="#1d1d1b">LA RIBALTA</text>
+  <text x="500" y="300" font-family="Helvetica, Arial, sans-serif" font-size="30" text-anchor="middle" fill="#1d1d1b">birra artigianale · via Cevedale</text>
+  <text x="500" y="460" font-family="Courier New, monospace" font-size="72" font-weight="bold" text-anchor="middle" fill="#1d1d1b">12 5 1 22 5</text>
+  <text x="500" y="570" font-family="Courier New, monospace" font-size="72" font-weight="bold" text-anchor="middle" fill="#1d1d1b">13 5</text>
+  <text x="500" y="680" font-family="Courier New, monospace" font-size="72" font-weight="bold" text-anchor="middle" fill="#1d1d1b">1 12 15 14 5</text>
+  <text x="500" y="800" font-family="Helvetica, Arial, sans-serif" font-size="30" font-style="italic" text-anchor="middle" fill="#1d1d1b">— G.</text>
+</svg>

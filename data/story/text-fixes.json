@@ -1,0 +1,1113 @@
+{
+  "$comment": [
+    "English corrections for the extracted scenes, applied by tools/extract-scenes.mjs. Keyed '<scene>#<beat>' -> field -> corrected value. Proofread Oct 2026."
+  ],
+  "scenes": {
+    "1-2#2": {
+      "text": "Sorry if I woke you up! I was just going through some of the latest photos I shot in Bovisa…"
+    },
+    "1-2#3": {
+      "text": "The Suburb? How did you ever get there?"
+    },
+    "1-2#4": {
+      "text": "Well, I grew up there!"
+    },
+    "1-2#6": {
+      "text": "Oh, I see… Sorry, but I'm going back to sleep now, I'm really tired. Can you please turn off the light? Thanks, goodnight!"
+    },
+    "1-2#8": {
+      "text": "I’m so sorry, I woke you up again… It’s so different here from my home, I just have to get used to it!"
+    },
+    "1-2#10": {
+      "text": "So you’re the outsider! Come on, tell me something about your place… I've never been there! To be honest, I’ve almost never been anywhere… Unfortunately."
+    },
+    "1-2#11": {
+      "text": "It’s so different that I really don’t know where to start… it’s like everything is black and white here, while outside… out there, everything is full of colors! Take these photos, maybe they can explain it better than I can."
+    },
+    "1-2#12": {
+      "text": "I tried so many times to imagine the world out there... Everything must be the opposite of this school, this system…"
+    },
+    "1-2#13": {
+      "text": "It really is! I applied here to make my interests useful and… meaningful, but even though I’ve only been here a couple of days, I can’t breathe! Maybe I've made a mistake, you know, I am a free spirit after all..."
+    },
+    "1-2#15": {
+      "text": "Wait, wait, wait! Am I high or is there a shadow over the window? It looks like someone trying to escape... doesn’t it? I’m so fucking curious, let’s find out what’s going on! Are you with me?"
+    },
+    "1-2#17": {
+      "text": "That’s ok… we can try to follow it. Looks like it’s headed for the first-floor staircase of B2. But keep calm, we have to be really cautious!",
+      "instruction": "Go to the location"
+    },
+    "1-2#18": {
+      "text": "No, no... are you crazy? Following it is too dangerous! But if I’m not wrong, there are some classrooms near the main entrance of the B2 building. I suppose it’ll pass by there when it comes back. We can try to wait for it there…",
+      "instruction": "Go to the location"
+    },
+    "1-2#01": {
+      "text": "I wish you all a wonderful academic year, my dear students!\nFirst, I’m glad to announce that this year there will be no changes in the faculty. We can reconfirm all the excellence in teaching that makes our University one of the best schools in the country."
+    },
+    "1-2#02": {
+      "text": "I’m also glad to introduce Yda to you! She’s our student representative and she will play a major role here: she will connect all of you with the teachers.\nI have to remind you, anyway, that in order to prevent intrusions from outside, our campus has a security service at all hours, and it is reinforced at night."
+    },
+    "1-2#03": {
+      "text": "Remember that these people don’t know who you are, so they won’t make any distinction between you and outsiders.\nI invite you all to respect the curfew and not to walk around the university at night without written permission; besides, I also strongly advise you not to even try to escape from the campus at any time of the day."
+    },
+    "1-2#04": {
+      "text": "As happens every year, today I’m introducing to you this year’s “worthy” one, who has entered the University system from the suburbs thanks to his school results and his strong desire to receive the best education in the country, in order to have the chance of a bright future."
+    },
+    "1-2#05": {
+      "text": "I ask you all to make him feel welcome and to help him become part of the University and of our student groups, making him feel the importance of this place and the beauty of our school and educational program."
+    },
+    "1-2#06": {
+      "text": "In conclusion, I wish you all the best possible year, one that can enrich your education along a path of growth and maturity, according to the meticulous and exemplary regulations of the University.\nBut now, it’s time to go to your classrooms! Let’s go, everyone!"
+    },
+    "1-2#container3": {
+      "text": "The following night..."
+    },
+    "2-1-3#1": {
+      "text": "Careful, Sirio, we mustn’t make any kind of noise. It’s forbidden to hang around the corridors at night. Yda is always around the corner."
+    },
+    "2-1-3#3": {
+      "text": "Don't you remember? Headmistress Moretti introduced her in the welcome speech: it says \"student rep\", but read \"Moretti's right-hand man\". She's Moretti's eyes and ears! Everyone beware of her 'cause she's a real bi..."
+    },
+    "2-1-3#4": {
+      "text": "Good evening, students! I hope you’re carrying a special permit to hang around the corridors at this late hour, even though I don't remember signing one for you two."
+    },
+    "2-1-3#5": {
+      "text": "I’m… really, I mean, we… are really… sorry, Yda!"
+    },
+    "2-1-3#6": {
+      "text": "A special permit? Can someone explain to me what the hell is happening here?"
+    },
+    "2-1-3#7": {
+      "text": "Oh, you must be the new freshman. Quite obvious. Well, tonight I feel tolerant: go back to your room now, and next time you two can’t sleep, take a look at the rules to kill time. If you’re able to, obviously."
+    },
+    "2-1-3#9": {
+      "text": "Hey, Sirio, come here… there’s that shadow again! It really looks like someone escaping!"
+    },
+    "2-1-3#11": {
+      "text": "If I'm not wrong, there are some classrooms near the main entrance of the B2 building. I suppose he'll pass by there when he comes back. We can try to wait for him there…",
+      "instruction": "Cut the line in the journal"
+    },
+    "2-1-3#81": {
+      "text": "Sirio! Wait, let's hide. If I'm not wrong, there are some classrooms near the main entrance of the B2 building. I suppose the shadow will pass by there when it comes back. We can try to wait for it there…",
+      "instruction": "Cut the line in the journal"
+    },
+    "2-1-3#container2": {
+      "text": "The next night..."
+    },
+    "4#3": {
+      "text": "Oh my God! I can’t believe it! It’s Roberto Remedia! Our “Principles of Web Design” professor! He’s one of the pillars of the University, he studied here and he taught here before the reform! Sirio? Sirio wait, what are you doing, stop, please!"
+    },
+    "4#6": {
+      "next": {
+        "pressing": "Pressing"
+      }
+    },
+    "4#7": {
+      "text": "We were waiting for you... we saw you last night as well. Unfortunately Yda caught us. I... I'm dying to see that world outside! Sirio told me about it... he really misses his freedom!"
+    },
+    "4#8": {
+      "text": "Good story, guys! Don't worry, I can help you. But remember, keep your mouths shut. We can meet tomorrow, after 2.30 p.m. for sure... I’m really busy, you know. I’ll give you this memo with our meeting time."
+    },
+    "4#9": {
+      "text": "Oh, thank you very much, professor!"
+    },
+    "4#81": {
+      "text": "I'll leave you two some more information, hidden near the B3 building entrance. Go out from there… I'll ask the guard to leave the gate open for you…"
+    },
+    "4#400": {
+      "text": "Well… guys, bad story, I was just looking for a USB pen I think I lost this afternoon…"
+    },
+    "4#401": {
+      "text": "Shit guys, how did you see me? I go out the most hidden way… what are YOU doing here, instead? Isn't it forbidden?"
+    },
+    "4#402": {
+      "text": "Well, let’s say that to find this pen it is enough to go to the ground-floor corridor, at the B1 door. That door has some trouble with the alarm… there you can look for “the USB pen” with no hassle."
+    },
+    "4#399a": {
+      "text": "Ehm, good evening professor… ehm, Sirio and I, we really couldn't sleep tonight… that’s why we decided to take a little… walk! And we were wondering if you had the same idea... that’s all!"
+    },
+    "4#399b": {
+      "text": "Good evening professor! We saw you climb over the University gate, twice... We are curious: where do you run away to when you go out?"
+    },
+    "5-1#2": {
+      "text": "Petronio, look, there’s something in that wooden… thing, on the left of the door… let’s see what it is!"
+    },
+    "5-1#9": {
+      "text": "It doesn’t seem so important! Just a bookmark."
+    },
+    "5#2": {
+      "text": "I can’t remember, what were we supposed to look for in this place, according to Remedia?"
+    },
+    "5#3": {
+      "text": "We should look for the missing information to complete the memo he gave us. Do you remember?"
+    },
+    "5#5": {
+      "instruction": "Search for information"
+    },
+    "5#11": {
+      "text": "Perfect, so… Let me take the map I keep in my journal: this way I can check where to go and find my way around."
+    },
+    "5#12": {
+      "text": "There’s a thing I absolutely have to show you first. Don’t worry, it’s quite near! It’s in Via Schiaffino, we have to go that way anyway."
+    },
+    "6#4": {
+      "text": "I’m happy you like it. Try to figure out where I want to go next!"
+    },
+    "6#10": {
+      "text": "It’s quite simple. Just focus on the road signs. Keep the lamppost on your left, look straight ahead, close your left eye and use this transparent paper… as always, when you find it, just nod, man!"
+    },
+    "6#13": {
+      "text": "Bingo, my friend! Follow me while you enjoy these murals"
+    },
+    "8-1#2": {
+      "text": "Weren't we supposed to say something once we got here? I forgot already"
+    },
+    "8-1#3": {
+      "next": {
+        "don't remember": "Don't remember"
+      }
+    },
+    "8-1#11": {
+      "text": "Nice place! But... what’s that thing on the ground next to the playground?"
+    },
+    "8-1#14": {
+      "text": "Seen up close they look like pieces of letters. I wonder if they mean something..."
+    },
+    "8-1#15": {
+      "text": "For sure! Come on, try to figure out what they mean, using your big big brain and that journal… I’m sure you'll make it!"
+    },
+    "8#1": {
+      "text": "BOMB! You did it guys! I’m glad to see that there are still smart people in that University!"
+    },
+    "8#2": {
+      "text": "Oh come on, professor! Hey, look, there, to the right of the gate, by the staircase… What’s that poster? Never seen it before!"
+    },
+    "8#3": {
+      "text": "No idea… it looks like some sort of film season or something? Good story… There’s a missing piece!"
+    },
+    "8#4": {
+      "text": "Look what I found on the ground… it could be the missing piece!"
+    },
+    "8#11": {
+      "text": "Bomb! Put them together and check what the poster says!"
+    },
+    "8#14": {
+      "instruction": "Follow Roberto's instructions",
+      "next": {
+        "DOne": "Done"
+      }
+    },
+    "8#15": {
+      "text": "Piazza Dergano! Nice place… why don't we make a stop there? Maybe I could meet some friends of mine from around here!"
+    },
+    "8#16": {
+      "text": "Tell me some names! Maybe I know them too and we can go say hello together."
+    },
+    "8#17": {
+      "text": "I can drop a line to Su. She’s a friend of mine who used to work at the library before they shut it. We haven’t seen each other in a while… at least since she started her new bijoux business…"
+    },
+    "9-1#2": {
+      "text": "Come on bro, you know I never read texts... Anyway Petronio here is way better than me when it comes to writing!"
+    },
+    "9-1#3": {
+      "next": {
+        "it's personal": "It's personal"
+      }
+    },
+    "9-1#4": {
+      "text": "I think the inspiration lies right under our feet, do you see these stamps? Some of them hide things and words... You'll see, it will be useful to you! keeek"
+    },
+    "9-1#5": {
+      "text": "Come on Petronio, it's getting late, it's time to go back. Let's go through the main entrance in Via Durando 10 to save time!",
+      "instruction": "Cut the journal's page"
+    },
+    "9-1#7": {
+      "text": "Come on Petronio, it's getting late, it's time to go back. Let's go through the main entrance in Via Durando 10 to save time!",
+      "instruction": "Turn the journal's page"
+    },
+    "9-1#21": {
+      "next": {
+        "good idea": "Good idea",
+        "maybe not": "Maybe not"
+      }
+    },
+    "9-1#31": {
+      "next": {
+        "sure": "Sure",
+        "not now": "Not now"
+      }
+    },
+    "9-1#41": {
+      "next": {
+        "ok then": "OK then",
+        "we are distant": "We're too far apart"
+      }
+    },
+    "9-1#111": {
+      "text": "Anybody talking about me? You idiot, wake up, why didn't you text me back? I texted you about that new project of murals with poems, but you have to help me, mate! You are the poet."
+    },
+    "9-1#31b": {
+      "text": "Right now? I don't know if I feel like it... Besides, I don't think my poems are suitable for your graffiti..."
+    },
+    "9-1#41b": {
+      "text": "I'm not sure we will be able to find common ground... But I'll think about it, and if so I'll let you know."
+    },
+    "9-1#399b": {
+      "text": "Yeah, I write poetry. But I prefer to keep it to myself because it deals with very personal topics..."
+    },
+    "9-1#21b": {
+      "text": "I'm still not convinced. I don't think these are two arts that go well together"
+    },
+    "9#3": {
+      "next": {
+        "don't remember": "Don't remember"
+      }
+    },
+    "9#14": {
+      "text": "Did you really do it? That's cool! It reminds me so much of the projects we used to do when we were studying at University, they were much more fun than the ones we have now... Shit, sorry, I got a text"
+    },
+    "9#15": {
+      "text": "It won't be Su, huh. What is that prehistoric shit?"
+    },
+    "9#16": {
+      "text": "Eh, I have to use a Nokia 3310 to talk with my friends outside so I don't get busted. Anyway look, this mobile phone is still a bomb, indestructible."
+    },
+    "9#18": {
+      "text": "All in code, cool right? Let's see if you \"youngsters\" still have some culture, try reading this, it's a super easy trick, just don't use T9."
+    },
+    "9#20": {
+      "instruction": "Try to read the message"
+    },
+    "10#1": {
+      "text": "Hi guys... Hey, love, what are you doing together? Do you know each other?"
+    },
+    "10#5": {
+      "text": "Robi has been coming to my father's bar forever and after a while we became friends and then... come on, you know what I mean."
+    },
+    "10#7": {
+      "text": "Just a second, first I have to finish something. Could you help me look for a flyer? I'd take a look at that stall to the right of the entrance."
+    },
+    "10#13": {
+      "text": "Ok, let me know when you've done it."
+    },
+    "10#16": {
+      "text": "Noo, that's the bomb, James Reka is the best. I have class tomorrow, but you should definitely go."
+    },
+    "10#17": {
+      "text": "Yeah, fuck it, we gotta go, my friend Guido will be there too for sure, fooling around as usual."
+    },
+    "11#4": {
+      "text": "I told you he's Australian, didn't I?"
+    },
+    "11#10": {
+      "text": "How come? I think you are smart enough to solve this in a couple of minutes if you use that diary of yours, give it a try"
+    },
+    "12-1#1": {
+      "text": "Who knows how 2501 came up with it. Guido, that asshole, was here staring at him the whole time, like he always does."
+    },
+    "12-1#3": {
+      "text": "Guido told me that there is a kind of game to play, but I don't know what he meant... He gave me this transparent sheet to play with, but I never managed to solve it!"
+    },
+    "12-1#4": {
+      "text": "Hand it to me, let me try, I'm so used to it by now! I think we just have to stand at the right distance and overlap them until everything makes sense."
+    },
+    "12-1#14": {
+      "instruction": "Follow Sirio's instructions"
+    },
+    "12-1#16": {
+      "text": "No way, that's dope. Anyway he's right, huh, maybe it's time to really go \"home\" before getting caught again!"
+    },
+    "12-1#18": {
+      "instruction": "End of the day"
+    },
+    "12#3": {
+      "next": {
+        "don't remember": "Don't remember"
+      }
+    },
+    "12#13": {
+      "text": "You don't remember shit, huh? What's up Sirio, why are you back already? I thought you'd gone all fancy by now and didn't hang out in keek suburbs anymore. Who is your friend?"
+    },
+    "12#15": {
+      "text": "Hi Guido, finally I get to meet you! Is this mural really yours? It's amazing! I hadn't seen one like this yet these days..."
+    },
+    "12#16": {
+      "text": "Look at this fella who doesn't know the real masters! Of course that's not mine, 2501 did it, it's so damn cool, I was here watching him to figure out how to do these things, but it didn't help me much apart from drooling all over it."
+    },
+    "12#17": {
+      "text": "Cut the bullshit, it's Penny Market time."
+    },
+    "13#2": {
+      "text": "Sure thing, this is how we introduce Petronio to the world of sub-brands."
+    },
+    "13#5": {
+      "text": "Basically we wanted to make a trashy postcard by photographing Penny's alcohol brands, highlighting only a few letters to make a sentence appear, but they busted our asses, and we never finished..."
+    },
+    "13#6": {
+      "text": "Yeah, but with your white-collar education, I guess you can understand what we wanted to say, let's see if our idea would have succeeded"
+    },
+    "13#7": {
+      "text": "Right bro! We still have a test photo, don't we? Let's go to the alcohol aisle, if you compare it with the shelf, you can do it for sure!"
+    },
+    "13#11": {
+      "instruction": "Try to make a sentence",
+      "next": {
+        "DOne": "Done"
+      }
+    },
+    "13#14": {
+      "text": "It's a super iconic place, where we go at the end of the day to have a couple of Karpackies. Crazy beer, man."
+    },
+    "14#4": {
+      "text": "Of course, those are the only things I remember! To cut it short, Petronio, if you read the poem from a certain point, highlighting some letters, the name of the place where we always go afterwards appears."
+    },
+    "14#10": {
+      "text": "Do you understand why I miss all this? ...Nooo, bro! I've just fished out of my pocket the note with the code from that famous evening... come on Petronio, try to solve it! Mega easy! It also says where you need to start reading!"
+    },
+    "15#5": {
+      "text": "No way, bro, you haven't figured it out yet? Everything has a meaning in Bovisa! Take that diary and try to solve it!"
+    },
+    "16-1#3": {
+      "next": {
+        "strick rules": "Strict rules",
+        "useless rules": "Useless rules"
+      }
+    },
+    "16-1#4": {
+      "text": "That idiot over there was not a student of ours, and since he tried to enter our university, and succeeded, I must deduce that he wants to be part of it, not to upset its balance."
+    },
+    "16-1#6": {
+      "text": "Your useless arguments make me laugh. The rules must always be respected, however hard they are; they were established to train and educate you in the best possible way. It's a real pity, I am forced to report everything to the principal, am I right, Professor?"
+    },
+    "16-1#7": {
+      "text": "We were waiting for you... we saw you last night as well. Unfortunately Yda caught us. I... I'm dying to see that world outside! Sirio told me about it... he really misses his freedom!"
+    },
+    "16-1#8": {
+      "text": "Is it really possible to have a new system of balance based on diversity? I could be the first one to organize such a system. You have intrigued me, at least. I will help you, but I want a prominent role in it. Since I'm the only one who can do it, I'll do some research. I'll be in touch in the next few days, students."
+    },
+    "16-1#9": {
+      "text": "Thanks Yda, we are counting on you! Send us a message when you finish your research... Hey Sirio, what do we do tomorrow?"
+    },
+    "16-1#10": {
+      "text": "I'd say we could go and eat something in Via Imbonati 11.",
+      "instruction": "End of the day"
+    },
+    "16-1#11": {
+      "instruction": "End of the day"
+    },
+    "16-1#21": {
+      "next": {
+        "need for freedom": "Need for freedom"
+      }
+    },
+    "16-1#30": {
+      "text": "Prove it to me, you have 12 seconds of my attention. Oh Yda, how lenient you are."
+    },
+    "16-1#31": {
+      "next": {
+        "Help me sirio": "Help me, Sirio"
+      }
+    },
+    "16-1#31b": {
+      "text": "Sirio, help me with this... Tell her you think the same, these rules hold us back and..."
+    },
+    "16-1#31a": {
+      "text": "Okay... Together we can create a new system based on respect for each other, for the ideas and potential of each one of us. This does not affect the possibility of producing prepared and educated students; on the contrary, it helps to train students who are also enriched by the diversity of others... Those were your 12 seconds."
+    },
+    "16-1#399a": {
+      "text": "Ehm... Come on Yda, let me at least explain... You know I've always respected the rules, but now I'm realizing they are too strict. The system could work just as well even if we were not isolated in here all the time."
+    },
+    "16-1#399b": {
+      "text": "You're right Yda! We didn't respect the rules! Do you know why? Because they serve no purpose but to isolate us within this university, without allowing us to experience the world out there!"
+    },
+    "16-1#prof3": {
+      "text": "Not this time, Yda, I heard you talking and I'm with you guys. When I was a student here we had much more freedom of expression and it is not true that things did not work, or rather..."
+    },
+    "16-1#21a": {
+      "text": "Yes, but if you think about it, the world doesn't run on the stupid rules of this university... What I'm trying to say is that rules are necessary, of course, but they can be different."
+    },
+    "16-1#21b": {
+      "text": "You just can't understand... Rules made you a different person than you would have been if you had had the freedom to have certain experiences!"
+    },
+    "16#3": {
+      "next": {
+        "Rules are srict": "Rules are strict"
+      }
+    },
+    "16#4": {
+      "text": "That idiot over there was not a student of ours, and since he tried to enter our university, and succeeded, I must deduce that he wants to be part of it, not to upset its balance."
+    },
+    "16#6": {
+      "text": "Your useless arguments make me laugh. The rules must always be respected, however hard they are; they were established to train and educate you in the best possible way. It's a real pity, I am forced to report everything to the principal, am I right, Professor?"
+    },
+    "16#7": {
+      "text": "We were waiting for you... we saw you last night as well. Unfortunately Yda caught us. I... I'm dying to see that world outside! Sirio told me about it... he really misses his freedom!"
+    },
+    "16#8": {
+      "text": "Is it really possible to have a new system of balance based on diversity? I could be the first one to organize such a system. You have intrigued me, at least. I will help you, but I want a prominent role in it. Since I'm the only one who can do it, I'll do some research. I'll be in touch in the next few days, students."
+    },
+    "16#9": {
+      "text": "Thanks Yda, we are counting on you! Send us a message when you finish your research... Hey Sirio, what do we do tomorrow?"
+    },
+    "16#10": {
+      "instruction": "End of the day"
+    },
+    "16#11": {
+      "text": "You know what? What do we care, bro? Don't make a fuss about it, tomorrow I'll take you to eat in Via Imbonati 11, our life is out there, do you understand it now?",
+      "instruction": "End of the day"
+    },
+    "16#30": {
+      "text": "Prove it to me, you have 12 seconds of my attention. Oh Yda, how lenient you are."
+    },
+    "16#31": {
+      "next": {
+        "help me Sirio": "Help me, Sirio"
+      }
+    },
+    "16#31b": {
+      "text": "Sirio, help me with this... Tell her you think the same, these rules hold us back and..."
+    },
+    "16#31a": {
+      "text": "Okay... Together we can create a new system based on respect for each other, for the ideas and potential of each one of us. This does not affect the possibility of producing prepared and educated students; on the contrary, it helps to train students who are also enriched by the diversity of others... Those were your 12 seconds."
+    },
+    "16#399a": {
+      "text": "Ehm... Come on Yda, let me at least explain... You know I've always respected the rules, but now I'm realizing they are too strict. The system could work just as well even if we were not isolated in here all the time."
+    },
+    "16#399b": {
+      "text": "You're right Yda! We didn't go by the rules! Do you know why? Because they serve no purpose but to isolate us within this university, without allowing us to experience the world out there!"
+    },
+    "16#prof3": {
+      "text": "Not this time, Yda, I heard you talking and I'm with you guys. When I was a student here we had much more freedom of expression and it is not true that things did not work, or rather... Now look at me, I've been here for ages and I still have to hide to see my friends or my girlfriend while pretending to be a serious person the rest of the time."
+    },
+    "16#21a": {
+      "text": "Yes, but if you think about it, the world doesn't run on the stupid rules of this university... What I'm trying to say is that rules are necessary, of course, but they can be different."
+    },
+    "16#21b": {
+      "text": "You just can't understand... Rules made you a different person than you would have been if you had had the freedom to have certain experiences!"
+    },
+    "17-1#3": {
+      "next": {
+        "don't remember": "Don't remember"
+      }
+    },
+    "17-1#12": {
+      "text": "What's all that stuff on the door with the \"private\" sign? Over there, inside the bar..."
+    },
+    "17-1#13": {
+      "text": "Those are stickers that people leave here, but there's one I don't recognize... let's take a look!"
+    },
+    "17-1#14": {
+      "text": "Look at this one, with fruit wedges all over it... It's really nice!"
+    },
+    "17-1#15": {
+      "text": "Ahahaha, I see! It's a game some place made up to make itself known! Try to solve it using that diary of yours!"
+    },
+    "17-1#26": {
+      "instruction": "Solve the riddle",
+      "next": {
+        "done": "Done"
+      }
+    },
+    "17-1#29": {
+      "text": "It's called a greengrocer, you know?"
+    },
+    "17#13": {
+      "text": "Dunno, I guess it's some game the crazy owners of this place have put up, let's check it out!"
+    },
+    "17#14": {
+      "text": "To me it seems just a list of words..."
+    },
+    "17#15": {
+      "text": "Look at this, there's the grid where you look for them, stick it in your diary and try to solve it!"
+    },
+    "17#26": {
+      "instruction": "Follow Sirio's instructions",
+      "next": {
+        "done": "Done"
+      }
+    },
+    "17#28": {
+      "text": "I've no fucking clue man, but there's a street here called Livigno, actually, let's go to Via Livigno 5, there's a park that's not bad at all"
+    },
+    "18-1#13": {
+      "text": "How I love chilling in parks! Now do you understand what you missed? Let's go to the play area, I'll tell you some childhood memories!"
+    },
+    "18-1#15": {
+      "text": "Dunno, I don't know, I think it's a kind of track for lots of sports, we always went there to play hopscotch!"
+    },
+    "18-1#17": {
+      "text": "What, bro? What is it? The thing I had to tell you about, hopscotch!"
+    },
+    "18-1#19": {
+      "text": "The game! Hopscotch, the game we all played as children: grab the stone, throw it on the square with the right number, jump... you know?"
+    },
+    "18-1#23": {
+      "text": "Yeah, yeah, but even the children here are strange, every time they use a different code! We did it too, it was fun, you know?"
+    },
+    "18-1#26": {
+      "instruction": "Solve the riddle",
+      "next": {
+        "solved": "Solved"
+      }
+    },
+    "18-1#29": {
+      "text": "You are such an asshole ahahah Anyway, \"Tango d'Amore\" is the solution. What does it mean?"
+    },
+    "18#2": {
+      "text": "Weren't we supposed to say something once we got here? I forgot already"
+    },
+    "18#3": {
+      "next": {
+        "don't remember": "Don't remember"
+      }
+    },
+    "18#14": {
+      "text": "Hide and seek? And what would that be?"
+    },
+    "18#16": {
+      "text": "You know, Sirio, my childhood was a bummer hahaha."
+    },
+    "18#17": {
+      "text": "No no, ok, then you absolutely have to try. Guido and I were so hooked that we made a map of the safest places to hide! Sometimes we were hiding for so long that I ended up getting bored... once I started doodling in my hiding place because I couldn't stand it anymore ahahahah."
+    },
+    "18#18": {
+      "text": "Who knows why nothing surprises me anymore ahahah Yet to be 100%. Sirio you have to tell me what you don't remember!"
+    },
+    "18#19": {
+      "text": "Yo bro, actually I don't remember what I drew, it would be funny to see it again. Look here, I still have our map hahaha, shall we go look for it?"
+    },
+    "18#26": {
+      "instruction": "Follow Sirio's instructions",
+      "next": {
+        "done": "Done"
+      }
+    },
+    "18#28": {
+      "text": "That's it! An ice cream! You don't know how much I've been craving one! But it just reminded me that there's an insane ice cream shop in Via Ciaia 6, come on, now I'm hungry too!"
+    },
+    "19#3": {
+      "text": "Hello students, I've been collecting my thoughts these days. To establish a new balance within the university we must first get rid of the principal. I'm investigating her and there are things that don't add up. You have to go and look for evidence in 3 places."
+    },
+    "19#4": {
+      "text": "The first one has something to do with diplomas: it is the Th(r)ief(t) Market in Piazza Emilio Alfieri, you can only go there on Sundays between 7:00 am and 2:00 pm. The second one is in Via Ciaia 4, you can go there between 7:00 pm and 3:00 am every day except Sundays."
+    },
+    "19#5": {
+      "text": "You have to solve a code in a picture and, as I understand it, the key to decrypting it is in the picture itself. The last one is in Via Baldinucci 76, it's a library: you'll have to access the registers to check the graduates, 1987 in medicine, 1989 in psychology and 1995 in architecture."
+    },
+    "19#6": {
+      "text": "Remember to say \"ARCHIVE\" when you enter. When you have found everything, go to Ribalta in Via Cevedale. Don't make me regret this choice, idiots.",
+      "instruction": "Take note of \"Archive\""
+    },
+    "20-1#1": {
+      "text": "Ok, he just gave me this diploma that looks like Moretti's, but he only gave us one minute. Do you have the one Yda gave us?"
+    },
+    "20-1#3": {
+      "instruction": "Cut the journal's page"
+    },
+    "20-1#6": {
+      "text": "What news, I can't believe it! Let's jot down the forger's name right away to use it as evidence... What's his name?"
+    },
+    "20-1#7": {
+      "instruction": "Take note of Forsety"
+    },
+    "20-1#8": {
+      "text": "Ok, maybe we can prove that it is a fake."
+    },
+    "20-1#9": {
+      "text": "That would be great! Let's jot down the forger's name right away to use it as evidence... What's his name?"
+    },
+    "20-1#10": {
+      "instruction": "Take note of Renato"
+    },
+    "20#2": {
+      "text": "Sirio, fuck off, you're really a scatterbrain! We're at the market looking for a clue."
+    },
+    "20#3": {
+      "text": "Oh yeah, that's true, I used to come here almost every Sunday to look for pieces for my projects."
+    },
+    "20#4": {
+      "text": "Well, then you'll surely know if there's any stall that could reveal something to us about the principal's past..."
+    },
+    "20#5": {
+      "text": "Well, I only know the ones who steal things and then resell them, but once Guido said he came here to get fake documents to try to get into the University."
+    },
+    "20#7": {
+      "text": "That's true! But wait, he doesn't have a stall, he always lurks by that pole with the road sign next to the shelter under the station."
+    },
+    "20#8": {
+      "text": "Oh, maybe I can see him... He's over there, let's go! But do me a favor, you do the talking, I don't even know where to start...",
+      "instruction": "Search for the QR code in the market"
+    },
+    "21-1#2": {
+      "text": "I don't know. But take a closer look at that girl in the middle... It does look like the headmistress, only younger, doesn't it?"
+    },
+    "21-1#4": {
+      "text": "Surely the code we have to decipher is this one on the billboard."
+    },
+    "21-1#5": {
+      "text": "Yda said there was a clue in the photo, right? The only thing out of place I see is that guy with his hand raised."
+    },
+    "21-1#6": {
+      "instruction": "You have one minute to decrypt the billboard"
+    },
+    "21-1#10": {
+      "text": "Oh fuck! Now I remember! My grandfather told me about it when I was a child, it was an association of people who wanted to gain power while avoiding all the difficulties, without studying or working."
+    },
+    "21-1#11": {
+      "text": "So you're saying the principal was one of them? The principles of the reform, my ass... But who ran all of this?"
+    },
+    "21-1#12": {
+      "text": "My grandpa always told me that the leader of the group was a certain \"Cordelia Bianchetti\", who disappeared who knows where after the reform."
+    },
+    "21-1#13": {
+      "text": "Ok, I'll take a note so we can use it as proof!"
+    },
+    "21-1#15": {
+      "text": "No no, I remembered one thing: when I was a child my grandpa used to tell me about an association of people who wanted to gain power but without studying or working"
+    },
+    "21-1#17": {
+      "text": "I really think so, you know, quite the opposite of what she told us in her stupid speech at the beginning of the year."
+    },
+    "21-1#20": {
+      "text": "Ok, I'll write it down right away!"
+    },
+    "21#2": {
+      "text": "Ok, I'll write it down right away, by now I've understood that we can't trust your memory... While you're at it, do you need anything else? Ahahah."
+    },
+    "21#3": {
+      "text": "Ah yeah dude, before going into Ribalta remind me that we must talk about MORETTI, it's important.",
+      "instruction": "Take note of Moretti"
+    },
+    "21#9": {
+      "text": "Ok, let's go look!"
+    },
+    "22-1#2": {
+      "text": "Weren't we supposed to say something once we got here? I forgot already."
+    },
+    "22-1#3": {
+      "next": {
+        "don't remember": "Don't remember"
+      }
+    },
+    "22-1#13": {
+      "text": "Don’t know… it says that something is going to reopen… there’s a white rectangular space. Why don’t you try putting that bookmark there? It seems to be exactly its shape!"
+    },
+    "22-1#18": {
+      "text": "Well, at least it reminded me that the next place we can go is nearby, it's a really nice park."
+    },
+    "22#2": {
+      "text": "Fuck you, Sirio, you and your memory will drive me crazy hahaha Come on, let's go to the pole with the words \"Free wi-fi area\". There seems to be a door that could be the archive's..."
+    },
+    "22#3": {
+      "text": "Fuck it, I can't find the 3 folders Yda told us about."
+    },
+    "22#4": {
+      "text": "Something is not right... The only codes missing are those 3. I bet they deleted them just so they couldn't be consulted!"
+    },
+    "22#5": {
+      "text": "We just need to understand how the code system works in this library."
+    },
+    "22#12": {
+      "text": "Certainly \"Gualtiero\", the archive librarian, he has always looked at me as if he had something to hide."
+    },
+    "22#13": {
+      "text": "I'll mark him down in the diary, he'll surely come in handy!",
+      "instruction": "Take note of Gualtiero"
+    },
+    "22#15": {
+      "text": "Neither do I, but write down the name of the archive librarian before I forget it, then we'll try to make him talk."
+    },
+    "22#16": {
+      "text": "Ok, I'll put it in the diary. Just tell me his name while you still remember it haha"
+    },
+    "22#17": {
+      "text": "He's called \"Luigi\"",
+      "instruction": "Take note of Luigi"
+    },
+    "23#3": {
+      "text": "Eh, now comes the good part! You know Guido loves 2501, right? Well, once, while he was doing this mural, he took a coaster from this brewery, peeled off the top layer, drew a piece of this mural on it and then asked Guido to figure out where it would fit... I mean, you get it? They get along because they are both crazy as fuck!"
+    },
+    "23#5": {
+      "text": "It ended with Guido all stoned, and it took him so long that in the end 2501 took pity on him and drew an arrow pointing to the spot to help him, and then he bought him a beer! In the end I kept that coaster, because it was really a trip! Try it yourself, come on!"
+    },
+    "23#6": {
+      "instruction": "Follow Sirio's instructions"
+    },
+    "24-2#2": {
+      "text": "Weren't we supposed to say something once we got here? I forgot already"
+    },
+    "24-2#3": {
+      "next": {
+        "don't remember": "Don't remember"
+      }
+    },
+    "24-2#14": {
+      "text": "Hey yo Gabri! What's up? This is Petronio, my mate from university."
+    },
+    "24-2#15": {
+      "text": "Nice to meet you, Gabriele! Sirio is taking me on some hidden tours of the suburbs. Unfortunately, after the reform, my father never allowed me..."
+    },
+    "24-2#16": {
+      "text": "I hear you... and this damn reform doesn't help at all, does it? Oh, I almost forgot! I have just finished brewing a new beer with the ingredients I brought back from my last trip to Germany, I called it Kayser Soze. Would you like some?"
+    },
+    "24-2#23": {
+      "text": "Dude, you know, Gabriele doesn't like jerks and people who peel his coasters, like 2501, so he found a way to tell them..."
+    },
+    "24-2#27": {
+      "instruction": "Follow Gabriele's instructions",
+      "next": {
+        "DOne": "Done"
+      }
+    },
+    "24-2#30": {
+      "text": "Yes, I'd say it fits us perfectly! We're so late, we have to go back to University."
+    },
+    "24-2#31": {
+      "text": "Time flies out here! Come on, hurry up, but let's go through the B1 door, which is the only faulty one. See you soon, Gabriele!",
+      "instruction": "Enter the university through the B1 door"
+    },
+    "24#4": {
+      "text": "Actually I didn't understand much, he was very vague and when I asked for more he immediately changed the subject, so we'll have to be very convincing."
+    },
+    "24#12": {
+      "text": "Here’s Gabriele! Hey hi Gabri!"
+    },
+    "24#13": {
+      "text": "Hi kids! You arrived just in time, I just finished preparing a new drink I learned to make in Thailand. Would you like to taste it? So you can also give me your opinion..."
+    },
+    "24#15": {
+      "text": "Eh, small talk is not my favorite thing."
+    },
+    "24#16": {
+      "text": "Gabri, to be honest, we are here because we have to talk to you about the principal, and I remember you let slip something about her, as if you knew her"
+    },
+    "24#17": {
+      "text": "You know, your help could be crucial. We would love to create a new university system with more freedom and fewer rules... We have already thought of everything."
+    },
+    "24#18": {
+      "text": "You two enjoy being a pain in my ass, huh? Your intentions are really noble, but I imagine you know that they alone are never enough, especially when it comes to changing something."
+    },
+    "24#21": {
+      "text": "Yes, kid, we were very close as children, even if very different. Then she became a great bitch, a person hungry for power, willing to do anything for it, including ruining our relationship by plotting behind everyone's back and lying shamelessly."
+    },
+    "24#23": {
+      "text": "When the reform took place it seemed to suit everyone inside the fucking system, and as far as I was concerned those weren't my fucking problems anyway. But now that you want to change things, why should I keep quiet? Now you know everything there is to know."
+    },
+    "24#25": {
+      "text": "These names tell me nothing. You can do some more research if you think your principal is hiding something, but be careful, you're playing with fire."
+    },
+    "24#26": {
+      "text": "All right Gabri, we'll be back, you'll see. Come on Petronio, it's time to go back, we'll find out more next time! Now let's go back to University and go to B2.2.14, to see if Yda is there as usual."
+    },
+    "24#180": {
+      "text": "We did some research and found these 3 names. By any chance, do they tell you anything about the principal?",
+      "instruction": "Write the names with the right capital letters"
+    },
+    "24#fin1": {
+      "text": "Look Petronio! The news is in the newspaper! The headmistress got arrested and now the University will be a completely different place."
+    },
+    "24#fin2": {
+      "instruction": "Open the envelope F1"
+    },
+    "25#2": {
+      "text": "As it turns out, you are idiots, and... oops, with the evidence I gathered you got someone's attention: the principal wants to see you."
+    },
+    "25#3": {
+      "text": "Here they are, our rebels. I didn't expect it from someone like you, Petronio; as for Sirio, I didn't have much hope, seeing where he grew up. Did you really think you could fool me?"
+    },
+    "25#4": {
+      "text": "Nobody has ever succeeded in all these years, Minerva, I don't see how they could be the first. By the way, Sirio, I really congratulate you on wasting a unique opportunity"
+    },
+    "25#11": {
+      "text": "Thank you Roberto, as always you took the words right out of my mouth. It's people like you and Yda, who understand all the benefits the reform has brought to the University, who count and will count in the future."
+    },
+    "25#13": {
+      "text": "Exactly: you are expelled from the University forever, with no possibility of appeal."
+    },
+    "25#15": {
+      "text": "I've never been so pissed off, I really didn't expect such a scene from Roberto; from that chick Yda, yes, but from Roberto..."
+    },
+    "25#16": {
+      "instruction": "Open the envelope F2"
+    },
+    "26#2": {
+      "text": "Look, I still have two photos from when they were doing these pieces... Take them! For your collection ahah"
+    },
+    "27#2": {
+      "text": "Isn't that it on the counter near the cash desk? That ban notice with your face on it hahaha."
+    },
+    "27#3": {
+      "text": "There it is hahaha. Anyway, look, I'm not a fool! My grandpa's shop was here on this street and if he'd seen it he would have killed me, that's why I sneaked back to scratch it out!"
+    },
+    "27#5": {
+      "text": "Take it easy man! Try to complete the writing, somewhere I still have a transparent sheet to help you..."
+    },
+    "27#12": {
+      "text": "Come on, move your ass, I'll show you where I became who I am."
+    },
+    "28#4": {
+      "text": "Eh, tell me about it. Now that I've been away for a while, I hardly recognize it anymore."
+    },
+    "28#11": {
+      "text": "Come on, enough with this sentimental shit! It just occurred to me that nearby, in Via Guerzoni 39, there's Su's new shop, I haven't been there yet, let's go say hello."
+    },
+    "29#1": {
+      "text": "Hi Sirio, you finally managed to come! You've been promising for months and you never came, you're always the same! I see your friend is here too."
+    },
+    "29#2": {
+      "text": "Finally, huh? You know it's a bad time to hang around freely... yo anyway, this new stuff here is lit! Look Petronio!"
+    },
+    "29#3": {
+      "next": {
+        "Cool stuffs": "Cool stuff",
+        "emm...": "Umm..."
+      }
+    },
+    "29#4": {
+      "text": "Okay guys, to make me and my art more understandable, try making the origami: you could learn something unexpected, something it's better for you to remember."
+    },
+    "29#5": {
+      "text": "I'll take you to another small park now, the one in Via Livigno 5! When we get there, remind me that I have to tell you about HOPSCOTCH!",
+      "instruction": "Cut the journal's page"
+    },
+    "29#7": {
+      "text": "We were waiting for you... we saw you last night as well. Unfortunately Yda caught us. I... I'm dying to see that world outside! Sirio told me about it... he really misses his freedom!"
+    },
+    "29#21": {
+      "next": {
+        "kidding": "Kidding",
+        "i don't understand": "I don't understand"
+      }
+    },
+    "29#41a": {
+      "text": "I certainly don't get it, but I can appreciate it, just like a lot of the stuff Sirio is showing me around here in Bovisa."
+    },
+    "29#41b": {
+      "text": "Eh, maybe that's just how it is... As an outsider, your jewels don't say much to me..."
+    },
+    "29#31a": {
+      "text": "Good evening professor! We saw you climb over the University gate, twice... We are curious: where do you run away to when you go out?"
+    },
+    "29#399a": {
+      "text": "Wow, congratulations Su! I love them. I'd love to learn to make things by hand myself, like you all do here in the suburbs!"
+    },
+    "29#399b": {
+      "text": "Ehm... Let's say they remind me a little of those surprises you used to find in snacks as a kid..."
+    },
+    "29#21a": {
+      "text": "Come on, I was kidding! I'm starting to act like Sirio hahaha You are very good, frankly, I'm the one who has trouble understanding art, considering where I grew up..."
+    },
+    "30#4": {
+      "text": "I don't know, let's get closer!"
+    },
+    "30#11": {
+      "text": "You're right, but we are geniuses! Come on, solve it!"
+    },
+    "30#12": {
+      "instruction": "Solve the riddle",
+      "next": {
+        "done": "Done"
+      }
+    },
+    "30#13": {
+      "text": "Well, it just says \"Turn\", but turn where?"
+    },
+    "30#14": {
+      "text": "Have you tried 180°? And I'm supposed to be the dumb one! Anyway look, that's the Fernet Branca chimney over there. It just occurred to me that we could drop by: it's in Via Resegone 2, and inside there's the \"Collezione Branca\"."
+    },
+    "31#3": {
+      "text": "Can we go in and visit?"
+    },
+    "31#4": {
+      "text": "Sure, it's not just there for looks ahahahaha, but you have to book the visit."
+    },
+    "31#12": {
+      "text": "Excellent, I'll keep them in my diary. Now we have to get back, right?"
+    },
+    "31#13": {
+      "text": "Yes, but cheer up man! Tomorrow we'll see graffiti right behind the university, in Via Schiaffino, then we'll go to a super nice place in Via Bovisasca 57!",
+      "instruction": "End of the day"
+    },
+    "32#4": {
+      "text": "It's getting late, we must run to the University, tomorrow I'll take you to the place I care about most. Oh please, let's go through the same door we came out of.",
+      "instruction": "Enter the university through the B3 door"
+    },
+    "33#1": {
+      "text": "This place is special! They organize some event almost every night. We also presented some of our projects here a few times!"
+    },
+    "33#2": {
+      "text": "Are you serious? I would have really liked to be there... Hey, look! Isn't that Professor Remedia?"
+    },
+    "33#3": {
+      "next": {
+        "it's cool": "It's cool",
+        "i am worried": "I'm worried"
+      }
+    },
+    "33#4": {
+      "text": "But before saying goodbye I want to tell you something: the beauty of the suburbs is that everything hides another meaning. For example, the Spirit bar is number 1 for wines, but even its business card could hide very important letters, it's a good story..."
+    },
+    "33#5": {
+      "text": "Now I'll show you how people think out here. Let's go to Via Durando 10, in front of the electric car charging column, to see some more street art.",
+      "instruction": "Cut the journal's page"
+    },
+    "33#7": {
+      "text": "Now I'll show you how people think out here. Let's go to Via Durando 10, in front of the electric car charging column, to see some more street art.",
+      "instruction": "Turn the page"
+    },
+    "33#21": {
+      "next": {
+        "it's not easy": "It's not easy"
+      }
+    },
+    "33#31": {
+      "next": {
+        "remain focused": "Stay focused"
+      }
+    },
+    "33#40": {
+      "text": "Ok, then I'll have a glass of this red wine, which is what I need right now."
+    },
+    "33#41": {
+      "next": {
+        "me too": "Me too",
+        "help me with yda": "Help me with Yda"
+      }
+    },
+    "33#31b": {
+      "text": "I don't know... I'd like to keep a clear head 'cause Yda could try to make us slip up at any moment..."
+    },
+    "33#41b": {
+      "text": "As for me, I’d need someone to intercede for us with the headmistress about the Yda situation..."
+    },
+    "33#21a": {
+      "text": "You're right! I really need something to help me stop thinking about it..."
+    },
+    "34#4": {
+      "text": "Yes, I'm very fond of it indeed. Now let's go to Via Imbriani 54, there are two really beautiful murals; the second is called \"Il Guardiano\", write it down please, Guido always wants me to remember it, his favorite artist made it."
+    },
+    "35#4": {
+      "text": "Yeah, now look... By the way, the guide always repeated something in dialect, I liked it so much that I wrote it everywhere, but as usual I can't remember it..."
+    },
+    "35#7": {
+      "text": "Sirio, fuck! You made a hole right on the word!"
+    },
+    "35#8": {
+      "text": "Eh, bro, I'm sorry... But look at the plaque below the school's! Let's try to move the sheet over the letters to see if something meaningful comes out."
+    },
+    "35#10": {
+      "text": "You'll see, bro, I'm a genius, a genius"
+    },
+    "35#12": {
+      "instruction": "Follow Sirio's instructions",
+      "next": {
+        "done": "Done"
+      }
+    },
+    "35#14": {
+      "text": "Crazy, eh? By the way, I just remembered there’s a super cool place in Via Butti 18, come on, come on!"
+    },
+    "36#12": {
+      "text": "I didn't think you'd ever done anything healthy in your life hahaha."
+    },
+    "36#13": {
+      "text": "I am a man of many resources, yo. Anyway you have to get my milkshake, it's so good man, I guarantee it."
+    },
+    "36#17": {
+      "text": "Easy, the owner surely still has the recipe hanging somewhere, he left it there to keep me from forgetting it every time hahaha."
+    },
+    "36#21": {
+      "text": "All very good bro, trust 5-year-old Sirio, write it in the diary, you’ll thank me. So, what word do the first letters make?"
+    },
+    "36#26": {
+      "instruction": "Follow Sirio's instructions",
+      "next": {
+        "done": "Done"
+      }
+    },
+    "36#28": {
+      "text": "Ah yeah, what a fool, it's the name of the square just around the corner. When we get there remind me that we have to play PING PONG, it's tradition."
+    },
+    "37#1": {
+      "text": "Here they are, the idiots who run away like dogs without a leash. I've had enough of you two breaking the balance guaranteed by the rules. I will report everything to the principal."
+    },
+    "37#2": {
+      "text": "Oh Yda, what a surprise... You just can't stay away from us, huh? You should understand that I discovered more things being out of here for just a few hours than in all the years I spent in there."
+    },
+    "37#4": {
+      "text": "Oops, I'm really forced to take you to Principal Moretti, what a pity. Let's go to B2.2.14, now!",
+      "instruction": "Turn the journal's page"
+    },
+    "37#5": {
+      "text": "Sure, do as you wish, idiots, I'm not going to waste any more time with you. Go and live in the middle of Chaos. Two fewer problems for the university's order."
+    },
+    "37#8": {
+      "text": "Shit, that's wonderful, I was in that place less than a month and I was already thinking about suicide, I don't know how you managed all those years hahaha."
+    },
+    "37#9": {
+      "text": "Well, you saw how dumb I was until a few days ago hahaha Thanks to you I'm finally learning how to be myself! Gimme five bro!"
+    },
+    "37#10": {
+      "instruction": "Open the envelope F3"
+    }
+  },
+  "clues": {
+    "36#26": {
+      "title": "Sirio's milkshake",
+      "text": "The milkshake recipe Sirio invented at five. He listed the ingredients in an order that means something."
+    }
+  },
+  "ui": [],
+  "unclear": [
+    {
+      "where": "9-1#4, 9-1#30, 12#13",
+      "text": "…useful to you! keeek / I appreciate keek / hang out in keek suburbs",
+      "note": "'keek'/'keeek' (Guido's tic?) is not an English word; left as is. If it stands for 'chic' or a laugh, spell it consistently."
+    },
+    {
+      "where": "16#7, 16-1#7, 29#7",
+      "text": "We were waiting for you... we saw you last night as well. Unfortunately Yda caught us…",
+      "note": "Spoken by Yda, but it is Petronio's line to Roberto from 4#7 (copy-paste leftover); reachable (16: 6→7→11; 29: 6→7). Grammar fixed, but the line needs rewriting or a different speaker."
+    },
+    {
+      "where": "29#31a",
+      "text": "Good evening professor! We saw you climb over the University gate, twice...",
+      "note": "Petronio says his line to Roberto (4#399b) to Su after choosing 'Awesome' (offer to learn bijouterie). Leftover from scene 4."
+    },
+    {
+      "where": "17#29",
+      "text": "Ahaha they're cool! They're a crew of guys… let's go to the park in Via Candiani…",
+      "note": "Petronio describes Sirio's old crew and sends them to Via Candiani right after Sirio said 'let's go to Via Livigno 5' (looks copied from 8-1). Speaker and destination contradict the scene."
+    },
+    {
+      "where": "18#18",
+      "text": "Who knows why nothing surprises me anymore ahahah Yet to be 100%. Sirio you have to tell me what you don't remember!",
+      "note": "'Yet to be 100%' has no clear meaning (maybe 'Just to be 100% sure'?)."
+    },
+    {
+      "where": "33#30",
+      "text": "Bomb, then let's get something to drink, like a small glass of red wine.",
+      "note": "Speaker is Su, but 'Bomb' is Roberto's catchphrase and Roberto answers the follow-up (33#40); probably Roberto's line."
+    },
+    {
+      "where": "34#4",
+      "text": "Now let's go to Via Imbriani 54, there are two really beautiful murals; the second is called \"Il Guardiano\"",
+      "note": "flow.json puts 2501's 'Il Guardiano' in Via Carnevali 113, while Via Imbriani 54 is Reka's mural; check the address."
+    },
+    {
+      "where": "27#2",
+      "text": "That ban notice with your face on it hahaha.",
+      "note": "Original 'That ban with your face on' — guessed it is a 'keep out' notice with Sirio's face (clue 27#11 calls it a KEEP OUT flyer)."
+    },
+    {
+      "where": "2-1-3#9",
+      "text": "Hey, Sirio, come here… there’s that shadow again!…",
+      "note": "The original text also contained '\\nSirio: I’m bloody curious… this time we really have to avoid Yda!', duplicated by the next beat (2-1-3#10, spoken by Sirio): removed from Petronio's line."
+    },
+    {
+      "where": "1-2#3",
+      "text": "The Suburb? How did you ever get there?",
+      "note": "'The Suburb' (singular, capitalised) kept as a possible in-world name; elsewhere it's 'the suburbs'."
+    }
+  ]
+}

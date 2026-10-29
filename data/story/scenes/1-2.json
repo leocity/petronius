@@ -1,0 +1,473 @@
+{
+  "scene": "1-2",
+  "pen": "https://codepen.io/sith/pen/yWePEB",
+  "start": "01",
+  "characters": [
+    "petronio",
+    "sirio",
+    "minerva"
+  ],
+  "assets": [
+    "camera.jpg",
+    "aula.jpg",
+    "wss.png",
+    "minerva.png",
+    "petronio_inside.png",
+    "roberto_serio.png",
+    "yda.png",
+    "sirio_inside.png"
+  ],
+  "beats": {
+    "1": {
+      "id": "1",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "text": "Ugh, where does this light come from? I had just fallen asleep!",
+      "next": [
+        {
+          "to": "2"
+        }
+      ]
+    },
+    "2": {
+      "id": "2",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_inside.png"
+      },
+      "text": "Sorry if I woke you up! I was just going through some of the latest photos I shot in Bovisa…",
+      "next": [
+        {
+          "to": "3"
+        }
+      ]
+    },
+    "3": {
+      "id": "3",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "text": "The Suburb? How did you ever get there?",
+      "next": [
+        {
+          "to": "4"
+        }
+      ]
+    },
+    "4": {
+      "id": "4",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_inside.png"
+      },
+      "text": "Well, I grew up there!",
+      "next": [
+        {
+          "to": "5"
+        }
+      ]
+    },
+    "5": {
+      "id": "5",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "next": [
+        {
+          "to": "10",
+          "label": "Keep talking"
+        },
+        {
+          "to": "6",
+          "label": "Back to sleep"
+        }
+      ]
+    },
+    "6": {
+      "id": "6",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "text": "Oh, I see… Sorry, but I'm going back to sleep now, I'm really tired. Can you please turn off the light? Thanks, goodnight!",
+      "next": [
+        {
+          "to": "container3"
+        }
+      ]
+    },
+    "7": {
+      "id": "7",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "text": "This light? Again? Got it, I’m not sleeping tonight!",
+      "next": [
+        {
+          "to": "8"
+        }
+      ]
+    },
+    "8": {
+      "id": "8",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_inside.png"
+      },
+      "text": "I’m so sorry, I woke you up again… It’s so different here from my home, I just have to get used to it!",
+      "next": [
+        {
+          "to": "9"
+        }
+      ]
+    },
+    "9": {
+      "id": "9",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "next": [
+        {
+          "to": "10",
+          "label": "Keep talking"
+        }
+      ]
+    },
+    "10": {
+      "id": "10",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "text": "So you’re the outsider! Come on, tell me something about your place… I've never been there! To be honest, I’ve almost never been anywhere… Unfortunately.",
+      "next": [
+        {
+          "to": "11"
+        }
+      ]
+    },
+    "11": {
+      "id": "11",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_inside.png"
+      },
+      "text": "It’s so different that I really don’t know where to start… it’s like everything is black and white here, while outside… out there, everything is full of colors! Take these photos, maybe they can explain it better than I can.",
+      "next": [
+        {
+          "to": "12"
+        }
+      ]
+    },
+    "12": {
+      "id": "12",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "text": "I tried so many times to imagine the world out there... Everything must be the opposite of this school, this system…",
+      "next": [
+        {
+          "to": "13"
+        }
+      ]
+    },
+    "13": {
+      "id": "13",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_inside.png"
+      },
+      "text": "It really is! I applied here to make my interests useful and… meaningful, but even though I’ve only been here a couple of days, I can’t breathe! Maybe I've made a mistake, you know, I am a free spirit after all...",
+      "media": [
+        {
+          "type": "image",
+          "class": "img",
+          "asset": "wss.png"
+        }
+      ],
+      "next": [
+        {
+          "to": "14"
+        }
+      ]
+    },
+    "14": {
+      "id": "14",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "text": "Yeah, it is exactly what I fe…",
+      "next": [
+        {
+          "to": "15"
+        }
+      ]
+    },
+    "15": {
+      "id": "15",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_inside.png"
+      },
+      "text": "Wait, wait, wait! Am I high or is there a shadow over the window? It looks like someone trying to escape... doesn’t it? I’m so fucking curious, let’s find out what’s going on! Are you with me?",
+      "next": [
+        {
+          "to": "16"
+        }
+      ]
+    },
+    "16": {
+      "id": "16",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "next": [
+        {
+          "to": "17",
+          "label": "Follow it"
+        },
+        {
+          "to": "18",
+          "label": "Hide and wait"
+        }
+      ]
+    },
+    "17": {
+      "id": "17",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "text": "That’s ok… we can try to follow it. Looks like it’s headed for the first-floor staircase of B2. But keep calm, we have to be really cautious!",
+      "instruction": "Go to the location",
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "18": {
+      "id": "18",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "text": "No, no... are you crazy? Following it is too dangerous! But if I’m not wrong, there are some classrooms near the main entrance of the B2 building. I suppose it’ll pass by there when it comes back. We can try to wait for it there…",
+      "instruction": "Go to the location",
+      "next": [
+        {
+          "to": "loading"
+        }
+      ]
+    },
+    "19": {
+      "id": "19",
+      "container": "container",
+      "kind": "line",
+      "speaker": "sirio",
+      "portrait": {
+        "class": "char_img_sirio",
+        "asset": "sirio_inside.png"
+      },
+      "text": "Sono super curioso! Stavolta non dobbiamo farci intralciare da Yda, nascondiamoci da qualche parte e aspettiamo che torni!",
+      "orphan": true
+    },
+    "20": {
+      "id": "20",
+      "container": "container",
+      "kind": "line",
+      "speaker": "petronio",
+      "portrait": {
+        "class": "char_img_petronio",
+        "asset": "petronio_inside.png"
+      },
+      "text": "C’è uno sgabuzzino vicino all’ingresso dal quale, se i miei calcoli sono giusti, dovrebbe passare quando rientra, è nell’atrio, sulla sinistra tenendo gli ascensori alle spalle…",
+      "orphan": true
+    },
+    "01": {
+      "id": "01",
+      "container": "container2",
+      "kind": "line",
+      "speaker": "minerva",
+      "portrait": {
+        "class": "char_img_minerva",
+        "asset": "minerva.png"
+      },
+      "text": "I wish you all a wonderful academic year, my dear students!\nFirst, I’m glad to announce that this year there will be no changes in the faculty. We can reconfirm all the excellence in teaching that makes our University one of the best schools in the country.",
+      "next": [
+        {
+          "to": "02"
+        }
+      ]
+    },
+    "02": {
+      "id": "02",
+      "container": "container2",
+      "kind": "line",
+      "speaker": "minerva",
+      "portrait": {
+        "class": "char_img_minerva",
+        "asset": "minerva.png"
+      },
+      "text": "I’m also glad to introduce Yda to you! She’s our student representative and she will play a major role here: she will connect all of you with the teachers.\nI have to remind you, anyway, that in order to prevent intrusions from outside, our campus has a security service at all hours, and it is reinforced at night.",
+      "next": [
+        {
+          "to": "03"
+        }
+      ]
+    },
+    "03": {
+      "id": "03",
+      "container": "container2",
+      "kind": "line",
+      "speaker": "minerva",
+      "portrait": {
+        "class": "char_img_minerva",
+        "asset": "minerva.png"
+      },
+      "text": "Remember that these people don’t know who you are, so they won’t make any distinction between you and outsiders.\nI invite you all to respect the curfew and not to walk around the university at night without written permission; besides, I also strongly advise you not to even try to escape from the campus at any time of the day.",
+      "next": [
+        {
+          "to": "04"
+        }
+      ]
+    },
+    "04": {
+      "id": "04",
+      "container": "container2",
+      "kind": "line",
+      "speaker": "minerva",
+      "portrait": {
+        "class": "char_img_minerva",
+        "asset": "minerva.png"
+      },
+      "text": "As happens every year, today I’m introducing to you this year’s “worthy” one, who has entered the University system from the suburbs thanks to his school results and his strong desire to receive the best education in the country, in order to have the chance of a bright future.",
+      "next": [
+        {
+          "to": "05"
+        }
+      ]
+    },
+    "05": {
+      "id": "05",
+      "container": "container2",
+      "kind": "line",
+      "speaker": "minerva",
+      "portrait": {
+        "class": "char_img_minerva",
+        "asset": "minerva.png"
+      },
+      "text": "I ask you all to make him feel welcome and to help him become part of the University and of our student groups, making him feel the importance of this place and the beauty of our school and educational program.",
+      "next": [
+        {
+          "to": "06"
+        }
+      ]
+    },
+    "06": {
+      "id": "06",
+      "container": "container2",
+      "kind": "line",
+      "speaker": "minerva",
+      "portrait": {
+        "class": "char_img_minerva",
+        "asset": "minerva.png"
+      },
+      "text": "In conclusion, I wish you all the best possible year, one that can enrich your education along a path of growth and maturity, according to the meticulous and exemplary regulations of the University.\nBut now, it’s time to go to your classrooms! Let’s go, everyone!",
+      "next": [
+        {
+          "to": "container4"
+        }
+      ]
+    },
+    "container3": {
+      "id": "container3",
+      "container": "container3",
+      "kind": "card",
+      "text": "The following night...",
+      "next": [
+        {
+          "to": "7"
+        }
+      ]
+    },
+    "container4": {
+      "id": "container4",
+      "container": "container4",
+      "kind": "card",
+      "text": "Later that night...",
+      "next": [
+        {
+          "to": "1"
+        }
+      ]
+    },
+    "loading": {
+      "id": "loading",
+      "kind": "end"
+    }
+  }
+}
