@@ -2,8 +2,9 @@
   "$comment": [
     "Digital versions of the paper journal's clues, for home mode. Hand-curated; audited Oct 2026 (docs/recap.md).",
     "clues: keyed '<scene>#<beat>' = the beat that carries the real-world instruction (or a puzzle/timer beat).",
-    "items[]: images shown in the clue. file = web copy in web/assets/journal/, built from src (+ crop/rotate/grid) by tools/build-journal-assets.py.",
+    "items[]: images shown in the clue. file = web copy in web/assets/journal/, built from src (+ crop/rotate/grid/strips) by tools/build-journal-assets.py.",
     "items[].sheet: the item is a transparent sheet/piece the player drags over the item before it. true = same size as the base, snaps at (0,0); or { w: width as a fraction of the base, at: [x, y] top-left target as fractions }.",
+    "items[].big: show the item full width instead of as a thumbnail (close-ups, tall columns such as the straightened fountain strips).",
     "items[].turn: the item must be rotated until it lines up (starts at `angle` degrees, aligned at 0).",
     "reveal: { label, text, items } shown after the player presses `label` (e.g. searching the spot on a map).",
     "answers: accepted answers, compared exactly after removing case, spaces and punctuation (list every accepted variant). No answers = look-and-continue.",
@@ -397,6 +398,32 @@
           "alt": "Penny Market flyer: LET'S… over eight bottles"
         },
         {
+          "file": "flyer-penny-a.jpg",
+          "src": "Riddles/Flyer Penny Market.pdf#1",
+          "crop": [
+            0,
+            0.25,
+            0.53,
+            0.9
+          ],
+          "alt": "Penny Market flyer, close-up of bottles 1 to 4 (from the left)",
+          "max": 1000,
+          "big": true
+        },
+        {
+          "file": "flyer-penny-b.jpg",
+          "src": "Riddles/Flyer Penny Market.pdf#1",
+          "crop": [
+            0.53,
+            0.25,
+            1,
+            0.9
+          ],
+          "alt": "Penny Market flyer, close-up of bottles 5 to 8",
+          "max": 1000,
+          "big": true
+        },
+        {
           "file": "flyer-penny-2.jpg",
           "src": "Riddles/Flyer Penny Market.pdf#2",
           "alt": "Penny Market flyer, back"
@@ -420,9 +447,121 @@
       "text": "Sirio's code from 'that famous evening': eight strips of the poem carved around the fountain in Piazza Bausan, one per side (page 15). On each strip a bar is a letter, a gap is a space; the orange bar is the letter to keep. Walk round the fountain anticlockwise from #1.",
       "items": [
         {
-          "file": "journal-p15.jpg",
+          "file": "fountain-strips.jpg",
           "src": "Journal.pdf#15",
-          "alt": "Journal page 15: strips #1 to #8 and Sirio's sketch"
+          "strips": [
+            {
+              "label": "#1",
+              "c": [
+                0.7571,
+                0.2636
+              ],
+              "angle": 0,
+              "size": [
+                0.1195,
+                0.04
+              ]
+            },
+            {
+              "label": "#2",
+              "c": [
+                0.635,
+                0.3434
+              ],
+              "angle": -45.2,
+              "size": [
+                0.1195,
+                0.04
+              ]
+            },
+            {
+              "label": "#3",
+              "c": [
+                0.5821,
+                0.5111
+              ],
+              "angle": 90,
+              "size": [
+                0.1195,
+                0.04
+              ]
+            },
+            {
+              "label": "#4",
+              "c": [
+                0.6329,
+                0.6869
+              ],
+              "angle": 45,
+              "size": [
+                0.1195,
+                0.04
+              ]
+            },
+            {
+              "label": "#5",
+              "c": [
+                0.7571,
+                0.7596
+              ],
+              "angle": 0,
+              "size": [
+                0.1195,
+                0.04
+              ]
+            },
+            {
+              "label": "#6",
+              "c": [
+                0.8829,
+                0.6869
+              ],
+              "angle": -45,
+              "size": [
+                0.1195,
+                0.04
+              ]
+            },
+            {
+              "label": "#7",
+              "c": [
+                0.9329,
+                0.5111
+              ],
+              "angle": 90,
+              "size": [
+                0.1195,
+                0.04
+              ]
+            },
+            {
+              "label": "#8",
+              "c": [
+                0.8829,
+                0.3434
+              ],
+              "angle": 44,
+              "size": [
+                0.1195,
+                0.04
+              ]
+            }
+          ],
+          "max": 2400,
+          "alt": "The eight strips #1 to #8, cut out and straightened",
+          "big": true
+        },
+        {
+          "file": "journal-p15-strips.jpg",
+          "src": "Journal.pdf#15",
+          "crop": [
+            0.52,
+            0.06,
+            1,
+            0.9
+          ],
+          "alt": "Journal page 15, right half: the strips where they sit around the fountain",
+          "big": true
         },
         {
           "file": "bausan.jpg",

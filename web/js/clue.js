@@ -181,6 +181,7 @@ export function gallery(items) {
   items.forEach((it, i) => {
     if (it.sheet) return;
     if (it.turn) { out.push(turner(it)); return; }
+    if (it.big) { out.push(bigImage(it)); return; }   // a close-up or a tall column: full width instead of a small thumbnail
     const next = items[i + 1];
     if (next?.sheet) out.push(overlay(it, next));
     else thumbs.push(thumb(it));

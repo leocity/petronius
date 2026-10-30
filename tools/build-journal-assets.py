@@ -9,6 +9,8 @@ Optional build ops, applied in this order:
   - crop: [x0, y0, x1, y1] as fractions of the source;
   - rotate: 90 / 180 / 270 (counter-clockwise);
   - grid: {"items": [{"src", "label"?}], "cols": n} composes several sources into one sheet (then `src` is unused);
+  - strips: [{"label", "c", "angle", "size"}] cuts tilted strips out of `src` and stands them upright in a column
+    (see `strips()` for the units);
   - max: long side in px (default 1400).
 PNG outputs keep transparency (sheets). Existing outputs are skipped unless --force; a changed item
 needs --force (or deleting its file).
@@ -116,9 +118,48 @@ def grid(spec, size):
     return page.get_pixmap(matrix=pymupdf.Matrix(zoom, zoom), alpha=False)
 
 
+def strips(it, size):
+    """Cut tilted strips out of a page and stand them upright, one under the other, each with its label.
+    `strips`: [{"label", "c": [x, y], "angle": deg, "size": [w, h]}], all as fractions of the page width/height
+    (c as fractions of width and height; size both as fractions of the width); angle = tilt of the strip's
+    long axis, clockwise positive as seen on the page (the strip is turned back by that much)."""
+    from PIL import Image, ImageDraw, ImageFont
+    page = load(it["src"], 3200)
+    img = Image.frombytes("RGB", (page.width, page.height), page.samples)
+    W, H = img.size
+    out_w = 900
+    try:
+        font = ImageFont.truetype("arialbd.ttf", 56)
+    except OSError:
+        font = ImageFont.load_default()
+    tiles = []
+    for s in it["strips"]:
+        cx, cy = s["c"][0] * W, s["c"][1] * H
+        w, h = s["size"][0] * W, s["size"][1] * W
+        spin = img.rotate(s["angle"], center=(cx, cy), resample=Image.BICUBIC, fillcolor=(255, 255, 255))
+        tile = spin.crop((round(cx - w / 2), round(cy - h / 2), round(cx + w / 2), round(cy + h / 2)))
+        tile = tile.resize((out_w, round(out_w * h / w)), Image.LANCZOS)
+        tiles.append((s["label"], tile))
+    pad, label_w = 30, 150
+    height = pad + sum(t.height + pad for _, t in tiles)
+    sheet = Image.new("RGB", (label_w + out_w + 2 * pad, height), (255, 255, 255))
+    draw = ImageDraw.Draw(sheet)
+    y = pad
+    for label, tile in tiles:
+        draw.text((pad, y + tile.height / 2), label, fill=(239, 102, 48), font=font, anchor="lm")
+        sheet.paste(tile, (label_w + pad, y))
+        y += tile.height + pad
+    k = size / max(sheet.size)
+    if k < 1:
+        sheet = sheet.resize((round(sheet.width * k), round(sheet.height * k)), Image.LANCZOS)
+    return pymupdf.Pixmap(pymupdf.csRGB, sheet.width, sheet.height, sheet.tobytes(), False)
+
+
 def build(it, dst):
     size = it.get("max", MAX)
-    if "grid" in it:
+    if "strips" in it:
+        pix = strips(it, size)
+    elif "grid" in it:
         pix = grid(it["grid"], size)
     else:
         pix = load(it["src"], size, it.get("crop"))
@@ -141,7 +182,7 @@ def main():
     done = {}
     for it in items(clues, cast):
         f = it["file"]
-        key = json.dumps({k: v for k, v in it.items() if k in ("src", "crop", "rotate", "grid", "max")}, sort_keys=True)
+        key = json.dumps({k: v for k, v in it.items() if k in ("src", "crop", "rotate", "grid", "strips", "max")}, sort_keys=True)
         if done.get(f, key) != key:
             raise SystemExit(f"{f} is built from two different specs")
         if f in done:
