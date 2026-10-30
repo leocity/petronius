@@ -152,6 +152,7 @@ button { font: inherit; color: inherit; }
 .puzzle p { margin: 0 0 1rem; }
 .puzzle label { display: block; font-weight: 650; margin: 0.75rem 0 0.25rem; }
 .puzzle input {
+  color: var(--ink);
   width: 100%; font: inherit; font-size: 1.15rem; padding: 0.6rem 0.75rem; border: 0.15rem solid var(--ink); background: var(--paper);
 }
 .puzzle .actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem; }
@@ -165,7 +166,7 @@ button { font: inherit; color: inherit; }
 .clue h2 { margin: 0; font-weight: 900; font-stretch: 120%; font-size: 1.6rem; line-height: 1.1; }
 .clue > p { margin: 0; max-width: 62ch; }
 .clue label { display: block; font-weight: 700; margin-bottom: 0.35rem; }
-.clue input { width: 100%; font: inherit; font-size: 1.15rem; padding: 0.6rem 0.75rem; border: 0.15rem solid var(--ink); background: var(--paper); }
+.clue input { color: var(--ink); width: 100%; font: inherit; font-size: 1.15rem; padding: 0.6rem 0.75rem; border: 0.15rem solid var(--ink); background: var(--paper); }
 .clue .actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem; }
 .say.full { cursor: default; }
 .gallery { display: flex; gap: 0.75rem; flex-wrap: wrap; }
@@ -286,7 +287,7 @@ button { font: inherit; color: inherit; }
 .stage { position: relative; }
 .stage:has(> .portrait-wall) {
   /* svh: stays put when the phone's address bar slides away on scroll */
-  --fig-h: clamp(11rem, 36vh, 26rem); --fig-h: clamp(11rem, 36svh, 26rem); --box-slot: clamp(13rem, 42svh, 17rem);
+  --fig-h: clamp(12rem, 40vh, 28rem); --fig-h: clamp(12rem, 40svh, 28rem); --box-slot: clamp(13rem, 40svh, 17rem);
   grid-template-rows: calc(var(--fig-h) - 2.6rem) minmax(var(--box-slot), auto); align-content: end; gap: 0;
 }
 .stage > .portrait-wall { position: relative; overflow: visible; pointer-events: none; min-height: 0; display: block; }
@@ -367,7 +368,7 @@ button { font: inherit; color: inherit; }
 .spot.found { border: 0.25rem solid var(--c-sirio); border-radius: 50%; background: rgba(25, 163, 154, 0.15); }
 
 /* ---------- Notebook news: a toast and a dot ---------- */
-.toasts { position: fixed; z-index: 2000; left: 0; right: 0; top: calc(env(safe-area-inset-top, 0px) + 3.75rem); display: grid; gap: 0.5rem; justify-items: center; padding: 0 0.75rem; pointer-events: none; }
+.toasts { position: fixed; z-index: 2000; left: 0; right: 0; top: calc(env(safe-area-inset-top, 0px) + 4.5rem); display: grid; gap: 0.5rem; justify-items: center; padding: 0 0.75rem; pointer-events: none; }
 .toast {
   pointer-events: auto; appearance: none; text-align: left; width: 100%; max-width: 30rem; font: inherit; cursor: pointer;
   background: var(--sticker); color: var(--ink); border: 0.15rem solid var(--ink); border-left: 0.6rem solid var(--cover);
@@ -433,3 +434,4 @@ button, .say, .card, .thumb, .big-image, .spot-stage { touch-action: manipulatio
 @media (pointer: coarse) {
   .leaflet-touch .leaflet-bar a { width: 2.75rem; height: 2.75rem; line-height: 2.75rem; font-size: 1.4rem; }
 }
+.puzzle input::placeholder, .clue input::placeholder { color: #6b737d; opacity: 1; }

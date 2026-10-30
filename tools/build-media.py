@@ -14,7 +14,7 @@ import pathlib
 import shutil
 import sys
 
-from PIL import Image
+from PIL import Image, ImageChops, ImageFilter
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "web" / "assets" / "media"
@@ -29,6 +29,12 @@ def background(src, dst):
 def portrait(src, dst):
     im = Image.open(src).convert("RGBA")
     alpha = im.getchannel("A").point(lambda a: 255 if a > 24 else 0)   # ignore faint halo pixels
+    # Stray hairlines left in some cut-outs (Petronio's "inside" has a white one along the top and right edge): drop
+    # whatever is thinner than a few pixels and detached from the figure, so it neither shows nor stretches the crop.
+    k = max(3, (im.height // 250) | 1)
+    body = alpha.filter(ImageFilter.MinFilter(k)).filter(ImageFilter.MaxFilter(k + 4))
+    im.putalpha(ImageChops.multiply(im.getchannel("A"), body))
+    alpha = ImageChops.multiply(alpha, body)
     im = im.crop(alpha.getbbox())
     h = 1000
     im = im.resize((round(im.width * h / im.height), h), Image.LANCZOS)
