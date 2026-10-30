@@ -272,7 +272,7 @@ button { font: inherit; color: inherit; }
 /* The figure has a fixed height (--fig-h, set by the screen only), so it never grows or shrinks with the
    dialogue box: a tall box pushes the page down instead of covering the character, a short one leaves the
    photo showing above the figure. The box overlaps only the figure's last 2.6rem. */
-.stage { position: relative; --fig-h: clamp(11rem, 36dvh, 26rem); --box-slot: 14rem; grid-template-rows: calc(var(--fig-h) - 2.6rem) minmax(var(--box-slot), auto); align-content: end; gap: 0; }
+.stage { position: relative; --fig-h: clamp(11rem, 36vh, 26rem); --fig-h: clamp(11rem, 36svh, 26rem);  /* svh: stays put when the phone's address bar slides away on scroll */ --box-slot: 14rem; grid-template-rows: calc(var(--fig-h) - 2.6rem) minmax(var(--box-slot), auto); align-content: end; gap: 0; }
 /* The box sits at the top of a fixed slot, so the figure stays where it is until a line is longer than the slot. */
 .stage > .say { align-self: start; }
 .stage > .portrait-wall { position: relative; overflow: visible; pointer-events: none; min-height: 0; display: block; }
