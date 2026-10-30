@@ -33,6 +33,18 @@ for (const [id, f] of Object.entries(flow.scenes)) {
   for (const b of exitBeats(s)) if (!covered.has(b)) warn(`scene ${id}: exit beat ${b} has no flow exit`);
 }
 
+// Every lead (and voice gate) says what the player was told: the referenced line, sentence or clue note must exist.
+const clueData = JSON.parse(fs.readFileSync(path.join(DIR, 'clues.json'), 'utf8'));
+for (const [id, f] of Object.entries(flow.scenes)) for (const e of f.exits) {
+  if (e.via === 'ending' || e.via === 'hub') continue;
+  const t = e.told;
+  if (!t) { if (e.via !== 'voice') warn(`scene ${id}: exit to ${e.to} has no "told"`); continue; }
+  if (t.note) { if (!clueData.clues[t.note]?.note) warn(`scene ${id}: told note ${t.note} has no note`); continue; }
+  const line = scenes[t.scene ?? id]?.beats[t.beat];
+  if (!line?.text) warn(`scene ${id}: told beat ${t.scene ?? id}#${t.beat} has no text`);
+  else if (t.match && !line.text.toLowerCase().includes(t.match.toLowerCase())) warn(`scene ${id}: told match "${t.match}" not in ${t.scene ?? id}#${t.beat}`);
+}
+
 // Graph over scenes; "hub" exits return to the hub scene's spokes.
 const hubOf = {};
 for (const [id, f] of Object.entries(flow.scenes)) for (const spoke of f.hub ?? []) hubOf[spoke] = id;

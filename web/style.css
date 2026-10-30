@@ -119,13 +119,6 @@ button { font: inherit; color: inherit; }
 .say p { margin: 0; max-width: 62ch; white-space: pre-line; font-size: clamp(1.05rem, 2.4vw, 1.25rem); }
 .say .tap-hint { display: block; margin-top: 0.75rem; color: #6b737d; font-size: 0.85rem; }
 
-/* Real-world instruction from the original (e.g. "Solve the riddle") */
-.task {
-  margin-top: 1rem; border-top: 0.15rem dashed var(--ink); padding-top: 0.75rem;
-  font-weight: 750; font-stretch: 110%; color: var(--ink);
-}
-.task small { display: block; font-weight: 500; font-stretch: 100%; color: #4b525b; margin-top: 0.25rem; }
-
 .choices { display: grid; gap: 0.9rem; margin-top: 1.25rem; }
 .choices .btn { width: 100%; }
 
@@ -271,10 +264,12 @@ button { font: inherit; color: inherit; }
     var(--asphalt);
 }
 #play .bar { background: rgba(20, 22, 26, 0.72); backdrop-filter: blur(4px); }
-.stage { position: relative; }
-.stage > .portrait-wall { position: absolute; inset: 0; overflow: hidden; pointer-events: none; min-height: 0; display: block; }
+/* The figure has its own area above the dialogue box (never less than --fig-min), so a tall box pushes the
+   page down instead of covering the character; the box overlaps only the figure's last 2.6rem. */
+.stage { position: relative; --fig-min: clamp(10rem, 30dvh, 16rem); grid-template-rows: minmax(var(--fig-min), 1fr) auto; gap: 0; }
+.stage > .portrait-wall { position: relative; overflow: visible; pointer-events: none; min-height: 0; display: block; }
 .figure {
-  position: absolute; bottom: 0; left: 0; height: min(82%, 40rem); max-width: 62%; object-fit: contain; object-position: left bottom;
+  position: absolute; bottom: -2.6rem; left: 0; height: min(calc(100% + 2.6rem), 40rem); max-width: 64%; object-fit: contain; object-position: left bottom;
   filter: drop-shadow(0.4rem 0.4rem 0 rgba(0, 0, 0, 0.55));
 }
 .figure.right { left: auto; right: 0; object-position: right bottom; }
@@ -282,7 +277,7 @@ button { font: inherit; color: inherit; }
 #btn-song.on { color: var(--cover); }
 .ending-video { width: min(100%, 40rem); border: 0.2rem solid var(--ink); box-shadow: var(--shadow-hard); background: #000; }
 @media (max-width: 47.99rem) {
-  .figure { height: min(70%, 30rem); max-width: 78%; }
+  .figure { max-width: 78%; }
 }
 
 /* Notebook: people met, with the character card */
@@ -325,3 +320,27 @@ button { font: inherit; color: inherit; }
 .spot-stage > img { display: block; width: 100%; }
 .spot { position: absolute; background: transparent; border: 0; padding: 0; cursor: crosshair; }
 .spot.found { border: 0.25rem solid var(--c-sirio); border-radius: 50%; background: rgba(25, 163, 154, 0.15); }
+
+/* ---------- Notebook news: a toast and a dot ---------- */
+.toasts { position: fixed; z-index: 2000; left: 0; right: 0; top: calc(env(safe-area-inset-top, 0px) + 3.75rem); display: grid; gap: 0.5rem; justify-items: center; padding: 0 0.75rem; pointer-events: none; }
+.toast {
+  pointer-events: auto; appearance: none; text-align: left; width: 100%; max-width: 30rem; font: inherit; cursor: pointer;
+  background: var(--sticker); color: var(--ink); border: 0.15rem solid var(--ink); border-left: 0.6rem solid var(--cover);
+  box-shadow: var(--shadow-hard); padding: 0.55rem 0.9rem; display: grid; gap: 0.1rem; animation: toast-in 180ms ease-out;
+}
+.toast b { font-size: 0.85rem; font-weight: 800; font-stretch: 112%; }
+.toast span { font-size: 1.02rem; line-height: 1.3; }
+@keyframes toast-in { from { transform: translateY(-0.6rem); opacity: 0; } }
+.icon-btn.has-news { position: relative; }
+.icon-btn.has-news::after { content: ''; position: absolute; top: 0.4rem; right: 0.35rem; width: 0.75rem; height: 0.75rem; border-radius: 50%; background: var(--cover); border: 0.14rem solid var(--asphalt); }
+
+/* ---------- What the player was told ---------- */
+.leadcards { display: grid; gap: 0.75rem; }
+.lead-card { margin: 0; background: var(--sticker); color: var(--ink); border: 0.15rem solid var(--ink); box-shadow: 0.25rem 0.25rem 0 var(--ink); padding: 0.7rem 1rem; }
+.lead-card blockquote { margin: 0; font-size: 1.05rem; line-height: 1.4; }
+.lead-card figcaption { margin-top: 0.3rem; font-weight: 800; font-stretch: 112%; font-size: 0.9rem; }
+.next .leadcards { max-width: 40rem; }
+.journal-page .leadcards { margin: 0.25rem 0 0.5rem; }
+.go-btn:disabled { opacity: 0.55; }
+.pin.guess { background: transparent; border: 0.2rem solid var(--cover); box-shadow: none; width: 1.8rem; height: 1.8rem; position: relative; }
+.pin.guess::after { content: ''; position: absolute; inset: 0.45rem; border-radius: 50%; background: var(--cover); }

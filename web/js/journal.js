@@ -1,27 +1,19 @@
 // Petronio's notebook: what the paper journal's "Next place / PSW" slots held, filled in automatically.
-import { flow, place, cast, assetUrl } from './story.js';
-import { getState } from './game.js';
+import { place, cast, assetUrl } from './story.js';
+import { getState, openLeads, leadCard } from './game.js';
 import { gallery } from './clue.js';
 
 const el = (tag, cls, text) => Object.assign(document.createElement(tag), cls ? { className: cls } : {}, text != null ? { textContent: text } : {});
 
-// Words the player can say at voice gates: known once the scene that teaches them is finished,
-// or (for words that came from paper riddles) once the gate itself has been reached.
-function knownWords(state) {
-  const words = [];
-  for (const [sceneId, f] of Object.entries(flow.scenes)) {
-    for (const e of f.exits) {
-      if (e.via !== 'voice') continue;
-      const learned = e.requires?.length ? e.requires.every((r) => state.finished.includes(r)) : state.log.some((v) => v.scene === sceneId);
-      if (learned && !words.some((w) => w.say === e.say)) words.push({ say: e.say, where: place(f.place)?.name });
-    }
-  }
-  return words;
-}
-
 export function renderJournal(page) {
   const state = getState();
   page.replaceChildren();
+
+  // Where to next: what the player was told, newest first (home mode: they find it on the map; on site they walk).
+  const leads = openLeads();
+  page.append(el('h2', null, 'Where to next'));
+  if (leads.length) { const box = el('div', 'leadcards'); for (const l of leads) box.append(leadCard(l)); page.append(box); }
+  else page.append(el('p', 'empty', 'Nowhere yet. Finish the scene you are in.'));
 
   page.append(el('h2', null, 'Names and passwords'));
   if (state.notes.length) {
@@ -30,13 +22,12 @@ export function renderJournal(page) {
     page.append(ul);
   } else page.append(el('p', 'empty', 'Nothing written down yet. When someone says "take note", it ends up here.'));
 
-  page.append(el('h2', null, 'Things to say'));
-  const words = knownWords(state);
-  if (words.length) {
+  page.append(el('h2', null, 'What people told you'));
+  if (state.heard?.length) {
     const ul = el('ul');
-    for (const w of words) { const li = el('li', 'hand', `"${w.say}"`); li.title = w.where ?? ''; ul.append(li); }
+    for (const h of state.heard) ul.append(el('li', 'hand', `${h.who}: “${h.text}”`));
     page.append(ul);
-  } else page.append(el('p', 'empty', 'Some places only open up if you say the right thing.'));
+  } else page.append(el('p', 'empty', 'Some places only open up if you say the right thing. Listen to what people say.'));
 
   page.append(el('h2', null, 'People'));
   if (state.met?.length) for (const id of state.met) {

@@ -148,6 +148,7 @@ Il sottobicchiere della 24-2 è ricreato (numeri di "Leave me alone"). Il lato #
 **Stato:**
 - **A ✅ fatta.**
 - **C ✅ fatta:** ogni scena ha il suo sfondo originale (cambia anche dentro la scena, come nell'originale), i personaggi originali scontornati in piedi (varianti inside/outside, errori di 24-2 e 33 corretti), le 18 canzoni con un pulsante ♪ in alto, e i video dei finali. Le canzoni che stavano su SoundCloud (10, 12, 13, 22-1, 23, 24-2, 8, 8-1, 9) non esistono più.
-- **B e D da fare.**
+- **D ✅ fatta (punti 1-3, senza aiuti a gettoni):** a casa le destinazioni non sono più pulsanti col nome. La schermata "Where to next" mostra cosa ti hanno detto (frase di Sirio, Yda…, o la nota dell'indizio) e il luogo si trova sulla mappa: tocchi il punto e premi Go (dopo due errori l'app dice quanto dista il luogo più vicino). Il diario ha "Where to next" e "What people told you" (le frasi vere, non l'elenco delle parole da dire). Ogni cosa che entra nel diario compare in un avviso (toast) e accende un pallino sul pulsante del diario. Le diciture da carta ("Cut the line", "Turn the page"…) non si vedono più.
+- **B in parte:** i personaggi non si nascondono più dietro il box (hanno una zona riservata sopra); restano zoom a pizzico, ritagli per i testi piccoli e timer che partono dopo aver aperto l'immagine.
 
 Ordine consigliato: A → B → C → D. A e B rendono il gioco giusto, C lo rende bello, D lo rende un gioco vero a casa.

@@ -1,7 +1,7 @@
-import { loadFlow, clues, sceneFlow } from './story.js';
+import { loadFlow, clues, sceneFlow, preloadFigures } from './story.js';
 import { load, newState, clear, save } from './save.js';
-import { init, startScene, resume, getState, showNext, jumpTo, toggleSong } from './game.js';
-import { renderMap } from './map.js';
+import { init, startScene, resume, getState, showNext, jumpTo, toggleSong, indexHeard } from './game.js';
+import { renderMap, simulateTap } from './map.js';
 import { renderJournal } from './journal.js';
 import { geo, startGeo, stopGeo, simulate, formatDistance, MAX_ACCURACY } from './geo.js';
 
@@ -10,6 +10,26 @@ const screens = ['title', 'play', 'map-screen'];
 const showScreen = (id) => screens.forEach((s) => { $(s).hidden = s !== id; });
 
 const flow = await loadFlow();
+indexHeard();
+preloadFigures();
+
+// Whatever goes into the notebook is announced: a toast (tap it to open the notebook) and a dot on the notebook button.
+const toasts = $('toasts');
+function toast(kind, text) {
+  const t = document.createElement('button');
+  t.type = 'button';
+  t.className = `toast ${kind}`;
+  const label = document.createElement('b');
+  label.textContent = 'Added to your notebook';
+  const body = document.createElement('span');
+  body.textContent = text.length > 120 ? `${text.slice(0, 117)}…` : text;
+  t.append(label, body);
+  t.addEventListener('click', () => { t.remove(); openJournal(); });
+  toasts.append(t);
+  while (toasts.children.length > 3) toasts.firstChild.remove();
+  $('btn-journal').classList.add('has-news');
+  setTimeout(() => t.remove(), 5500);
+}
 
 function hooks() {
   return {
@@ -19,6 +39,7 @@ function hooks() {
     onEnding: () => title(),
     onGeo: () => { gpsChip(); if (!$('map-screen').hidden) renderMap($('map'), $('leads'), { geoOnly: true }); },
     onMode: (mode) => applyMode(mode),
+    notify: toast,
     // The scene's location photo behind everything (kept while choosing the next place).
     setSong: (has) => { $('btn-song').hidden = !has; },
     onSong: (on) => { $('btn-song').setAttribute('aria-pressed', String(on)); $('btn-song').classList.toggle('on', on); },
@@ -44,6 +65,8 @@ function openMap() {
   $('btn-map-close').focus();
 }
 function openJournal() {
+  $('btn-journal').classList.remove('has-news');
+  toasts.replaceChildren();
   renderJournal($('journal-page'));
   $('journal').hidden = false;
   $('btn-journal-close').focus();
@@ -98,6 +121,12 @@ document.addEventListener('keydown', (e) => {
 
 // Debug helpers for testing from the console: petronius.state(), petronius.flow, petronius.clues,
 // petronius.fakePosition(lat, lng, accuracy) to try on-site mode away from Bovisa,
-// petronius.goto('13', '11') to jump to a beat (start or continue a game first).
-window.petronius = { state: getState, flow, clues, fakePosition: simulate, goto: (scene, beat) => { showScreen('play'); jumpTo(scene, beat); } };
+// petronius.goto('13', '11') to jump to a beat (start or continue a game first),
+// petronius.tapMap(lat, lng) to tap the map in home mode.
+window.petronius = {
+  state: getState, flow, clues, fakePosition: simulate,
+  goto: (scene, beat) => { showScreen('play'); jumpTo(scene, beat); },
+  // Home mode: tap the map at a place and press Go (what the player does).
+  tapMap: (lat, lng) => { if ($('map-screen').hidden) openMap(); simulateTap(lat, lng); },
+};
 title();

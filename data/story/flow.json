@@ -9,7 +9,8 @@
     "exits[].via: gps | voice | qr | ending. `where` is the place the player must reach; `say` is the voice keyword.",
     "confidence: confirmed (APK trigger + explicit text) | likely (explicit address or strong textual link) | guess.",
     "Voice scenes are visited with or without the keyword: knowing it jumps to the sibling scene, otherwise the",
-    "'don't remember' branch continues the walk. The same place can therefore be visited twice (e.g. 22-1)."
+    "'don't remember' branch continues the walk. The same place can therefore be visited twice (e.g. 22-1).",
+    "exits[].told = what the player was told that leads here, shown on the next-place card and in the notebook: { beat, match? } = a line of the exit's own scene (the sentence containing `match`, else the whole line); { note: '<scene>#<beat>' } = the note of that solved clue; on voice exits { scene, beat, match } = the line elsewhere that teaches the word, recorded in the notebook when it is read."
   ],
   "start": "1-2",
   "endings": {
@@ -262,7 +263,10 @@
           "via": "qr",
           "where": "uni-b1-b3",
           "confidence": "likely",
-          "evidence": "Roberto hides information 'near B3 building entrance'; journal p07 ESCAPE B3 SIDE"
+          "evidence": "Roberto hides information 'near B3 building entrance'; journal p07 ESCAPE B3 SIDE",
+          "told": {
+            "beat": "81"
+          }
         },
         {
           "from": "402",
@@ -270,7 +274,10 @@
           "via": "qr",
           "where": "uni-b1-b3",
           "confidence": "likely",
-          "evidence": "'go to ground floor corridor, at B1 door'; journal p07 ESCAPE B1 SIDE"
+          "evidence": "'go to ground floor corridor, at B1 door'; journal p07 ESCAPE B1 SIDE",
+          "told": {
+            "beat": "402"
+          }
         }
       ]
     },
@@ -283,7 +290,11 @@
           "via": "gps",
           "where": "schiaffino",
           "confidence": "likely",
-          "evidence": "'It is in via Schiaffino'"
+          "evidence": "'It is in via Schiaffino'",
+          "told": {
+            "beat": "12",
+            "match": "It’s in Via Schiaffino, we h"
+          }
         }
       ]
     },
@@ -296,7 +307,10 @@
           "via": "gps",
           "where": "schiaffino",
           "confidence": "likely",
-          "evidence": "'go straight and then right… follow me while you enjoy this murales'"
+          "evidence": "'go straight and then right… follow me while you enjoy this murales'",
+          "told": {
+            "beat": "13"
+          }
         }
       ]
     },
@@ -309,7 +323,10 @@
           "via": "gps",
           "where": "baldinucci-54",
           "confidence": "likely",
-          "evidence": "'let's meet with Roberto'; 8-1 GPS Schiaffino 20/21, Baldinucci 46"
+          "evidence": "'let's meet with Roberto'; 8-1 GPS Schiaffino 20/21, Baldinucci 46",
+          "told": {
+            "note": "5#5"
+          }
         }
       ]
     },
@@ -322,7 +339,11 @@
           "via": "gps",
           "where": "piazza-dergano",
           "confidence": "likely",
-          "evidence": "merged poster reads 'Piazza Dergano! … why we don't make a stop there?'"
+          "evidence": "merged poster reads 'Piazza Dergano! … why we don't make a stop there?'",
+          "told": {
+            "beat": "15",
+            "match": "Piazza Dergano!"
+          }
         }
       ]
     },
@@ -341,7 +362,12 @@
             "36"
           ],
           "confidence": "confirmed",
-          "evidence": "APK voice 'ong' -> 9-1; 36 'remember that we have to play PING PONG'"
+          "evidence": "APK voice 'ong' -> 9-1; 36 'remember that we have to play PING PONG'",
+          "told": {
+            "scene": "36",
+            "beat": "28",
+            "match": "PING PONG"
+          }
         },
         {
           "from": "22",
@@ -349,7 +375,10 @@
           "via": "gps",
           "where": "davanzati-2",
           "confidence": "confirmed",
-          "evidence": "Roberto's Nokia: 'VIA DAVANZATI, DUE' (clue 9#20); 10 is at Mamusca with Su"
+          "evidence": "Roberto's Nokia: 'VIA DAVANZATI, DUE' (clue 9#20); 10 is at Mamusca with Su",
+          "told": {
+            "note": "9#20"
+          }
         }
       ]
     },
@@ -363,7 +392,10 @@
           "where": "imbriani-54",
           "dayEnd": true,
           "confidence": "confirmed",
-          "evidence": "Su's flyer: 'James Reka is the best … you should be going there' (tomorrow); journal p12 'a flyer that gave us an idea of what to do tomorrow'; Mamusca flyer gives Via degli Imbriani 54"
+          "evidence": "Su's flyer: 'James Reka is the best … you should be going there' (tomorrow); journal p12 'a flyer that gave us an idea of what to do tomorrow'; Mamusca flyer gives Via degli Imbriani 54",
+          "told": {
+            "note": "10#14"
+          }
         }
       ]
     },
@@ -376,7 +408,10 @@
           "via": "gps",
           "where": "carnevali-113",
           "confidence": "likely",
-          "evidence": "Reka code 'let's do as he says'; 10 'Guido will be there too'; journal p13 Reka -> p14 'Here I met Guido'"
+          "evidence": "Reka code 'let's do as he says'; 10 'Guido will be there too'; journal p13 Reka -> p14 'Here I met Guido'",
+          "told": {
+            "note": "11#11"
+          }
         }
       ]
     },
@@ -395,7 +430,12 @@
             "34"
           ],
           "confidence": "confirmed",
-          "evidence": "APK voice 'uardia' -> 12-1; 34 'the second is called Il Guardiano, write it down'"
+          "evidence": "APK voice 'uardia' -> 12-1; 34 'the second is called Il Guardiano, write it down'",
+          "told": {
+            "scene": "34",
+            "beat": "4",
+            "match": "Il Guardiano"
+          }
         },
         {
           "from": "17",
@@ -403,7 +443,11 @@
           "via": "gps",
           "where": "carnevali-104",
           "confidence": "likely",
-          "evidence": "'it's Penny market time'; 13 opens 'Something to drink bro?'"
+          "evidence": "'it's Penny market time'; 13 opens 'Something to drink bro?'",
+          "told": {
+            "beat": "17",
+            "match": "Cut the bullshit, it's Penny"
+          }
         }
       ]
     },
@@ -416,7 +460,10 @@
           "via": "gps",
           "where": "bausan",
           "confidence": "confirmed",
-          "evidence": "Penny flyer: the covered letters spell LET'S GO BAUSAN (clue 13#11); 14 is Piazza Bausan"
+          "evidence": "Penny flyer: the covered letters spell LET'S GO BAUSAN (clue 13#11); 14 is Piazza Bausan",
+          "told": {
+            "note": "13#11"
+          }
         }
       ]
     },
@@ -429,7 +476,10 @@
           "via": "gps",
           "where": "schiavone",
           "confidence": "likely",
-          "evidence": "14 ends on skateboarding; journal p15 fountain strips 'clue to the next place' -> p16 'where they all learned skateboarding' (15, the steps)"
+          "evidence": "14 ends on skateboarding; journal p15 fountain strips 'clue to the next place' -> p16 'where they all learned skateboarding' (15, the steps)",
+          "told": {
+            "note": "14#11"
+          }
         }
       ]
     },
@@ -442,7 +492,10 @@
           "via": "gps",
           "where": "mercantini",
           "confidence": "likely",
-          "evidence": "flyer decodes to an address with 'other super beautiful murals'; journal p16 -> p17 'Here we saw other 2501's graffiti' (32: 2501's lines); p15 strips list VIA MERCANTINI"
+          "evidence": "flyer decodes to an address with 'other super beautiful murals'; journal p16 -> p17 'Here we saw other 2501's graffiti' (32: 2501's lines); p15 strips list VIA MERCANTINI",
+          "told": {
+            "note": "15#11"
+          }
         }
       ]
     },
@@ -456,7 +509,11 @@
           "where": "butti-18",
           "dayEnd": true,
           "confidence": "likely",
-          "evidence": "'Let's grab a bite in Via Butti 18, remember that we gotta go to the garden' [day end]"
+          "evidence": "'Let's grab a bite in Via Butti 18, remember that we gotta go to the garden' [day end]",
+          "told": {
+            "beat": "10",
+            "match": "Let's grab a bite in Via But"
+          }
         },
         {
           "from": "11",
@@ -465,7 +522,11 @@
           "where": "imbonati-11",
           "dayEnd": true,
           "confidence": "likely",
-          "evidence": "'tomorrow I'll take you to eat in Via Imbonati 11' [day end]"
+          "evidence": "'tomorrow I'll take you to eat in Via Imbonati 11' [day end]",
+          "told": {
+            "beat": "11",
+            "match": "Don't make a fuss about it, "
+          }
         }
       ]
     },
@@ -478,7 +539,11 @@
           "via": "gps",
           "where": "livigno-5",
           "confidence": "likely",
-          "evidence": "'let's go to Via Livigno 5, there is a park'"
+          "evidence": "'let's go to Via Livigno 5, there is a park'",
+          "told": {
+            "beat": "28",
+            "match": "I've no fucking clue man, bu"
+          }
         }
       ]
     },
@@ -497,7 +562,12 @@
             "29"
           ],
           "confidence": "confirmed",
-          "evidence": "APK voice 'scotch' -> 18-1; 29 'remind me to tell you about the HOPSCOTCH'"
+          "evidence": "APK voice 'scotch' -> 18-1; 29 'remind me to tell you about the HOPSCOTCH'",
+          "told": {
+            "scene": "29",
+            "beat": "5",
+            "match": "HOPSCOTCH"
+          }
         },
         {
           "from": "28",
@@ -505,7 +575,11 @@
           "via": "gps",
           "where": "ciaia-6",
           "confidence": "likely",
-          "evidence": "'an insane ice cream shop in Via Ciaia 6'"
+          "evidence": "'an insane ice cream shop in Via Ciaia 6'",
+          "told": {
+            "beat": "28",
+            "match": "But it just reminded me that"
+          }
         }
       ]
     },
@@ -523,7 +597,11 @@
           "via": "gps",
           "where": "vare",
           "confidence": "likely",
-          "evidence": "Yda's SMS: the market (Th(r)ief(t) Market) is one of three clue sites"
+          "evidence": "Yda's SMS: the market (Th(r)ief(t) Market) is one of three clue sites",
+          "told": {
+            "beat": "4",
+            "match": "The first one has something "
+          }
         },
         {
           "from": "6",
@@ -531,7 +609,11 @@
           "via": "qr",
           "where": "ciaia-4",
           "confidence": "likely",
-          "evidence": "Yda's SMS: 'solve a code in a picture' (Sound of '70 billboard)"
+          "evidence": "Yda's SMS: 'solve a code in a picture' (Sound of '70 billboard)",
+          "told": {
+            "beat": "4",
+            "match": "The second one is in Via Cia"
+          }
         },
         {
           "from": "6",
@@ -539,7 +621,11 @@
           "via": "gps",
           "where": "armenia",
           "confidence": "likely",
-          "evidence": "Yda's SMS: library in via Baldinucci, 'Remember to say ARCHIVE when you enter'"
+          "evidence": "Yda's SMS: library in via Baldinucci, 'Remember to say ARCHIVE when you enter'",
+          "told": {
+            "beat": "5",
+            "match": "The last one is in Via Baldi"
+          }
         },
         {
           "from": "6",
@@ -552,7 +638,11 @@
             "22"
           ],
           "confidence": "likely",
-          "evidence": "'When you have found everything, go to Ribalta in via Cevedale'; 21 'before going to Ribalta…'"
+          "evidence": "'When you have found everything, go to Ribalta in via Cevedale'; 21 'before going to Ribalta…'",
+          "told": {
+            "beat": "6",
+            "match": "When you have found everythi"
+          }
         }
       ]
     },
@@ -565,7 +655,10 @@
           "via": "qr",
           "where": "vare",
           "confidence": "likely",
-          "evidence": "[search for the qr in the market]"
+          "evidence": "[search for the qr in the market]",
+          "told": {
+            "beat": "7"
+          }
         }
       ]
     },
@@ -578,7 +671,10 @@
           "via": "gps",
           "where": "cevedale",
           "confidence": "likely",
-          "evidence": "'stop by a mural by 2501 which is right there in Via Cevedale' [take note of Moretti]"
+          "evidence": "'stop by a mural by 2501 which is right there in Via Cevedale' [take note of Moretti]",
+          "told": {
+            "beat": "1"
+          }
         }
       ]
     },
@@ -610,7 +706,10 @@
           "via": "gps",
           "where": "ribalta",
           "confidence": "likely",
-          "evidence": "'Come on let's get in!' (Ribalta, Cevedale 3)"
+          "evidence": "'Come on let's get in!' (Ribalta, Cevedale 3)",
+          "told": {
+            "beat": "11"
+          }
         }
       ]
     },
@@ -631,7 +730,10 @@
           "via": "qr",
           "where": "uni-b2-room",
           "confidence": "likely",
-          "evidence": "names wrong: 'go back to University and go to B2.2.14, to see if Yda is there'"
+          "evidence": "names wrong: 'go back to University and go to B2.2.14, to see if Yda is there'",
+          "told": {
+            "beat": "26"
+          }
         }
       ]
     },
@@ -657,7 +759,11 @@
           "via": "gps",
           "where": "cevedale",
           "confidence": "likely",
-          "evidence": "'if we turn left on Via Cevedale we find another crazy mural' (23, GPS Cevedale). 23 is revisited in the endgame via 21"
+          "evidence": "'if we turn left on Via Cevedale we find another crazy mural' (23, GPS Cevedale). 23 is revisited in the endgame via 21",
+          "told": {
+            "beat": "4",
+            "match": "Come on, if we turn left on "
+          }
         }
       ]
     },
@@ -670,7 +776,10 @@
           "via": "gps",
           "where": "caianello-1",
           "confidence": "likely",
-          "evidence": "'I'll show you where I became what I am'; Da Amilcare flyer + sheet -> Via Caianello 1"
+          "evidence": "'I'll show you where I became what I am'; Da Amilcare flyer + sheet -> Via Caianello 1",
+          "told": {
+            "note": "27#11"
+          }
         }
       ]
     },
@@ -683,7 +792,11 @@
           "via": "gps",
           "where": "guerzoni-39",
           "confidence": "likely",
-          "evidence": "'in via Guerzoni 39, there is Su's new shop'"
+          "evidence": "'in via Guerzoni 39, there is Su's new shop'",
+          "told": {
+            "beat": "11",
+            "match": "It just occurred to me that "
+          }
         }
       ]
     },
@@ -696,7 +809,11 @@
           "via": "gps",
           "where": "livigno-5",
           "confidence": "likely",
-          "evidence": "'the one in Via Livigno 5! … remind me … the HOPSCOTCH' [cut the journal's page]"
+          "evidence": "'the one in Via Livigno 5! … remind me … the HOPSCOTCH' [cut the journal's page]",
+          "told": {
+            "beat": "5",
+            "match": "I'll take you to another sma"
+          }
         },
         {
           "from": "7",
@@ -704,7 +821,11 @@
           "via": "gps",
           "where": "livigno-5",
           "confidence": "guess",
-          "evidence": "origami declined (6 -> 7); 7's text is a line copy-pasted from 16 (Yda), so this branch never named a next place: assume the same route as the origami branch"
+          "evidence": "origami declined (6 -> 7); 7's text is a line copy-pasted from 16 (Yda), so this branch never named a next place: assume the same route as the origami branch",
+          "told": {
+            "beat": "5",
+            "match": "Livigno"
+          }
         }
       ]
     },
@@ -717,7 +838,10 @@
           "via": "gps",
           "where": "resegone-2",
           "confidence": "likely",
-          "evidence": "'the chimney of the Fernet Branca … in via Resegone 2'"
+          "evidence": "'the chimney of the Fernet Branca … in via Resegone 2'",
+          "told": {
+            "beat": "14"
+          }
         }
       ]
     },
@@ -731,7 +855,11 @@
           "where": "schiaffino",
           "dayEnd": true,
           "confidence": "likely",
-          "evidence": "'Tomorrow … via Schiaffino, then … via Bovisasca 57!' [day end]"
+          "evidence": "'Tomorrow … via Schiaffino, then … via Bovisasca 57!' [day end]",
+          "told": {
+            "beat": "13",
+            "match": "Tomorrow we'll see graffiti "
+          }
         }
       ]
     },
@@ -745,7 +873,11 @@
           "where": "uni-b1-b3",
           "dayEnd": true,
           "confidence": "likely",
-          "evidence": "[enter university from the b3 door]; journal p17 'Yda caught us! Fortunately, Roberto appeared' on the same spread as 2501's graffiti. 16 = QR at the B3 door, 16-1 = QR at the B1 door"
+          "evidence": "[enter university from the b3 door]; journal p17 'Yda caught us! Fortunately, Roberto appeared' on the same spread as 2501's graffiti. 16 = QR at the B3 door, 16-1 = QR at the B1 door",
+          "told": {
+            "beat": "4",
+            "match": "same door"
+          }
         },
         {
           "from": "4",
@@ -754,7 +886,11 @@
           "where": "reale",
           "after": "16",
           "confidence": "guess",
-          "evidence": "'tomorrow I'll take you to the place I care most about' ~ 33 'This place is special! … we presented some of our projects here'; 33 talks about the Yda situation, so it follows 16. Only known way into 33"
+          "evidence": "'tomorrow I'll take you to the place I care most about' ~ 33 'This place is special! … we presented some of our projects here'; 33 talks about the Yda situation, so it follows 16. Only known way into 33",
+          "told": {
+            "beat": "4",
+            "match": "tomorrow"
+          }
         }
       ]
     },
@@ -767,7 +903,11 @@
           "via": "gps",
           "where": "durando-10",
           "confidence": "likely",
-          "evidence": "'Let's go to Via Durando 10, in front of the electric cars recharging column' [cut the journal's page]"
+          "evidence": "'Let's go to Via Durando 10, in front of the electric cars recharging column' [cut the journal's page]",
+          "told": {
+            "beat": "5",
+            "match": "Let's go to Via Durando 10, "
+          }
         },
         {
           "from": "7",
@@ -775,7 +915,11 @@
           "via": "gps",
           "where": "durando-10",
           "confidence": "likely",
-          "evidence": "same line [turn the page]"
+          "evidence": "same line [turn the page]",
+          "told": {
+            "beat": "7",
+            "match": "Let's go to Via Durando 10, "
+          }
         }
       ]
     },
@@ -788,7 +932,11 @@
           "via": "gps",
           "where": "imbriani-54",
           "confidence": "likely",
-          "evidence": "'let's go to via Imbriani 54 … the second is called Il Guardiano, write it down'"
+          "evidence": "'let's go to via Imbriani 54 … the second is called Il Guardiano, write it down'",
+          "told": {
+            "beat": "4",
+            "match": "Now let's go to Via Imbriani"
+          }
         }
       ]
     },
@@ -801,7 +949,11 @@
           "via": "gps",
           "where": "butti-18",
           "confidence": "likely",
-          "evidence": "'a super cool place in Via Butti 18'"
+          "evidence": "'a super cool place in Via Butti 18'",
+          "told": {
+            "beat": "14",
+            "match": "By the way, I just remembere"
+          }
         }
       ]
     },
@@ -814,7 +966,10 @@
           "via": "gps",
           "where": "piazza-dergano",
           "confidence": "likely",
-          "evidence": "flyer initials spell DERGANO: 'the name of the square just around the corner … PING PONG'"
+          "evidence": "flyer initials spell DERGANO: 'the name of the square just around the corner … PING PONG'",
+          "told": {
+            "beat": "28"
+          }
         }
       ]
     },
@@ -827,7 +982,10 @@
           "via": "qr",
           "where": "uni-b2-room",
           "confidence": "likely",
-          "evidence": "wrong answers: 'take you to the principal Moretti … B2.2.14, now!'"
+          "evidence": "wrong answers: 'take you to the principal Moretti … B2.2.14, now!'",
+          "told": {
+            "beat": "4"
+          }
         },
         {
           "from": "container3",
@@ -848,7 +1006,10 @@
           "via": "qr",
           "where": "uni-b2",
           "confidence": "likely",
-          "evidence": "'he's headed first floor staircase of the B2' [go to the location]"
+          "evidence": "'he's headed first floor staircase of the B2' [go to the location]",
+          "told": {
+            "beat": "17"
+          }
         },
         {
           "from": "18",
@@ -856,7 +1017,10 @@
           "via": "qr",
           "where": "uni-b2",
           "confidence": "likely",
-          "evidence": "'classrooms near the main entrance of B2' [go to the location]"
+          "evidence": "'classrooms near the main entrance of B2' [go to the location]",
+          "told": {
+            "beat": "18"
+          }
         }
       ]
     },
@@ -869,7 +1033,10 @@
           "via": "qr",
           "where": "uni-b2",
           "confidence": "likely",
-          "evidence": "wait near B2 entrance; 4 opens 'Quiet! I hear someone is approaching' [Cut the line on the journal]"
+          "evidence": "wait near B2 entrance; 4 opens 'Quiet! I hear someone is approaching' [Cut the line on the journal]",
+          "told": {
+            "beat": "11"
+          }
         },
         {
           "from": "81",
@@ -877,7 +1044,10 @@
           "via": "qr",
           "where": "uni-b2",
           "confidence": "likely",
-          "evidence": "same as above"
+          "evidence": "same as above",
+          "told": {
+            "beat": "81"
+          }
         }
       ]
     },
@@ -890,7 +1060,10 @@
           "via": "gps",
           "where": "armenia",
           "confidence": "likely",
-          "evidence": "bookmark of the library; 22-1 'put the bookmark in the shape'"
+          "evidence": "bookmark of the library; 22-1 'put the bookmark in the shape'",
+          "told": {
+            "beat": "10"
+          }
         }
       ]
     },
@@ -917,7 +1090,11 @@
           "via": "gps",
           "where": "candiani",
           "confidence": "likely",
-          "evidence": "'let's go to the park in Via Candiani'"
+          "evidence": "'let's go to the park in Via Candiani'",
+          "told": {
+            "beat": "18",
+            "match": "They're fellas a little olde"
+          }
         }
       ]
     },
@@ -930,7 +1107,11 @@
           "via": "gps",
           "where": "durando-10",
           "confidence": "likely",
-          "evidence": "'go from the main entrance in via Durando 10': the APK checked GPS on every LocationChanged, so reaching Durando fired 34, which (like 10's Reka flyer) sends the player to Imbriani 54 (11)"
+          "evidence": "'go from the main entrance in via Durando 10': the APK checked GPS on every LocationChanged, so reaching Durando fired 34, which (like 10's Reka flyer) sends the player to Imbriani 54 (11)",
+          "told": {
+            "beat": "5",
+            "match": "Let's go through the main en"
+          }
         },
         {
           "from": "7",
@@ -938,7 +1119,11 @@
           "via": "gps",
           "where": "durando-10",
           "confidence": "likely",
-          "evidence": "same line [turn the journal's page]"
+          "evidence": "same line [turn the journal's page]",
+          "told": {
+            "beat": "7",
+            "match": "Let's go through the main en"
+          }
         }
       ]
     },
@@ -952,7 +1137,11 @@
           "where": "bodio-22",
           "dayEnd": true,
           "confidence": "likely",
-          "evidence": "'Let's start from an insane place in Viale Bodio 22!' [day end]"
+          "evidence": "'Let's start from an insane place in Viale Bodio 22!' [day end]",
+          "told": {
+            "beat": "18",
+            "match": "Let's start from an insane p"
+          }
         }
       ]
     },
@@ -966,7 +1155,11 @@
           "where": "imbonati-11",
           "dayEnd": true,
           "confidence": "likely",
-          "evidence": "'go and eat something in via Imbonati 11' [day end]"
+          "evidence": "'go and eat something in via Imbonati 11' [day end]",
+          "told": {
+            "beat": "10",
+            "match": "I'd say we could go and eat "
+          }
         },
         {
           "from": "11",
@@ -975,7 +1168,11 @@
           "where": "imbonati-11",
           "dayEnd": true,
           "confidence": "likely",
-          "evidence": "'Tomorrow I'll take you to eat in Via Imbonati 11' [day end]"
+          "evidence": "'Tomorrow I'll take you to eat in Via Imbonati 11' [day end]",
+          "told": {
+            "beat": "11",
+            "match": "Tomorrow I'll take you to ea"
+          }
         }
       ]
     },
@@ -993,7 +1190,12 @@
           ],
           "learnFrom": "16: 'we gotta go to the garden'; Rob de Matt poster/sticker",
           "confidence": "confirmed",
-          "evidence": "APK voice \"It's\"+'arden' -> 17; 16 'we gotta go to the garden'"
+          "evidence": "APK voice \"It's\"+'arden' -> 17; 16 'we gotta go to the garden'",
+          "told": {
+            "scene": "16",
+            "beat": "10",
+            "match": "garden"
+          }
         },
         {
           "from": "29",
@@ -1001,7 +1203,10 @@
           "via": "gps",
           "where": "ciaia-8",
           "confidence": "confirmed",
-          "evidence": "Fruit sticker + page 33 spell CIAIA 8 (clue 17-1#26): the greengrocer (36)"
+          "evidence": "Fruit sticker + page 33 spell CIAIA 8 (clue 17-1#26): the greengrocer (36)",
+          "told": {
+            "note": "17-1#26"
+          }
         }
       ]
     },
@@ -1014,7 +1219,11 @@
           "via": "gps",
           "where": "jenner-42",
           "confidence": "likely",
-          "evidence": "'Tango d'Amore … a mural in Viale Jenner 42'"
+          "evidence": "'Tango d'Amore … a mural in Viale Jenner 42'",
+          "told": {
+            "beat": "30",
+            "match": "Well, it's a mural in Viale "
+          }
         }
       ]
     },
@@ -1072,7 +1281,12 @@
             "19"
           ],
           "confidence": "confirmed",
-          "evidence": "APK voice 'rchive' -> 22; Yda: 'say ARCHIVE when you enter'"
+          "evidence": "APK voice 'rchive' -> 22; Yda: 'say ARCHIVE when you enter'",
+          "told": {
+            "scene": "19",
+            "beat": "6",
+            "match": "ARCHIVE"
+          }
         },
         {
           "from": "18",
@@ -1080,7 +1294,10 @@
           "via": "gps",
           "where": "piazza-dergano",
           "confidence": "likely",
-          "evidence": "first visit (bookmark, no keyword yet): 'the next place we can go is thereby, it's a really nice park'; 9 opens 'What are we going to play?' (ping pong) and its GPS includes Baldinucci 76/63 next to the library"
+          "evidence": "first visit (bookmark, no keyword yet): 'the next place we can go is thereby, it's a really nice park'; 9 opens 'What are we going to play?' (ping pong) and its GPS includes Baldinucci 76/63 next to the library",
+          "told": {
+            "beat": "18"
+          }
         }
       ]
     },
@@ -1099,7 +1316,12 @@
             "21"
           ],
           "confidence": "confirmed",
-          "evidence": "APK voice 'oretti' -> 24; 21 [take note of Moretti]"
+          "evidence": "APK voice 'oretti' -> 24; 21 [take note of Moretti]",
+          "told": {
+            "scene": "21",
+            "beat": "3",
+            "match": "MORETTI"
+          }
         },
         {
           "from": "31",
@@ -1108,7 +1330,10 @@
           "where": "uni-b1-b3",
           "dayEnd": true,
           "confidence": "likely",
-          "evidence": "16-1 = QR at the B1 door (16 is the B3 one). First Ribalta visit without the keyword: 'go through the B1 door' [enter university through the b1 door]; 16-1: Yda catches them; journal order brewery (p22) -> restaurant Imbonati 11 (p26)"
+          "evidence": "16-1 = QR at the B1 door (16 is the B3 one). First Ribalta visit without the keyword: 'go through the B1 door' [enter university through the b1 door]; 16-1: Yda catches them; journal order brewery (p22) -> restaurant Imbonati 11 (p26)",
+          "told": {
+            "beat": "31"
+          }
         }
       ]
     }

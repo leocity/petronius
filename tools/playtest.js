@@ -1,6 +1,6 @@
 // Browser-console bot: plays Petronius (home mode) from the current screen to an ending.
 // Paste into the console on http://localhost:5173/web/ after starting a new game. Returns a log.
-// On-site mode: fakes the GPS position at each destination. Strategy: first choice; journal clues answered from clues.json; correct puzzle answers; say voice keywords only once learned; prefer unvisited leads.
+// Home mode: taps the map at each destination. On-site mode: fakes the GPS position at each destination. Strategy: first choice; journal clues answered from clues.json; correct puzzle answers; say voice keywords only once learned; prefer unvisited leads.
 (async () => {
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   const { flow } = petronius;
@@ -9,6 +9,16 @@
     await sleep(15);
     const st = petronius.state();
     if (document.querySelector('.ending')) { log.push('ENDING ' + st.ending + ' on day ' + st.day + ' after ' + st.log.length + ' scenes'); break; }
+    // Home mode: lead cards ("what you were told"); the player finds the place on the map: tap it, press Go.
+    const cards = [...document.querySelectorAll('.next .lead-card')];
+    if (cards.length) {
+      const visited = new Set(st.log.map((v) => v.scene));
+      const pick = cards.find((c) => !visited.has(c.dataset.scene)) ?? cards[0];
+      const p = flow.places[st.leads.find((l) => l.to === pick.dataset.scene).where];
+      log.push(`-> ${pick.dataset.scene} (${p.name}) [tap map]`);
+      petronius.tapMap(p.lat + 0.0001, p.lng + 0.0001);
+      await sleep(30); continue;
+    }
     const dests = [...document.querySelectorAll('.next .dest')];
     if (dests.length) {
       const visited = new Set(st.log.map((v) => v.scene));

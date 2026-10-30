@@ -1,6 +1,6 @@
 // The engine: plays a scene beat by beat, then uses flow.json to turn the scene's exit into
 // destinations ("leads") the player can travel to. Home mode: every trigger is satisfied in-app.
-import { flow, clues, cast, media, clueFor, assetUrl, mediaUrl, backgroundFor, figureFor, loadScene, place, sceneFlow, CHARACTERS } from './story.js';
+import { flow, clues, cast, media, clueFor, assetUrl, mediaUrl, backgroundFor, figureFor, loadScene, place, sceneFlow, resolveTold, CHARACTERS } from './story.js';
 import { save } from './save.js';
 import { cluePanel, gallery, hints, hotspotImage, compact } from './clue.js';
 import { geo, onGeo, proximity, formatDistance, MAX_ACCURACY } from './geo.js';
@@ -14,7 +14,24 @@ export function init(s, hooks) {
   state.solved ??= [];   // clue keys "<scene>#<beat>" (saves from before clues existed lack these)
   state.items ??= [];    // journal items collected: [{ title, items }]
   state.met ??= [];      // characters who have spoken (notebook "People")
+  state.heard ??= [];    // lines that taught the player something to say: [{ key, who, text, scene, day }]
   Object.assign(ui, hooks);
+}
+
+// Lines that teach a voice word (flow.json voice exits' `told`): recorded in the notebook the moment they are read.
+const HEARD = new Map();
+export function indexHeard() {
+  for (const [sid, f] of Object.entries(flow.scenes)) for (const e of f.exits)
+    if (e.via === 'voice' && e.told) HEARD.set(`${e.told.scene ?? sid}#${e.told.beat}`, { key: `${e.told.scene ?? sid}#${e.told.beat}`, match: e.told.match });
+}
+
+// Tell the player something went into the notebook (toast + dot on the notebook button, see main.js).
+const notify = (kind, text) => ui.notify?.(kind, text);
+function addNote(text) {
+  if (state.notes.some((n) => norm(n.text) === norm(text))) return false;
+  state.notes.push({ text, scene: state.scene, day: state.day });
+  notify('note', text);
+  return true;
 }
 export const getState = () => state;
 
@@ -41,7 +58,7 @@ export const openLeads = () => state.leads.filter(leadOpen);
 function addLead(e, fromScene) {
   if (!e.to || state.leads.some((l) => l.to === e.to)) return;
   state.leads.push({ to: e.to, where: e.where ?? sceneFlow(e.to)?.place, via: e.via, from: fromScene,
-    requires: e.requires, after: e.after, dayEnd: !!e.dayEnd });
+    requires: e.requires, after: e.after, dayEnd: !!e.dayEnd, told: resolveTold(e.told, fromScene) });
 }
 
 // Hub spokes are done when the scene their branch must reach (the hub's final exit `requires`, same order) is finished.
@@ -56,14 +73,21 @@ function hubLeads(hubId) {
 }
 
 // ---------- Scenes ----------
+let starting = false;   // the scene file is fetched first: a second tap meanwhile must not start it twice
 export async function startScene(id) {
-  scene = await loadScene(id);
-  state.scene = id;
-  state.trail = [];
-  state.leads = state.leads.filter((l) => l.to !== id);
-  state.log.push({ day: state.day, scene: id, place: sceneFlow(id).place, at: new Date().toISOString() });
-  for (const p of clues.pickups[id] ?? []) collect(p);
-  show(scene.start);
+  if (starting) return;
+  starting = true;
+  try {
+    scene = await loadScene(id);
+    state.scene = id;
+    state.trail = [];
+    state.leads = state.leads.filter((l) => l.to !== id);
+    state.log.push({ day: state.day, scene: id, place: sceneFlow(id).place, at: new Date().toISOString() });
+    for (const p of clues.pickups[id] ?? []) collect(p);
+    show(scene.start);
+  } finally {
+    starting = false;
+  }
 }
 
 // Testing helper (petronius.goto in the console): jump straight to a beat of a scene.
@@ -124,6 +148,11 @@ function render(beat) {
   const stage = ui.stage;
   stage.replaceChildren();
   takeNotes(beat);
+  const rule = HEARD.get(`${state.scene}#${beat.id}`);
+  if (rule && !state.heard.some((x) => x.key === rule.key)) {
+    const q = resolveTold({ beat: beat.id, match: rule.match }, state.scene);
+    if (q) { state.heard.push({ key: rule.key, who: q.who, text: q.text, scene: state.scene, day: state.day }); notify('heard', `${q.who}: “${q.text}”`); }
+  }
   if (beat.speaker && cast.characters[beat.speaker] && !state.met.includes(beat.speaker)) state.met.push(beat.speaker);
   switch (beat.kind) {
     case 'card': return stage.append(cardView(beat.text, () => go(uniqueNext(beat)[0])));
@@ -142,12 +171,10 @@ function lineView(beat) {
   const choices = nexts.filter((n) => n.label);
   const say = h('div', { class: 'say' },
     h('span', { class: 'name-tag', style: `--c:${color}` }, CHARACTERS[who] ?? who),
-    beat.text ? h('p', {}, beat.text) : null,
-    beat.instruction && !beat.waitsFor ? taskView(beat.instruction) : null);
+    beat.text ? h('p', {}, beat.text) : null);
 
   const clue = beat.instruction && !beat.waitsFor && clueFor(state.scene, beat.id);
   if (clue) {
-    say.querySelector('.task')?.remove();
     const cont = choices.length === 1 ? choices[0] : nexts[0];
     if (beat.text) ui.stage.append(h('div', { class: 'say full' }, h('span', { class: 'name-tag', style: `--c:${color}` }, CHARACTERS[who] ?? who), h('p', {}, beat.text)));
     ui.stage.append(
@@ -196,33 +223,24 @@ player.addEventListener('play', () => ui.onSong?.(true));
 player.addEventListener('pause', () => ui.onSong?.(false));
 
 
-function taskView(text) {
-  const parts = text.split(' / ').filter((p) => !/take note of/i.test(p));
-  const paper = parts.find((p) => /cut|turn the (journal'?s )?page|turn the page/i.test(p));
-  const qr = parts.find((p) => /qr/i.test(p));
-  return h('div', { class: 'task' }, text,
-    paper ? h('small', {}, 'In the paper journal you would do this by hand. Here the notebook keeps track for you.')
-      : qr ? h('small', {}, 'At home the code is on the map: pick the next place when the scene ends.') : null);
-}
-
 // A solved clue: its note goes in the notebook, its items in "Things you picked up".
 function solved(clue, key) {
   if (state.solved.includes(key)) return;
   state.solved.push(key);
-  if (clue.note && !state.notes.some((n) => n.text === clue.note)) state.notes.push({ text: clue.note, scene: state.scene, day: state.day });
+  if (clue.note) addNote(clue.note);
   if (clue.items?.length) collect(clue);
   persist();
 }
 function collect(item) {
   if (state.items.some((i) => i.title === item.title)) return;
   state.items.push({ title: item.title, items: item.items });
-  if (item.note && !state.notes.some((n) => n.text === item.note)) state.notes.push({ text: item.note, scene: state.scene, day: state.day });
+  if (item.note) addNote(item.note);
 }
 
 function takeNotes(beat) {
   for (const part of (beat.instruction ?? '').split(' / ')) {
     const m = part.match(/take note of\s+"?([^"]+?)"?\s*$/i);
-    if (m && !state.notes.some((n) => norm(n.text) === norm(m[1]))) state.notes.push({ text: m[1], scene: state.scene, day: state.day });
+    if (m) addNote(m[1]);
   }
 }
 
@@ -376,10 +394,12 @@ function renderNext() {
   ui.stage.replaceChildren(h('div', { class: 'next full' },
     h('h2', {}, newDay ? `Day ${newDay}` : 'Where to next?'),
     h('p', {}, newDay ? 'Back through the university doors before anyone notices. Tomorrow starts here:'
-      : onsite ? 'Walk there. The scene unlocks when you arrive.' : 'Pick a place. It stays on your map until you go there.'),
+      : onsite ? 'Walk there. The scene unlocks when you arrive.' : 'Here is what you were told. Find the place on the map.'),
     onsite ? gpsNotice() : null,
-    leads.length ? h('div', { class: 'choices' }, leads.map((l) => destButton(l))) : h('p', {}, 'No open leads. Check the map.'),
-    h('button', { class: 'btn', onclick: ui.openMap }, 'Open map')));
+    !leads.length ? h('p', {}, 'No open leads. Check the map.')
+      : onsite ? h('div', { class: 'choices' }, leads.map((l) => destButton(l)))
+      : h('div', { class: 'leadcards' }, leads.map((l) => leadCard(l))),
+    h('button', { class: onsite ? 'btn' : 'btn btn-primary', onclick: ui.openMap }, onsite ? 'Open map' : 'Find it on the map')));
 }
 
 function gpsNotice() {
@@ -397,6 +417,15 @@ export function setMode(mode) {
   persist();
   ui.onMode?.(mode);
   if (nextArgs && ui.stage.querySelector('.next')) renderNext();
+}
+
+// Home mode: what the player was told about the next place (not its name on a button: they find it on the map).
+export function leadCard(l) {
+  const t = l.told;
+  const p = place(l.where);
+  return h('figure', { class: 'lead-card', 'data-scene': l.to },
+    h('blockquote', {}, t?.text ?? p?.name ?? l.to),
+    h('figcaption', {}, t?.who ?? p?.address ?? ''));
 }
 
 export function destButton(l) {
