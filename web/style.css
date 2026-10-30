@@ -272,14 +272,16 @@ button { font: inherit; color: inherit; }
 /* The figure has a fixed height (--fig-h, set by the screen only), so it never grows or shrinks with the
    dialogue box: a tall box pushes the page down instead of covering the character, a short one leaves the
    photo showing above the figure. The box overlaps only the figure's last 2.6rem. */
-.stage { position: relative; --fig-h: clamp(11rem, 36dvh, 26rem); grid-template-rows: calc(var(--fig-h) - 2.6rem) auto; align-content: end; gap: 0; }
+.stage { position: relative; --fig-h: clamp(11rem, 36dvh, 26rem); --box-slot: 14rem; grid-template-rows: calc(var(--fig-h) - 2.6rem) minmax(var(--box-slot), auto); align-content: end; gap: 0; }
+/* The box sits at the top of a fixed slot, so the figure stays where it is until a line is longer than the slot. */
+.stage > .say { align-self: start; }
 .stage > .portrait-wall { position: relative; overflow: visible; pointer-events: none; min-height: 0; display: block; }
 .figure {
   position: absolute; bottom: -2.6rem; left: 0; height: var(--fig-h); max-width: 64%; object-fit: contain; object-position: left bottom;
   filter: drop-shadow(0.4rem 0.4rem 0 rgba(0, 0, 0, 0.55));
 }
 .figure.right { left: auto; right: 0; object-position: right bottom; }
-.stage > .say { position: relative; z-index: 1; grid-row: 2; align-self: end; }
+.stage > .say { position: relative; z-index: 1; grid-row: 2; }
 #btn-song.on { color: var(--cover); }
 .ending-video { width: min(100%, 40rem); border: 0.2rem solid var(--ink); box-shadow: var(--shadow-hard); background: #000; }
 @media (max-width: 47.99rem) {
