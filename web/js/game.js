@@ -1,9 +1,10 @@
 // The engine: plays a scene beat by beat, then uses flow.json to turn the scene's exit into
 // destinations ("leads") the player can travel to. Home mode: every trigger is satisfied in-app.
-import { flow, clues, cast, media, clueFor, assetUrl, mediaUrl, backgroundFor, figureFor, loadScene, place, sceneFlow, resolveTold, CHARACTERS } from './story.js';
+import { flow, clues, cast, media, clueFor, mediaUrl, backgroundFor, figureFor, loadScene, place, sceneFlow, resolveTold, CHARACTERS } from './story.js';
 import { save } from './save.js';
 import { cluePanel, gallery, bigImage, hints, hotspotImage, compact } from './clue.js';
 import { geo, onGeo, proximity, formatDistance, MAX_ACCURACY } from './geo.js';
+import { h } from './dom.js';
 
 let state;
 let scene;               // current scene data
@@ -16,6 +17,8 @@ export function init(s, hooks) {
   state.met ??= [];      // characters who have spoken (notebook "People")
   state.heard ??= [];    // lines that taught the player something to say: [{ key, who, text, scene, day }]
   Object.assign(ui, hooks);
+  arrived.clear();       // a new or resumed game vibrates again on arrival
+  nextArgs = null;
 }
 
 // Lines that teach a voice word (flow.json voice exits' `told`): recorded in the notebook the moment they are read.
@@ -38,16 +41,6 @@ function addNote(text) {
 }
 export const getState = () => state;
 
-const h = (tag, attrs = {}, ...kids) => {
-  const el = document.createElement(tag);
-  for (const [k, v] of Object.entries(attrs)) {
-    if (k.startsWith('on')) el.addEventListener(k.slice(2), v);
-    else if (v === true) el.setAttribute(k, '');
-    else if (v !== false && v != null) el.setAttribute(k, v);
-  }
-  for (const k of kids.flat(Infinity)) if (k != null && k !== false) el.append(k);
-  return el;
-};
 const norm = (s) => s.toLowerCase().replace(/\s+/g, ' ').trim();
 const persist = () => save(state);
 // The original buttons were typed by hand ("DOne", "done", "solved"): tidy single-word labels.
@@ -81,16 +74,29 @@ export async function startScene(id) {
   if (starting) return;
   starting = true;
   try {
-    scene = await loadScene(id);
+    const loaded = await loadScene(id);
+    scene = loaded;
     state.scene = id;
     state.trail = [];
     state.leads = state.leads.filter((l) => l.to !== id);
     state.log.push({ day: state.day, scene: id, place: sceneFlow(id).place, at: new Date().toISOString() });
     for (const p of clues.pickups[id] ?? []) collect(p);
     show(scene.start);
+  } catch (err) {
+    loadFailed(() => startScene(id));
   } finally {
     starting = false;
   }
+}
+
+// The scene file could not be fetched (offline, a dropped connection): say so and let the player try again.
+// The game state is untouched, so nothing is lost.
+function loadFailed(retry) {
+  ui.closeOverlays?.();
+  ui.stage.replaceChildren(h('div', { class: 'next full' },
+    h('h2', {}, 'No connection'),
+    h('p', {}, 'This place could not be loaded. Your game is saved: check your connection and try again.'),
+    h('button', { class: 'btn btn-primary', onclick: retry }, 'Try again')));
 }
 
 // Testing helper (petronius.goto in the console): jump straight to a beat of a scene.
@@ -102,9 +108,10 @@ export async function jumpTo(id, beat) {
 }
 
 export async function resume() {
-  if (!state.scene) return showNext(openLeads(), null);
-  scene = await loadScene(state.scene);
-  show(state.beat ?? scene.start, { keepTrail: true });
+  // A save from an older version of the story may name a scene or beat that no longer exists: choose where to go instead.
+  if (!state.scene || !sceneFlow(state.scene)) { state.scene = null; return showNext(openLeads(), null); }
+  try { scene = await loadScene(state.scene); } catch { return loadFailed(resume); }
+  show(scene.beats[state.beat] ? state.beat : scene.start, { keepTrail: true });
 }
 
 function show(id, { keepTrail = false } = {}) {
@@ -307,7 +314,8 @@ function timerView(beat) {
     tick = setInterval(() => {
       left -= 1;
       count.textContent = String(Math.max(left, 0));
-      if (left <= 0 || !count.isConnected) finish(timeout);
+      if (!count.isConnected) { clearInterval(tick); return; }   // the player left this screen: stop, don't jump
+      if (left <= 0) finish(timeout);
     }, 1000);
     if (hotspots) {
       // Find the differences: tap the areas on the image; a tap elsewhere costs 5 seconds.
@@ -350,7 +358,8 @@ function voiceView(beat) {
     mic.classList.add('listening'); mic.textContent = 'Listening…';
     rec.onresult = (e) => { input.value = e.results[0][0].transcript; attempt(input.value); };
     rec.onend = () => { mic.classList.remove('listening'); mic.textContent = 'Speak'; };
-    rec.start();
+    rec.onerror = (e) => { feedback.textContent = e.error === 'not-allowed' ? 'The microphone is off for this page. You can type it instead.' : 'I couldn’t hear you. Try again, or type it.'; };
+    try { rec.start(); } catch { rec.onend(); }
   } }, 'Speak');
   queueMicrotask(() => input.focus());
   return h('form', { class: 'puzzle', style: 'box-shadow:none;border:0;padding:1rem 0 0', onsubmit: (e) => { e.preventDefault(); attempt(input.value); } },
@@ -399,7 +408,12 @@ onGeo(() => {
   if (nextArgs && ui.stage.querySelector('.next')) renderNext();
 });
 
-export function showNext(leads, newDay) { nextArgs = { leads, newDay }; renderNext(); }
+export function showNext(leads, newDay) {
+  nextArgs = { leads, newDay };
+  renderNext();
+  // Fetch the candidate scenes while the player reads and looks for the place, so the walk doesn't wait on a weak signal.
+  for (const l of leads) loadScene(l.to).catch(() => {});
+}
 
 function renderNext() {
   const { leads, newDay } = nextArgs;

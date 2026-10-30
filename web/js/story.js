@@ -8,7 +8,11 @@ export let cast = null;    // data/story/cast.json: portraits and bios from the 
 export let media = null;   // data/story/media.json: the original game's backgrounds, portraits, audio, videos
 
 export async function loadFlow() {
-  [flow, clues, cast, media] = await Promise.all(['flow.json', 'clues.json', 'cast.json', 'media.json'].map(async (f) => (await fetch(new URL(f, BASE))).json()));
+  [flow, clues, cast, media] = await Promise.all(['flow.json', 'clues.json', 'cast.json', 'media.json'].map(async (f) => {
+    const r = await fetch(new URL(f, BASE));
+    if (!r.ok) throw new Error(`${f}: ${r.status}`);
+    return r.json();
+  }));
   return flow;
 }
 
@@ -37,8 +41,15 @@ export function preloadFigures() {
   for (const p of Object.values(media.portraits)) new Image().src = mediaUrl(p.file);
 }
 
+// A failed fetch is forgotten, so the next try goes to the network again instead of replaying the failure.
 export async function loadScene(id) {
-  if (!cache.has(id)) cache.set(id, fetch(new URL(`scenes/${id}.json`, BASE)).then((r) => { const d = r.json(); d.then((x) => loaded.set(id, x)); return d; }));
+  if (!cache.has(id)) {
+    const p = fetch(new URL(`scenes/${id}.json`, BASE))
+      .then((r) => { if (!r.ok) throw new Error(`scene ${id}: ${r.status}`); return r.json(); })
+      .then((x) => { loaded.set(id, x); return x; });
+    p.catch(() => cache.delete(id));
+    cache.set(id, p);
+  }
   return cache.get(id);
 }
 export const sceneIfLoaded = (id) => loaded.get(id);

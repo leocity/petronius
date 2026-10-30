@@ -17,6 +17,7 @@ for (const [id, p] of Object.entries(flow.places)) {
   const q = query(p);
   const url = `https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=it&q=${encodeURIComponent(q)}`;
   const res = await fetch(url, { headers: { 'User-Agent': 'petronius-revival/0.1 (university project archive)' } });
+  if (!res.ok) { console.log(`${id.padEnd(16)} HTTP ${res.status} (${q}): stopped, re-run later`); break; }
   const [hit] = await res.json();
   if (hit) { p.lat = +(+hit.lat).toFixed(6); p.lng = +(+hit.lon).toFixed(6); }
   console.log(`${id.padEnd(16)} ${hit ? `${p.lat}, ${p.lng}` : 'NOT FOUND'}  (${q})`);

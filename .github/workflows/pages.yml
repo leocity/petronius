@@ -23,6 +23,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}/web/
     steps:
       - uses: actions/checkout@v4
+      - name: Check the story data
+        run: node tools/check-flow.mjs
       - name: Assemble site
         run: |
           mkdir -p _site/data

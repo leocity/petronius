@@ -2,17 +2,7 @@
 // physical mechanic where there was one (a transparent sheet or a ripped piece to lay over it, a coaster to
 // turn, a spot to search) and an answer to type.
 import { assetUrl } from './story.js';
-
-const h = (tag, attrs = {}, ...kids) => {
-  const el = document.createElement(tag);
-  for (const [k, v] of Object.entries(attrs)) {
-    if (k.startsWith('on')) el.addEventListener(k.slice(2), v);
-    else if (v === true) el.setAttribute(k, '');
-    else if (v !== false && v != null) el.setAttribute(k, v);
-  }
-  for (const k of kids.flat(Infinity)) if (k != null && k !== false) el.append(k);
-  return el;
-};
+import { h } from './dom.js';
 
 // Answers are compared without case, accents, spaces or punctuation ("Tango d'Amore" == "tangodamore"),
 // and must match one accepted variant exactly.

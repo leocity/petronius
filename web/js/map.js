@@ -6,6 +6,7 @@
 import { flow, place } from './story.js';
 import { getState, openLeads, destButton, leadCard, travel } from './game.js';
 import { geo, proximity, formatDistance, distance, DEFAULT_RADIUS } from './geo.js';
+import { el } from './dom.js';
 
 const CENTER = [45.5025, 9.1695];
 let map;
@@ -17,13 +18,16 @@ let guess = null;
 let misses = 0;
 let message = '';
 
-const el = (tag, cls, text) => Object.assign(document.createElement(tag), cls ? { className: cls } : {}, text != null ? { textContent: text } : {});
-
 // frame: the map was just opened (home: back to the neighbourhood; on site: fit the leads and you).
 // geoOnly: a live GPS update: redraw your position and the list, keep the place pins (and any open popup).
 export function renderMap(container, list, { frame = false, geoOnly = false } = {}) {
   const L = window.L;
   panel = list;
+  if (!L) {   // Leaflet comes from a CDN: without a connection there is no map, but the story still plays
+    container.replaceChildren(el('p', 'map-offline', 'The map needs a connection. You can still follow the story: the notebook has what you were told.'));
+    list.replaceChildren();
+    return;
+  }
   if (!map) {
     map = L.map(container, { zoomControl: true, attributionControl: true }).setView(CENTER, 15);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

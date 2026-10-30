@@ -2,8 +2,7 @@
 import { place, cast, assetUrl } from './story.js';
 import { getState, openLeads, leadCard } from './game.js';
 import { gallery } from './clue.js';
-
-const el = (tag, cls, text) => Object.assign(document.createElement(tag), cls ? { className: cls } : {}, text != null ? { textContent: text } : {});
+import { el } from './dom.js';
 
 export function renderJournal(page) {
   const state = getState();

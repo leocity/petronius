@@ -86,5 +86,19 @@ for (const end of Object.keys(flow.endings)) {
   for (let n = key; n; n = prev.get(n)) p.unshift(n.split('|')[0]);
   console.log(`${end} (${p.length - 2} hops): ${p.join(' -> ')}`);
 }
+// Every image, portrait, audio and video the story data points to exists in web/assets/ (a missing one shows nothing in the game).
+const WEB = path.join(DIR, '..', '..', 'web', 'assets');
+const mediaData = JSON.parse(fs.readFileSync(path.join(DIR, 'media.json'), 'utf8'));
+const castData = JSON.parse(fs.readFileSync(path.join(DIR, 'cast.json'), 'utf8'));
+const need = (dir, file, who) => { if (file && !fs.existsSync(path.join(WEB, dir, file))) warn(`${who}: missing web/assets/${dir}/${file}`); };
+const clueItems = (c) => [...(c.items ?? []), ...(c.reveal?.items ?? []), ...(c.image ? [c.image] : [])];
+for (const [k, c] of Object.entries(clueData.clues)) for (const it of clueItems(c)) need('journal', it.file, `clue ${k}`);
+for (const [k, group] of Object.entries(clueData.pickups ?? {})) for (const p of group) for (const it of p.items ?? []) need('journal', it.file, `pickup ${k}`);
+for (const [k, group] of Object.entries(clueData.endings ?? {})) for (const it of group) need('journal', it.file, `ending ${k}`);
+for (const [k, c] of Object.entries(castData.characters)) need('journal', c.file, `cast ${k}`);
+for (const p of Object.values(mediaData.portraits)) need('media', p.file, 'portrait');
+for (const f of Object.keys(mediaData.backgroundFiles)) need('media', f, 'background');
+for (const a of [...Object.values(mediaData.audio), ...Object.values(mediaData.videos)]) need('media', a.file, 'media');
+
 if (problems.length) { console.log(`\n${problems.length} problem(s):\n- ` + problems.join('\n- ')); process.exitCode = 1; }
 else console.log('flow OK');

@@ -9,9 +9,32 @@ const $ = (id) => document.getElementById(id);
 const screens = ['title', 'play', 'map-screen'];
 const showScreen = (id) => screens.forEach((s) => { $(s).hidden = s !== id; });
 
-const flow = await loadFlow();
+let flow;
+try { flow = await loadFlow(); } catch (err) {
+  // The story data could not be fetched (offline on the very first visit): say so instead of showing a blank page.
+  const box = Object.assign(document.createElement('div'), { className: 'boot-error' });
+  box.append(Object.assign(document.createElement('h1'), { textContent: 'Petronius can’t start' }),
+    Object.assign(document.createElement('p'), { textContent: 'The story could not be loaded. Check your connection and reload the page.' }));
+  document.getElementById('app').replaceChildren(box);
+  throw err;
+}
 indexHeard();
 preloadFigures();
+
+// Works offline once it has been opened (see sw.js). Registered after load so it never competes with the first paint.
+if ('serviceWorker' in navigator) addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+
+// Full screen where the browser allows it (Android, desktop): hides the address bar. On iPhone, "Add to Home Screen" does it.
+const full = $('btn-full');
+if (document.fullscreenEnabled && !matchMedia('(display-mode: standalone)').matches) {
+  full.hidden = false;
+  full.addEventListener('click', () => (document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen().catch(() => {})));
+  document.addEventListener('fullscreenchange', () => {
+    const on = !!document.fullscreenElement;
+    full.setAttribute('aria-pressed', String(on));
+    full.setAttribute('aria-label', on ? 'Leave full screen' : 'Full screen');
+  });
+}
 
 // Whatever goes into the notebook is announced: a toast (tap it to open the notebook) and a dot on the notebook button.
 const toasts = $('toasts');
