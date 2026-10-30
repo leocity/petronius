@@ -269,23 +269,46 @@ button { font: inherit; color: inherit; }
     var(--asphalt);
 }
 #play .bar { background: rgba(20, 22, 26, 0.72); backdrop-filter: blur(4px); }
-/* The figure has a fixed height (--fig-h, set by the screen only), so it never grows or shrinks with the
-   dialogue box: a tall box pushes the page down instead of covering the character, a short one leaves the
-   photo showing above the figure. The box overlaps only the figure's last 2.6rem. */
-.stage { position: relative; --fig-h: clamp(11rem, 36vh, 26rem); --fig-h: clamp(11rem, 36svh, 26rem);  /* svh: stays put when the phone's address bar slides away on scroll */ --box-slot: 14rem; grid-template-rows: calc(var(--fig-h) - 2.6rem) minmax(var(--box-slot), auto); align-content: end; gap: 0; }
-/* The box sits at the top of a fixed slot, so the figure stays where it is until a line is longer than the slot. */
-.stage > .say { align-self: start; }
+/* Upright (phone held vertically, desktop): the figure has a fixed height (--fig-h, set by the screen only), so it
+   never grows or shrinks with the dialogue box. A tall box pushes the page down instead of covering the character;
+   the box sits at the top of a fixed slot, so the figure stays put until a line outgrows the slot. The box overlaps
+   only the figure's last 2.6rem. Screens without a figure (next place, puzzles, endings) keep the plain stage grid. */
+.stage { position: relative; }
+.stage:has(> .portrait-wall) {
+  /* svh: stays put when the phone's address bar slides away on scroll */
+  --fig-h: clamp(11rem, 36vh, 26rem); --fig-h: clamp(11rem, 36svh, 26rem); --box-slot: 14rem;
+  grid-template-rows: calc(var(--fig-h) - 2.6rem) minmax(var(--box-slot), auto); align-content: end; gap: 0;
+}
 .stage > .portrait-wall { position: relative; overflow: visible; pointer-events: none; min-height: 0; display: block; }
 .figure {
   position: absolute; bottom: -2.6rem; left: 0; height: var(--fig-h); max-width: 64%; object-fit: contain; object-position: left bottom;
   filter: drop-shadow(0.4rem 0.4rem 0 rgba(0, 0, 0, 0.55));
 }
 .figure.right { left: auto; right: 0; object-position: right bottom; }
-.stage > .say { position: relative; z-index: 1; grid-row: 2; }
+.stage > .say { position: relative; z-index: 1; grid-row: 2; align-self: start; }
 #btn-song.on { color: var(--cover); }
 .ending-video { width: min(100%, 40rem); border: 0.2rem solid var(--ink); box-shadow: var(--shadow-hard); background: #000; }
 @media (max-width: 47.99rem) {
   .figure { max-width: 78%; }
+}
+/* Landscape on a short screen (phone held sideways): the figure and the dialogue box stand side by side, the
+   figure on the speaker's side (Petronio left, everyone else right) and as tall as the room allows, on the same
+   baseline as the box. Nothing overlaps, and each column has a width of its own, so neither follows the text. */
+@media (orientation: landscape) and (max-height: 34rem) {
+  .stage { padding-top: 0.75rem; padding-bottom: 1rem; }
+  .stage:has(> .portrait-wall) {
+    --fig-h: max(9rem, calc(100svh - 5.9rem));
+    grid-template-columns: calc(var(--fig-h) * 0.73) minmax(0, 1fr); grid-template-rows: auto;
+    column-gap: clamp(1rem, 3vw, 2rem); align-items: end;
+  }
+  .stage:has(> .portrait-wall):has(.figure.right) { grid-template-columns: minmax(0, 1fr) calc(var(--fig-h) * 0.73); }
+  .stage > .portrait-wall { grid-column: 1; grid-row: 1; height: var(--fig-h); }
+  .stage > .say { grid-column: 2; grid-row: 1; align-self: end; }
+  .stage:has(.figure.right) > .portrait-wall { grid-column: 2; }
+  .stage:has(.figure.right) > .say { grid-column: 1; }
+  .stage > :not(.portrait-wall, .say) { grid-column: 1 / -1; grid-row: 2; }
+  .figure { bottom: 0; height: 100%; max-width: 100%; }
+  .stage:has(> .clue) { --fig-h: 9rem; }   /* a clue needs the room: the speaker shrinks to a small figure beside the line */
 }
 
 /* Notebook: people met, with the character card */
