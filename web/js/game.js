@@ -2,7 +2,7 @@
 // destinations ("leads") the player can travel to. Home mode: every trigger is satisfied in-app.
 import { flow, clues, cast, media, clueFor, assetUrl, mediaUrl, backgroundFor, figureFor, loadScene, place, sceneFlow, resolveTold, CHARACTERS } from './story.js';
 import { save } from './save.js';
-import { cluePanel, gallery, hints, hotspotImage, compact } from './clue.js';
+import { cluePanel, gallery, bigImage, hints, hotspotImage, compact } from './clue.js';
 import { geo, onGeo, proximity, formatDistance, MAX_ACCURACY } from './geo.js';
 
 let state;
@@ -176,7 +176,10 @@ function lineView(beat) {
   const clue = beat.instruction && !beat.waitsFor && clueFor(state.scene, beat.id);
   if (clue) {
     const cont = choices.length === 1 ? choices[0] : nexts[0];
-    if (beat.text) ui.stage.append(h('div', { class: 'say full' }, h('span', { class: 'name-tag', style: `--c:${color}` }, CHARACTERS[who] ?? who), h('p', {}, beat.text)));
+    // The speaker stays on screen above the clue, with their line, as in any other beat.
+    if (beat.text) ui.stage.append(
+      h('div', { class: 'portrait-wall' }, portrait(who, beat)),
+      h('div', { class: 'say full' }, h('span', { class: 'name-tag', style: `--c:${color}` }, CHARACTERS[who] ?? who), h('p', {}, beat.text)));
     ui.stage.append(
       cluePanel(clue, {
         doneLabel: cont?.label ? tidy(cont.label) : 'Continue',
@@ -287,35 +290,43 @@ function timerView(beat) {
   // Some countdowns only have a time-out edge (22): "I'm ready" then just skips the wait.
   const timeout = beat.next?.find((n) => n.kind === 'timeout') ?? beat.next?.find((n) => !n.kind);
   const success = beat.next?.find((n) => !n.kind) ?? timeout;
-  let left = beat.seconds ?? 60;
-  const count = h('div', { class: 'countdown', 'aria-live': 'off' }, String(left));
-  const finish = (edge) => { clearInterval(tick); go(edge); };
-  const tick = setInterval(() => {
-    left -= 1;
-    count.textContent = String(Math.max(left, 0));
-    if (left <= 0 || !count.isConnected) finish(timeout);
-  }, 1000);
-
   const clue = clueFor(state.scene, beat.id);
-  const body = [];
-  if (clue?.hotspots) {
-    // Find the differences: tap the areas on the image; a tap elsewhere costs 5 seconds.
-    if (window.innerWidth < 600) { left += 30; count.textContent = String(left); }   // small screens need longer to compare
-    const progress = h('p', { class: 'feedback', role: 'status' }, `0 of ${clue.hotspots.length} found`);
-    body.push(h('p', {}, clue.text),
-      gallery(clue.items ?? []),
-      hotspotImage(clue.image, clue.hotspots, {
-        onFound: (n) => { progress.textContent = `${n} of ${clue.hotspots.length} found`; },
-        onAllFound: () => finish(success),
-        onWrong: () => { left = Math.max(1, left - 5); count.textContent = String(left); progress.textContent = 'Not that. −5 seconds.'; },
-      }),
-      progress);
-  } else {
-    if (clue?.text) body.push(h('p', {}, clue.text));
-    body.push(gallery(clue?.items ?? []), h('p', {}, 'Remember what you need before time runs out.'),
-      h('button', { class: 'btn btn-primary', onclick: () => finish(success) }, "I'm ready"));
-  }
-  return h('div', { class: 'puzzle full' }, h('h2', {}, clue?.title ?? 'Against the clock'), count, ...body);
+  const hotspots = !!clue?.hotspots;
+  let left = (beat.seconds ?? 60) + (hotspots && window.innerWidth < 600 ? 30 : 0);   // small screens need longer to compare
+  const count = h('div', { class: 'countdown', 'aria-live': 'off' }, String(left));
+  let tick = null;
+  const finish = (edge) => { clearInterval(tick); go(edge); };
+
+  // The clock only starts when the player presses Start, so reading the instructions and opening the picture are free.
+  const body = h('div', { class: 'timed-body' });
+  const start = h('button', { class: 'btn btn-primary', type: 'button', onclick: () => {
+    start.remove();
+    tick = setInterval(() => {
+      left -= 1;
+      count.textContent = String(Math.max(left, 0));
+      if (left <= 0 || !count.isConnected) finish(timeout);
+    }, 1000);
+    if (hotspots) {
+      // Find the differences: tap the areas on the image; a tap elsewhere costs 5 seconds.
+      const progress = h('p', { class: 'feedback', role: 'status' }, `0 of ${clue.hotspots.length} found`);
+      body.append(
+        gallery(clue.items ?? []),
+        hotspotImage(clue.image, clue.hotspots, {
+          onFound: (n) => { progress.textContent = `${n} of ${clue.hotspots.length} found`; },
+          onAllFound: () => finish(success),
+          onWrong: () => { left = Math.max(1, left - 5); count.textContent = String(left); progress.textContent = 'Not that. −5 seconds.'; },
+        }),
+        progress);
+    } else {
+      body.append(...(clue?.items ?? []).map(bigImage), h('p', {}, 'Remember what you need before time runs out.'),
+        h('button', { class: 'btn btn-primary', type: 'button', onclick: () => finish(success) }, "I'm ready"));
+    }
+  } }, `Start the clock (${left} s)`);
+
+  return h('div', { class: 'puzzle full' }, h('h2', {}, clue?.title ?? 'Against the clock'),
+    clue?.text ? h('p', {}, clue.text) : null,
+    h('p', {}, 'The clock starts when you press the button, not before.'),
+    start, count, body);
 }
 
 // "Press the talk button to say something or leave": home mode types (or speaks) the keyword.

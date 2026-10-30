@@ -57,6 +57,8 @@
       log.push(`${st.scene}: password ${ans.join(', ')}`);
       inputs[0].form.requestSubmit(); continue;
     }
+    const clock = [...document.querySelectorAll('.puzzle > .btn')].find((b) => /start the clock/i.test(b.textContent));
+    if (clock) { clock.click(); continue; }
     const hot = document.querySelector('.spot:not(.found)');
     if (hot) { hot.click(); continue; }
     const ready = [...document.querySelectorAll('.puzzle .btn')].find((b) => /ready/i.test(b.textContent));
