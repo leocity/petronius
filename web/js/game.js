@@ -101,6 +101,7 @@ function loadFailed(retry) {
 
 // Testing helper (petronius.goto in the console): jump straight to a beat of a scene.
 export async function jumpTo(id, beat) {
+  if (!state) return console.warn('petronius.goto: start or continue a game first');
   scene = await loadScene(id);
   state.scene = id;
   state.trail = [];
@@ -176,11 +177,11 @@ function render(beat) {
 
 function lineView(beat) {
   const who = beat.speaker ?? 'petronio';
-  const color = `var(--c-${who}, var(--muted))`;
+  const tag = `--c:var(--c-${who}, var(--muted)); --tag-ink:var(--ink-${who}, var(--ink))`;   // dark tags get white lettering (contrast)
   const nexts = uniqueNext(beat);
   const choices = nexts.filter((n) => n.label);
   const say = h('div', { class: 'say' },
-    h('span', { class: 'name-tag', style: `--c:${color}` }, CHARACTERS[who] ?? who),
+    h('span', { class: 'name-tag', style: tag }, CHARACTERS[who] ?? who),
     beat.text ? h('p', {}, beat.text) : null);
 
   const clue = beat.instruction && !beat.waitsFor && clueFor(state.scene, beat.id);
@@ -189,7 +190,7 @@ function lineView(beat) {
     // The speaker stays on screen above the clue, with their line, as in any other beat.
     if (beat.text) ui.stage.append(
       h('div', { class: 'portrait-wall' }, portrait(who, beat)),
-      h('div', { class: 'say full' }, h('span', { class: 'name-tag', style: `--c:${color}` }, CHARACTERS[who] ?? who), h('p', {}, beat.text)));
+      h('div', { class: 'say full' }, h('span', { class: 'name-tag', style: tag }, CHARACTERS[who] ?? who), h('p', {}, beat.text)));
     ui.stage.append(
       cluePanel(clue, {
         doneLabel: cont?.label ? tidy(cont.label) : 'Continue',
@@ -488,7 +489,7 @@ function ending(fromBeat) {
   const video = videoBeat && media.videos[videoBeat.src];
   player.pause();
   ui.stage.replaceChildren(h('div', { class: 'ending full' },
-    video ? h('video', { class: 'ending-video', src: mediaUrl(video.file), controls: true, autoplay: true, playsinline: true }) : null,
+    video ? h('video', { class: 'ending-video', src: mediaUrl(video.file), controls: true, autoplay: true, playsinline: true, preload: 'metadata' }) : null,
     h('div', { class: 'envelope' }, h('b', {}, `Envelope ${e.ending}`), h('strong', {}, info.title)),
     h('p', {}, info.how),
     gallery(clues.endings[e.ending] ?? []),

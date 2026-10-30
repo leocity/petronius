@@ -63,7 +63,7 @@ function drawPlaces(L, state, onsite, leads) {
   layer.clearLayers();
   const leadPlaces = new Set(leads.map((l) => l.where));
   const visited = new Set(state.log.map((v) => v.place));
-  const pin = (cls) => L.divIcon({ className: '', html: `<div class="pin ${cls}"></div>`, iconSize: [28, 28], iconAnchor: [14, 14] });
+  const pin = (cls) => L.divIcon({ className: 'pin-wrap', html: `<div class="pin ${cls}"></div>`, iconSize: [44, 44], iconAnchor: [22, 22] });
 
   for (const [id, p] of Object.entries(flow.places)) {
     const isLead = onsite && leadPlaces.has(id);

@@ -87,15 +87,20 @@ function openMap() {
   renderMap($('map'), $('leads'), { frame: true });
   $('btn-map-close').focus();
 }
+// The notebook is a dialog over the game: while it is open the screens behind it can't be reached by keyboard or screen reader.
+function setJournal(open) {
+  $('journal').hidden = !open;
+  for (const s of screens) $(s).inert = open;
+}
 function openJournal() {
   $('btn-journal').classList.remove('has-news');
   toasts.replaceChildren();
   renderJournal($('journal-page'));
-  $('journal').hidden = false;
+  setJournal(true);
   $('btn-journal-close').focus();
 }
 function closeOverlays() {
-  $('journal').hidden = true;
+  setJournal(false);
   showScreen('play');
 }
 
@@ -135,10 +140,10 @@ $('btn-map').addEventListener('click', openMap);
 $('btn-song').addEventListener('click', toggleSong);
 $('btn-map-close').addEventListener('click', () => { showScreen('play'); });
 $('btn-journal').addEventListener('click', openJournal);
-$('btn-journal-close').addEventListener('click', () => { $('journal').hidden = true; $('btn-journal').focus(); });
+$('btn-journal-close').addEventListener('click', () => { setJournal(false); $('btn-journal').focus(); });
 document.addEventListener('keydown', (e) => {
   if (e.key !== 'Escape') return;
-  if (!$('journal').hidden) $('journal').hidden = true;
+  if (!$('journal').hidden) { setJournal(false); $('btn-journal').focus(); }
   else if (!$('map-screen').hidden) showScreen('play');
 });
 

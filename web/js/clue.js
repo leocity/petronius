@@ -85,11 +85,11 @@ export function zoom(item) {
 }
 
 const thumb = (item) => h('button', { class: `thumb${/\.png$/.test(item.file) ? ' on-dark' : ''}`, type: 'button', onclick: () => zoom(item), 'aria-label': `Enlarge: ${item.alt ?? item.file}` },
-  h('img', { src: assetUrl(item.file), alt: '' }));
+  h('img', { src: assetUrl(item.file), alt: '', loading: 'lazy', decoding: 'async' }));
 
 // One large picture, full width, for the clues that are a single image to study (tap to enlarge).
 export const bigImage = (item) => h('button', { class: `big-image${/\.png$/.test(item.file) ? ' on-dark' : ''}`, type: 'button', onclick: () => zoom(item), 'aria-label': `Enlarge: ${item.alt ?? item.file}` },
-  h('img', { src: assetUrl(item.file), alt: item.alt ?? '' }));
+  h('img', { src: assetUrl(item.file), alt: item.alt ?? '', loading: 'lazy', decoding: 'async' }));
 
 // A base image with a sheet (or ripped piece) the player drags onto it.
 // sheet: true -> same size as the base, target (0, 0); or { w, at: [x, y] } as fractions of the base.
