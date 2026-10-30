@@ -130,12 +130,12 @@
       "id": "7",
       "container": "container",
       "kind": "line",
-      "speaker": "yda",
+      "speaker": "sirio",
       "portrait": {
-        "class": "char_img_yda",
-        "asset": "yda.png"
+        "class": "char_img_sirio",
+        "asset": "sirio_shocked.png"
       },
-      "text": "We were waiting for you... we saw you last night as well. Unfortunately Yda caught us. I... I'm dying to see that world outside! Sirio told me about it... he really misses his freedom!",
+      "text": "Su is right, it's not for everyone. Come on, let's go to another small park, the one in Via Livigno 5! When we get there, remind me that I have to tell you about HOPSCOTCH!",
       "next": [
         {
           "to": "loading"
@@ -318,7 +318,7 @@
         "class": "char_img_petronio",
         "asset": "petronio_dubbioso.png"
       },
-      "text": "Good evening professor! We saw you climb over the University gate, twice... We are curious: where do you run away to when you go out?",
+      "text": "Awesome, I'd love to learn! Show me the basics, Su.",
       "next": [
         {
           "to": "4"

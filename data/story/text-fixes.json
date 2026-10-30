@@ -380,7 +380,9 @@
       "text": "Your useless arguments make me laugh. The rules must always be respected, however hard they are; they were established to train and educate you in the best possible way. It's a real pity, I am forced to report everything to the principal, am I right, Professor?"
     },
     "16-1#7": {
-      "text": "We were waiting for you... we saw you last night as well. Unfortunately Yda caught us. I... I'm dying to see that world outside! Sirio told me about it... he really misses his freedom!"
+      "text": "I'm afraid Yda is right, and I can't pretend I didn't see you on the wrong side of the gate. Go back to your rooms, and try not to make things worse.",
+      "speaker": "roberto",
+      "portrait": "roberto_serio.png"
     },
     "16-1#8": {
       "text": "Is it really possible to have a new system of balance based on diversity? I could be the first one to organize such a system. You have intrigued me, at least. I will help you, but I want a prominent role in it. Since I'm the only one who can do it, I'll do some research. I'll be in touch in the next few days, students."
@@ -441,7 +443,9 @@
       "text": "Your useless arguments make me laugh. The rules must always be respected, however hard they are; they were established to train and educate you in the best possible way. It's a real pity, I am forced to report everything to the principal, am I right, Professor?"
     },
     "16#7": {
-      "text": "We were waiting for you... we saw you last night as well. Unfortunately Yda caught us. I... I'm dying to see that world outside! Sirio told me about it... he really misses his freedom!"
+      "text": "I'm afraid Yda is right, and I can't pretend I didn't see you on the wrong side of the gate. Go back to your rooms, and try not to make things worse.",
+      "speaker": "roberto",
+      "portrait": "roberto_serio.png"
     },
     "16#8": {
       "text": "Is it really possible to have a new system of balance based on diversity? I could be the first one to organize such a system. You have intrigued me, at least. I will help you, but I want a prominent role in it. Since I'm the only one who can do it, I'll do some research. I'll be in touch in the next few days, students."
@@ -571,7 +575,7 @@
       "text": "No no, ok, then you absolutely have to try. Guido and I were so hooked that we made a map of the safest places to hide! Sometimes we were hiding for so long that I ended up getting bored... once I started doodling in my hiding place because I couldn't stand it anymore ahahahah."
     },
     "18#18": {
-      "text": "Who knows why nothing surprises me anymore ahahah Yet to be 100%. Sirio you have to tell me what you don't remember!"
+      "text": "Who knows why nothing surprises me anymore ahahah Just to be 100% sure. Sirio you have to tell me what you don't remember!"
     },
     "18#19": {
       "text": "Yo bro, actually I don't remember what I drew, it would be funny to see it again. Look here, I still have our map hahaha, shall we go look for it?"
@@ -871,7 +875,9 @@
       "instruction": "Cut the journal's page"
     },
     "29#7": {
-      "text": "We were waiting for you... we saw you last night as well. Unfortunately Yda caught us. I... I'm dying to see that world outside! Sirio told me about it... he really misses his freedom!"
+      "text": "Su is right, it's not for everyone. Come on, let's go to another small park, the one in Via Livigno 5! When we get there, remind me that I have to tell you about HOPSCOTCH!",
+      "speaker": "sirio",
+      "portrait": "sirio_shocked.png"
     },
     "29#21": {
       "next": {
@@ -886,7 +892,7 @@
       "text": "Eh, maybe that's just how it is... As an outsider, your jewels don't say much to me..."
     },
     "29#31a": {
-      "text": "Good evening professor! We saw you climb over the University gate, twice... We are curious: where do you run away to when you go out?"
+      "text": "Awesome, I'd love to learn! Show me the basics, Su."
     },
     "29#399a": {
       "text": "Wow, congratulations Su! I love them. I'd love to learn to make things by hand myself, like you all do here in the suburbs!"
@@ -1049,6 +1055,11 @@
     },
     "37#10": {
       "instruction": "Open the envelope F3"
+    },
+    "33#30": {
+      "speaker": "roberto",
+      "portrait": "roberto_serio.png",
+      "text": "Bomb, then let's get something to drink, like a small glass of red wine."
     }
   },
   "clues": {
@@ -1062,37 +1073,12 @@
     {
       "where": "9-1#4, 9-1#30, 12#13",
       "text": "…useful to you! keeek / I appreciate keek / hang out in keek suburbs",
-      "note": "'keek'/'keeek' (Guido's tic?) is not an English word; left as is. If it stands for 'chic' or a laugh, spell it consistently."
-    },
-    {
-      "where": "16#7, 16-1#7, 29#7",
-      "text": "We were waiting for you... we saw you last night as well. Unfortunately Yda caught us…",
-      "note": "Spoken by Yda, but it is Petronio's line to Roberto from 4#7 (copy-paste leftover); reachable (16: 6→7→11; 29: 6→7). Grammar fixed, but the line needs rewriting or a different speaker."
-    },
-    {
-      "where": "29#31a",
-      "text": "Good evening professor! We saw you climb over the University gate, twice...",
-      "note": "Petronio says his line to Roberto (4#399b) to Su after choosing 'Awesome' (offer to learn bijouterie). Leftover from scene 4."
+      "note": "Guido's tic, kept on purpose (owner, Oct 2026): always spelled 'keek'."
     },
     {
       "where": "17#29",
       "text": "Ahaha they're cool! They're a crew of guys… let's go to the park in Via Candiani…",
-      "note": "Petronio describes Sirio's old crew and sends them to Via Candiani right after Sirio said 'let's go to Via Livigno 5' (looks copied from 8-1). Speaker and destination contradict the scene."
-    },
-    {
-      "where": "18#18",
-      "text": "Who knows why nothing surprises me anymore ahahah Yet to be 100%. Sirio you have to tell me what you don't remember!",
-      "note": "'Yet to be 100%' has no clear meaning (maybe 'Just to be 100% sure'?)."
-    },
-    {
-      "where": "33#30",
-      "text": "Bomb, then let's get something to drink, like a small glass of red wine.",
-      "note": "Speaker is Su, but 'Bomb' is Roberto's catchphrase and Roberto answers the follow-up (33#40); probably Roberto's line."
-    },
-    {
-      "where": "34#4",
-      "text": "Now let's go to Via Imbriani 54, there are two really beautiful murals; the second is called \"Il Guardiano\"",
-      "note": "flow.json puts 2501's 'Il Guardiano' in Via Carnevali 113, while Via Imbriani 54 is Reka's mural; check the address."
+      "note": "Unreachable in the game (no beat leads to it, the exit is 28): nothing to fix. Speaker and destination contradict the scene (looks copied from 8-1)."
     },
     {
       "where": "27#2",

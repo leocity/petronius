@@ -167,7 +167,7 @@
         "class": "char_img_petronio",
         "asset": "petronio_dubbioso.png"
       },
-      "text": "Who knows why nothing surprises me anymore ahahah Yet to be 100%. Sirio you have to tell me what you don't remember!",
+      "text": "Who knows why nothing surprises me anymore ahahah Just to be 100% sure. Sirio you have to tell me what you don't remember!",
       "next": [
         {
           "to": "19"

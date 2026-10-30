@@ -22,7 +22,10 @@ export function init(s, hooks) {
 const HEARD = new Map();
 export function indexHeard() {
   for (const [sid, f] of Object.entries(flow.scenes)) for (const e of f.exits)
-    if (e.via === 'voice' && e.told) HEARD.set(`${e.told.scene ?? sid}#${e.told.beat}`, { key: `${e.told.scene ?? sid}#${e.told.beat}`, match: e.told.match });
+    if (e.via === 'voice' && e.told) for (const b of [e.told.beat, ...(e.told.also ?? [])]) {
+      const key = `${e.told.scene ?? sid}#${e.told.beat}`;
+      HEARD.set(`${e.told.scene ?? sid}#${b}`, { key, match: e.told.match });
+    }
 }
 
 // Tell the player something went into the notebook (toast + dot on the notebook button, see main.js).

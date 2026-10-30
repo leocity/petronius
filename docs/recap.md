@@ -129,11 +129,14 @@ Il sottobicchiere della 24-2 è ricreato (numeri di "Leave me alone"). Il lato #
 
 ### Inglese (revisione completata)
 
-314 battute corrette in `data/story/text-fixes.json` (grammatica, ortografia, calchi dall'italiano, maiuscole, nomi), mantenendo slang e parolacce dei personaggi. Restano da decidere con l'autore:
-- **Battute copiate dette dal personaggio sbagliato:** 16#7, 16-1#7 e 29#7 (Yda dice una battuta di Petronio a Roberto); 29#31a (Petronio dice a Su una battuta pensata per Roberto); 17#29 (Petronio dice la battuta di Sirio sui Candiani Beach Boyz subito dopo "Via Livigno 5"); 33#30 ("Bomb" detto da Su, ma è il tormentone di Roberto).
-- **"keek"/"keeek" di Guido** (9-1, 12): non è inglese. È un intercalare voluto?
-- **18#18 "Yet to be 100%."**: significato poco chiaro.
-- **34#4:** "Il Guardiano" viene collocato in via Imbriani 54, ma la scena del Guardiano è in via Carnevali 113.
+314 battute corrette in `data/story/text-fixes.json` (grammatica, ortografia, calchi dall'italiano, maiuscole, nomi), mantenendo slang e parolacce dei personaggi. Le questioni aperte con l'autore sono state decise così:
+- **Decisioni del 30 ottobre 2026:**
+  - Il sottobicchiere di Gabriele (24-2) resta quello ricreato ("Leave me alone"). Il lato #5 della fontana resta la V dedotta, data nel testo dell'indizio.
+  - Le battute copiate nel posto sbagliato sono riscritte: 16#7 e 16-1#7 diventano di Roberto (dalla parte di Yda), 29#7 di Sirio (nomina Via Livigno 5 e HOPSCOTCH, come il ramo con l'origami), 29#31a è Petronio che accetta la lezione di Su, 33#30 passa a Roberto. 17#29 non è raggiungibile (nessuna battuta porta lì) e non serve toccarla.
+  - "keek" di Guido è un tic voluto e resta uguale. 18#18 diventa "Just to be 100% sure."
+  - 34#4: nessuna modifica. Imbriani 54 e Carnevali 113 distano 41 m (stesso isolato) e "Il Guardiano" è la parola che si dice a voce nella scena 12: toglierlo romperebbe l'indizio.
+  - I due collegamenti ipotetici restano ipotesi: 32 → 33 e il ramo di 29 senza origami (ora con testo coerente).
+  - La prova in strada della modalità in giro resta da fare.
 
 ## 7. Piano di lavoro
 

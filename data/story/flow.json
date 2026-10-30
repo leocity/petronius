@@ -566,7 +566,10 @@
           "told": {
             "scene": "29",
             "beat": "5",
-            "match": "HOPSCOTCH"
+            "match": "HOPSCOTCH",
+            "also": [
+              "7"
+            ]
           }
         },
         {
@@ -821,10 +824,10 @@
           "via": "gps",
           "where": "livigno-5",
           "confidence": "guess",
-          "evidence": "origami declined (6 -> 7); 7's text is a line copy-pasted from 16 (Yda), so this branch never named a next place: assume the same route as the origami branch",
+          "evidence": "origami declined (6 -> 7); 7 was a line copy-pasted from 16 (Yda). Rewritten for the revival as Sirio naming the same place as the origami branch (5). The original's next place is unknown.",
           "told": {
-            "beat": "5",
-            "match": "Livigno"
+            "beat": "7",
+            "match": "Via Livigno 5"
           }
         }
       ]

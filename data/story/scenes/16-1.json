@@ -121,12 +121,12 @@
       "id": "7",
       "container": "container",
       "kind": "line",
-      "speaker": "yda",
+      "speaker": "roberto",
       "portrait": {
-        "class": "char_img_yda",
-        "asset": "yda.png"
+        "class": "char_img_roberto",
+        "asset": "roberto_serio.png"
       },
-      "text": "We were waiting for you... we saw you last night as well. Unfortunately Yda caught us. I... I'm dying to see that world outside! Sirio told me about it... he really misses his freedom!",
+      "text": "I'm afraid Yda is right, and I can't pretend I didn't see you on the wrong side of the gate. Go back to your rooms, and try not to make things worse.",
       "next": [
         {
           "to": "11"

@@ -401,6 +401,10 @@ function applyTextFixes(story, r) {
     const beat = story.beats[id];
     if (!beat) { r.stale.push(key); continue; }
     for (const field of ['text', 'instruction', 'prompt']) if (fix[field] != null) beat[field] = fix[field];
+    if (fix.speaker) {   // a line that was copy-pasted under the wrong character
+      beat.speaker = fix.speaker;
+      beat.portrait = { class: `char_img_${fix.speaker}`, asset: fix.portrait ?? `${fix.speaker}.png` };
+    }
     for (const [from, to] of Object.entries(fix.next ?? {})) {
       const edges = (beat.next ?? []).filter((n) => n.label === from);
       if (!edges.length) r.stale.push(`${key} label "${from}"`);
