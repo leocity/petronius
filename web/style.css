@@ -269,12 +269,13 @@ button { font: inherit; color: inherit; }
     var(--asphalt);
 }
 #play .bar { background: rgba(20, 22, 26, 0.72); backdrop-filter: blur(4px); }
-/* The figure has its own area above the dialogue box (never less than --fig-min), so a tall box pushes the
-   page down instead of covering the character; the box overlaps only the figure's last 2.6rem. */
-.stage { position: relative; --fig-min: clamp(10rem, 30dvh, 16rem); grid-template-rows: minmax(var(--fig-min), 1fr) auto; gap: 0; }
+/* The figure has a fixed height (--fig-h, set by the screen only), so it never grows or shrinks with the
+   dialogue box: a tall box pushes the page down instead of covering the character, a short one leaves the
+   photo showing above the figure. The box overlaps only the figure's last 2.6rem. */
+.stage { position: relative; --fig-h: clamp(11rem, 36dvh, 26rem); grid-template-rows: calc(var(--fig-h) - 2.6rem) auto; align-content: end; gap: 0; }
 .stage > .portrait-wall { position: relative; overflow: visible; pointer-events: none; min-height: 0; display: block; }
 .figure {
-  position: absolute; bottom: -2.6rem; left: 0; height: min(calc(100% + 2.6rem), 40rem); max-width: 64%; object-fit: contain; object-position: left bottom;
+  position: absolute; bottom: -2.6rem; left: 0; height: var(--fig-h); max-width: 64%; object-fit: contain; object-position: left bottom;
   filter: drop-shadow(0.4rem 0.4rem 0 rgba(0, 0, 0, 0.55));
 }
 .figure.right { left: auto; right: 0; object-position: right bottom; }
